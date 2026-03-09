@@ -1,0 +1,9 @@
+# Whitelist entries
+*
+!*/
+
+!.gitignore
+!LICENSE
+
+# Notes
+!*.md
