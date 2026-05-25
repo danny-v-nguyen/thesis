@@ -10,3 +10,7 @@
 
 # Scripts
 !*.sh
+!activate
+
+# Python
+!*.py
