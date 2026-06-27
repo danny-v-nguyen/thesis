@@ -262,7 +262,17 @@ high-dimensional feature space from which structured semantic primitives can be
 decoded. 
 
 \subsubsection{Algorithmic Formulation and Modeling}
-To-Do: describe implementation of Alain's linear probe algorithm
+The foundational modeling technique utilizes shallow linear classification 
+probes optimized via standard Logistic Regression with $L_2$ regularization. 
+Mathematically, given a dataset of hidden state activation vectors 
+$X \in \mathbb{R}^{d}$ extracted from a specific intermediate transformer layer 
+$l$ (where $d = 2048$ for Llama 3.2-3B), the probe seeks to learn a weight 
+matrix $W$ and bias vector $b$ to predict the discrete logical class $Y$ (e.g., 
+term boundaries or connective relations):
+
+$$\hat{Y} = \sigma(W \cdot X + b)$$
+
+where $\sigma$ represents the softmax function.
 
 \subsubsection{Train-Test Splits and Validation Strategy}
 The experimental validation follows a rigorous cross-validation protocol using 
@@ -301,8 +311,8 @@ During the scoping phase, discussions with my advisor focused on the inherent
 limitations of using standard generative workflows for truth and fact-checking 
 tasks. Forcing an LLM to output structural text or a natural language 
 explanation often introduces stochastic hallucinations and abstract reasoning 
-errors that a human reviewer cannot easily audit without manual fact-checking.
-\cite{guo2022surveyautomatedfactchecking} 
+errors that a human reviewer cannot easily audit without manual 
+fact-checking~\cite{guo2022surveyautomatedfactchecking}.
 To ensure a higher standard of human verifiability, the choice to deploy 
 diagnostic linear probes directly on the model's internal residual stream was 
 validated. By extracting the raw latent geometries and mapping them directly to 
@@ -327,7 +337,8 @@ graph networks.
 % This section is optional for this progress report.  It corresponds to the 
 % Evaluation phase of the data science method.
 
-TBD
+TBD. I hope I have enough time try single-layer and multi-layer probes, and a 
+couple different open models to see how results change by model size.
 
 \newpage
 \section{Deliverables}
