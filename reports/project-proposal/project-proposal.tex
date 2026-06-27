@@ -1,0 +1,218 @@
+\documentclass[12 pt]{article}  % sets the font to 12 pt and says this is an 
+                                % article (as opposed to book or other documents)
+\usepackage{amsfonts, amssymb}  % math fonts and symbols
+\usepackage{amsmath}            % math
+\usepackage{enumitem}           % change enumeration bullet styles
+\usepackage{graphicx}           % graphics
+\usepackage{parskip}
+\usepackage{xcolor}             % color
+\usepackage{hyperref}           % linkable references
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    citecolor=black
+    }
+\usepackage[nottoc,numbib]{tocbibind}
+  
+%\usepackage{setspace}          % Together with \doublespacing below allows for
+                                % doublespacing of the document
+
+\oddsidemargin=-0.5cm
+\setlength{\textwidth}{7in}
+\addtolength{\voffset}{-20pt}
+\addtolength{\headsep}{25pt}
+\renewcommand\thefootnote{[\arabic{footnote}]} % Bracketed footnotes
+
+                                        % Macro definitions for the header
+\newcommand{\myname}{Danny Nguyen}      % Name
+\newcommand{\myid}{OU ID: 113687989}    % Student ID
+\newcommand{\mysemester}{Summer 2026}   % Semester
+\newcommand{\myclass}{DSA 5900}         % Class
+\newcommand{\myassignment}{Project Proposal}  % Assignment designator
+
+% Page headers automatically horizontal fill; Name ID Date Class Assignment Page.No.
+\pagestyle{myheadings}
+\markright{\myname \hfill \myid \hfill \today \hfill \myclass \hfill \myassignment \hfill }
+
+\newcommand{\eqn}[0]{\begin{array}{rcl}}    % begin an aligned equation - allows
+                                            % for aligning = or inequalities.
+                                            % Always use with $$ $$
+\newcommand{\eqnend}[0]{\end{array} }  	    % end the aligned equation
+
+\newcommand{\qed}[0]{$\square$}     % make an unfilled square the
+                                    % default for ending a proof
+
+% Common number sets, must be in math mode
+\newcommand{\Naturals}[0]{\mathbb{N}}   % Natural numbers
+\newcommand{\Integers}[0]{\mathbb{Z}}   % Integers
+\newcommand{\Rationals}[0]{\mathbb{Q}}  % Rationals
+\newcommand{\Reals}[0]{\mathbb{R}}      % Reals
+\newcommand{\Complex}[0]{\mathbb{C}}    % Complex
+
+\newcommand{\heading}[1]{\noindent\large{\textbf{#1}}}  % for sections
+\newcommand{\problem}[1]{\noindent\paragraph{#1:}}      % for problem labels
+
+%\doublespacing         % Together with the package setspace above allows for
+                        % doublespacing of the document
+
+% Use these commands for self-assessments
+\newcommand{\correct}[1]{\colorbox{green}{\checkmark #1}}   % mark correct
+\newcommand{\correction}[1]{{\color{red}\textbf{#1}}}       % write a correction
+
+\title{Project Proposal}
+
+\begin{document}
+
+\include{title.tex}
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\newpage
+\pagenumbering{arabic}
+
+\section{Introduction}
+% A brief description of the practicum project context.
+% a) Discuss why this project is of interest and of value.
+% b) What problems or questions does it help address?
+% c) Include a discussion of the research questions/objectives of the sponsor (if applicable)
+% and how this project will contribute to those goals.
+% d) Use appropriate citations and proper formatting
+
+In the modern media landscape, the velocity and volume at which information spreads make manual verification insufficient, leaving professional journalists and publishers working under severe time constraints. This problem has catalyzed a growing interest in fact-checking systems capable of parsing arbitrary text, retrieving evidence, and predicting the veracity of assertions. 
+\cite{cheng2025empoweringllmslogicalreasoning}
+\cite{guo2022surveyautomatedfactchecking}
+However, contemporary semantic pipelines frequently rely on generative large language models (LLMs) to output structured configurations like JSON, introducing critical flaws: they are highly prone to hallucination, 
+fragile under slight parsing variances, and computationally expensive at scale.
+\cite{jin2022logicalfallacydetection}
+\cite{lalwani2025autoformalizingnaturallanguagefirstorder}
+\cite{yang2023couplinglargelanguagemodels}
+
+To overcome these limitations, this practicum aims to define a low-compute, symbolic framework to extract the underlying predicate logic from synthetic natural language reasoning examples using frozen transformer activations. By deploying a compact, open-weights model---Meta's Llama 3.2-3B---this practicum extracts high-dimensional activation vectors from the model's intermediate residual stream layers. Rather than relying on text generation, these numerical parameters will feed into shallow, linear classification probes trained to deterministically isolate atomic assertions and identify propositional relationships (e.g., implication, negation, and conjunction) directly from the embeddings within a model's latent space.
+\cite{alain2018understandingintermediatelayersusing} 
+\cite{marks2024geometrytruthemergentlinear}
+
+\newpage
+\section{Objectives}
+% A clear and concise statement of the goals of the practicum project
+% a) include the technical project objectives
+% b) include individual learning objectives
+The overarching goal of this practicum is to develop a robust, parameter-level extraction pipeline that bypasses generative LLM bottlenecks to map natural language into verifiable logical graphs. The specific project and individual objectives are outlined below:
+
+\subsection{Technical Project Objectives}
+\begin{itemize}
+    \item \textbf{Latent Space Probing Architecture:} Design and train low-compute, linear classification heads (probes) to extract propositional claims and logical relationships directly from the intermediate residual stream of Meta's Llama 3.2-3B model.
+    \item \textbf{Symbolic Pipeline Integration:} Construct a deterministic pipeline that translates extracted latent representations into discrete symbolic tokens without relying on stochastic text-generation or JSON parsing.
+    \item \textbf{Graph-Based Fact Verification:} Implement a visualization and verification layer that structures the extracted symbols into a formal logical graph, for human interpretation of the underlying logical structures of natural language.
+    \item \textbf{Performance Optimization:} Evaluate the classifier framework to achieve high factual and structural precision while reducing inference-time computational overhead compared to baseline autoregressive generative prompting.
+\end{itemize}
+
+\subsection{Individual Learning Objectives}
+\begin{itemize}
+    \item \textbf{Mechanistic Interpretability Mastery:} Gain deep, practical expertise in analyzing the internal geometry of transformers, specifically concerning layer-wise activation tracking, representation dynamics, and internal knowledge localization.
+    \item \textbf{Advanced Representation Engineering:} Master state-of-the-art diagnostic probing and activation patching methodologies using specialized interpretability toolkits.
+    \item \textbf{Symbolic Architecture Development:} Develop a rigorous engineering workflow for bridging machine representations (vector embeddings) with classical symbolic paradigms (graph structures).
+\end{itemize}
+
+\newpage
+\section{Plan}
+% Describe the process that you will use to address the problem and achieve the
+% objectives.
+% a) Describe the data that you will use to address your project. Describe the size of the data
+% set(s), the format, the fields that it contains and the fields you will use. Describe any
+% surface features of the data that have already been discovered/described. Provide the
+% citation for your data.
+% b) Describe the methods that you intend to apply at each stage of the process
+% c) If you are completing the project as part of an internship or research group, describe
+% your direct responsibilities and tasks.
+To achieve the project objectives and transition from text generation to parameter-level classification, this practicum will deploy a structured, multi-stage methodology. The engineering process encompasses dataset preprocessing, model activation extraction, linear probe training, and symbolic graph generation.
+
+\subsection{Data Description and Transformation}
+This project will utilize the \textbf{LogicNLI} dataset\cite{tian-etal-2021-diagnosing}, a diagnostic benchmark explicitly designed to evaluate structural logical reasoning in natural language processing models. 
+\begin{itemize}
+    \item \textbf{Dataset Size and Format:} The dataset consists of 20,000 synthetic text pairs divided into training, validation, and testing splits, formatted as structured parquet entries.
+    \item \textbf{Native Fields:} Each native entry contains three fields: \texttt{premise} (the context statement), \texttt{hypothesis} (the query statement), and \texttt{label} (a categorical value denoting whether the hypothesis is entailed by, neutral to, or contradicts the premise).
+    \item \textbf{Data Transformation and Feature Engineering:} Because the native dataset lacks explicit labels for isolated logical components, a deterministic preprocessing step will be introduced. Using rule-based semantic parsing (via regular expressions and token-dependency matching), each \texttt{premise} string will be programmatically decomposed into:
+    \begin{enumerate}
+        \item \textbf{Atomic Terms:} Individually isolated propositional variables (e.g., extracting ``Alice is in the garden'' as Token Block $A$).
+        \item \textbf{Relational Connectives:} Explicit markers representing the logical syntax joining those terms (e.g., identifying ``If... then'' structures as implication ($\rightarrow$), ``not'' as negation ($\neg$), and ``and'' as conjunction ($\land$)).
+    \end{enumerate}
+    These transformed, fine-grained structural targets will serve as the ground-truth annotations used to train the relational linear probes.
+\end{itemize}
+
+\subsection{Methodological Stages}
+The technical execution of the project is divided into three major operational stages:
+
+\subsubsection{Stage 1: Activation Extraction and Vector Alignment}
+The first stage involves routing the preprocessed natural language input strings through a frozen Meta Llama 3.2-3B architecture. To accommodate a consumer-grade, low-compute evaluation environment, the execution pipeline will be tested under two hardware paradigms: an enterprise laptop utilizing an Intel Core i7-13620H CPU, and a consumer desktop equipped with an NVIDIA RTX 4070 Ti (12GB VRAM) GPU. To strictly adhere to the VRAM (or lack thereof) and memory constraints of these target systems while maximizing throughput, input sequences will be processed in deterministic batches of size $b=16$ or $b=32$, depending on the active hardware configuration.
+
+Rather than running the model to its final token-generation layer, PyTorch forward-hook functions will be injected into the transformer's intermediate blocks—specifically isolating the middle residual stream layers (layers 8 through 16). At these layers, the forward pass will be intercepted to extract high-dimensional hidden state representations. 
+
+To align token spans with our pre-identified atomic propositions, the Hugging Face tokenizer's \texttt{return\_offsets\_mapping} parameter will be leveraged. This maps the character indices of each rule-parsed proposition directly to its corresponding token position indices in the tensor. The extracted hidden states within these verified token boundaries will then undergo mean-pooling to construct static, $\Reals^{3072}$ semantic representation vectors for each propositional clause and connective.
+
+\subsubsection{Stage 2: Linear Probing and Parameter Classification}
+Using the extracted intermediate activation vectors as frozen input features, shallow probes will be trained using standard logistic regression and minimal multi-layer perceptrons (MLPs). Separate classification heads will be optimized via cross-entropy loss to predict the structural primitives established during our data transformation stage:
+\begin{enumerate}
+    \item The presence and boundaries of distinct atomic propositional terms within the text vector space.
+    \item The operational connectives joining them (e.g., classifying a latent vector as containing an active negation, conjunction, or implication relation).\footnote{In order to maintain an achievable schedule for this practicum, the initial implementation will focus on a limited set of logical relations; starting with implications. Further relations will be added iteratively as time allows.}
+\end{enumerate}
+By restricting these heads to linear layers, the pipeline ensures that any successful classification reflects structured, linearly separable logical information natively encoded by the Llama model's internal geometry.
+
+\subsubsection{Stage 3: Symbolic Mapping and Graph Construction}
+Once the linear probes output deterministic, parameter-driven classifications, these discrete predictions will be mapped into a classical symbolic syntax (e.g., representing the text as nodes $A$ and $B$ connected by a directed edge $\rightarrow$). A visualization and validation script written in NetworkX will intake these extracted symbols to construct a formal logical graph representation. This graph will serve as the auditable interface for automated fact-checking, bypassing generative hallucinations entirely.
+
+\newpage
+\section{Deliverables}
+% Explain what you plan to deliver as the outcome of the practicum.
+% a) Include an explanation of the technical deliverables in the context of the project
+% objectives.
+% b) Describe visualizations you anticipate using to communicate your findings
+To fulfill the project objectives and provide the sponsor with a functional, verifiable neuro-symbolic framework, this practicum will yield a suite of open-source software modules, trained artifacts, and interpretive visual assets. 
+
+\subsection{Technical Deliverables}
+\begin{itemize}
+    \item \textbf{Data Augmentation and Preprocessing Engine:} A Python-based pipeline that ingests raw LogicNLI data and applies deterministic rule-based semantic parsing to output token-aligned ground-truth annotations for atomic propositions and logical connectives.
+    \item \textbf{Transformer Activation Extraction Framework:} A PyTorch and Hugging Face-based framework utilizing forward hooks to interface with a frozen Meta Llama 3.2-3B model. This module intercepts the intermediate residual stream (layers 8--16) and extracts aligned, mean-pooled hidden state tensors without triggering token generation.
+    \item \textbf{Linear Probe Model Artifacts:} A collection of serialized, low-compute linear classification heads (logistic regression and shallow MLP layers) optimized to map internal vector geometries to discrete symbolic primitives (e.g., terms, negations, implications).
+    \item \textbf{Symbolic Logic Graph Compiler:} A software script that converts numerical classification logits into structured symbolic notation and automatically compiles them into a graph database structure using the NetworkX library.
+    \item \textbf{Performance Evaluation Suite:} A comprehensive benchmarking suite comparing the parameter-level classification framework against baseline zero-shot generative LLM prompting, measuring metrics such as inference latency, memory consumption, parsing failure rates, and structural accuracy.
+\end{itemize}
+
+\subsection{Anticipated Visualizations}
+To effectively communicate the empirical findings and prove the existence of internal logical geometry, the following visual assets will be generated:
+\begin{itemize}
+    \item \textbf{Latent Space Dimensionality Reductions (PCA/t-SNE):} Two- and three-dimensional scatter plots visualizing the geometry of the residual stream. These plots will illustrate how vectors representing distinct logical relations (e.g., statements containing negation vs. implication) naturally cluster and linearly separate within Llama's middle layers.
+    \item \textbf{Layer-Wise Accuracy Trajectories:} Line graphs tracking the classification accuracy of the linear probes across every layer of the 3B model. This visualization will map the "semantic engine" of the transformer, demonstrating where abstract logical structures converge in the middle layers and where they dissolve in the late generation layers.
+    \item \textbf{Interpretable Symbolic Graph Networks:} Automated graph node-link diagrams rendering the final pipeline output. These will visually represent natural language premises as clear, auditable network graphs where vertices depict extracted atomic terms and directed, color-coded edges depict verified logical operations.
+\end{itemize}
+
+\newpage
+\section{Schedule}
+% A work management plan for completion of the practicum project.
+% a) Identify your project completion date.
+% b) Specify when the milestones will be completed to ensure project completion by your
+% target date
+To ensure the systematic execution and successful completion of this project, a comprehensive work management schedule has been established. The target completion date for this practicum is \textbf{August 2026}.
+
+The multi-stage implementation plan is organized into the following consecutive bi-weekly milestones:
+
+\begin{table}[h!]
+\centering
+\caption{Project Milestones and Targeted Completion Dates}
+\vspace{0.5cm}
+\begin{tabular}{|l|p{7.5cm}|l|}
+\hline
+\textbf{Milestone} & \textbf{Description of Activities and Key Deliverables} & \textbf{Target} \\ \hline
+Milestone 1 & \textbf{Data Engineering \& Hook Extraction:} Process the LogicNLI dataset to extract atomic terms/connective labels, and simultaneously implement the PyTorch forward-hook architecture to extract Llama 3.2-3B intermediate residual stream tensors. & June 19 \\ \hline
+Milestone 2 & \textbf{Probe Training:} Train and cross-validate linear classification heads on the extracted vector representations; optimize for term and relation detection. & July 3 \\ \hline
+Milestone 3 & \textbf{Graph Compilation:} Develop the downstream translation module to map probe logits into discrete network symbolic graph architectures. & July 10 \\ \hline
+Milestone 4 & \textbf{Evaluation \& Visualization:} Run comparative benchmarks against generative baselines; generate PCA geometric plots and layer-wise accuracy charts. & July 17 \\ \hline
+Milestone 5 & \textbf{Final Reporting:} Document engineering pipelines, compile project artifacts for the sponsor, and finalize the comprehensive practicum report. & July 24 \\ \hline
+\end{tabular}
+\end{table}
+
+\cleardoublepage
+\bibliographystyle{plain}
+\bibliography{../refs.bib}
+\end{document}

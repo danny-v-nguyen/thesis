@@ -14,3 +14,7 @@
 
 # Python
 !*.py
+
+# LaTeX
+!*.tex
+!*.bib
