@@ -73,49 +73,41 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-% A brief description of the practicum project context.
-% a) Discuss why this project is of interest and of value.
-% b) What problems or questions does it help address?
-% c) Include a discussion of the research questions/objectives of the sponsor (if applicable)
-% and how this project will contribute to those goals.
-% d) Use appropriate citations and proper formatting
-
 In the modern media landscape, the velocity and volume at which information 
 spreads make manual verification insufficient, leaving professional journalists 
-and publishers working under severe time constraints. This problem has 
-catalyzed a growing interest in fact-checking systems capable of parsing 
-arbitrary text, retrieving evidence, and predicting the veracity of assertions. 
-\cite{cheng2025empoweringllmslogicalreasoning}
-\cite{guo2022surveyautomatedfactchecking}
+and publishers working under severe time constraints.
+\correction{REVISION REQUIRED: Reframe away from full "fact-checking". Update the narrative below to emphasize logical-structure extraction from synthetic reasoning instances instead of general domain fact-checking.}
+This problem has catalyzed a growing interest in fact-checking systems capable 
+of parsing arbitrary text, retrieving evidence, and predicting the veracity of 
+assertions~\cite{cheng2025empoweringllmslogicalreasoning,guo2022surveyautomatedfactchecking}.
 However, contemporary semantic pipelines frequently rely on generative large 
 language models (LLMs) to output structured configurations like JSON, 
 introducing critical flaws: they are highly prone to hallucination, 
-fragile under slight parsing variances, and computationally expensive at scale.
-\cite{jin2022logicalfallacydetection}
-\cite{lalwani2025autoformalizingnaturallanguagefirstorder}
-\cite{yang2023couplinglargelanguagemodels}
+fragile under slight parsing variances, and computationally expensive at scale~\cite{jin2022logicalfallacydetection, lalwani2025autoformalizingnaturallanguagefirstorder, yang2023couplinglargelanguagemodels}.
 
 To overcome these limitations, this practicum aims to define a low-compute, 
 symbolic framework to extract the underlying predicate logic from synthetic 
-natural language reasoning examples using frozen transformer activations. By 
-deploying a compact, open-weights model---Meta's Llama 3.2-3B---this practicum 
+natural language reasoning examples using frozen transformer activations.
+By deploying a compact, open-weights model---Meta's Llama 3.2-3B---this practicum 
 extracts high-dimensional activation vectors from the model's intermediate 
-residual stream layers. Rather than relying on text generation, these numerical 
+residual stream layers.
+Rather than relying on text generation, these numerical 
 parameters will feed into shallow, linear classification probes trained to 
 deterministically isolate atomic assertions and identify propositional 
 relationships (e.g., implication, negation, and conjunction) directly from the 
-embeddings within a model's latent space.
-\cite{alain2018understandingintermediatelayersusing} 
-\cite{marks2024geometrytruthemergentlinear}
+embeddings within a model's latent space~\cite{alain2018understandingintermediatelayersusing, marks2024geometrytruthemergentlinear}.
+
+\correction{INSERT REQUIRED: Provide practical engineering examples here to illustrate the challenge and show how a sentence maps into the targeted structural logic.}
+\\
+\textbf{Example 1 (Implication):} "If a student studies, then they pass." $\rightarrow$ Target extraction: $\text{Studies} \rightarrow \text{Passes}$. \\
+\textbf{Example 2 (Negation):} "Alice is not in the office." $\rightarrow$ Target extraction: $\neg\text{Office(Alice)}$.
 
 \newpage
 \section{Objectives}
-% A clear and concise statement of the goals of the practicum project
-% a) include the technical project objectives
-% b) include individual learning objectives
 The overarching goal of this practicum is to develop a robust, parameter-level 
 extraction pipeline that bypasses generative LLM bottlenecks to map natural 
-language into verifiable logical graphs. The specific project and individual 
+language into verifiable logical graphs.
+The specific project and individual 
 objectives are outlined below:
 
 \subsection{Technical Project Objectives}
@@ -156,38 +148,33 @@ objectives are outlined below:
 \section{Data}
 
 \subsection{Ingestion}
-% Describe what you did to acquire the data and where you are storing it.  
-% What obstacles have you overcome in getting it?
-The dataset selected for this project is \textbf{LogicNLI}
-\cite{tian-etal-2021-diagnosing}, an open-source diagnostic benchmark hosted by 
-the Hugging Face hub. The dataset in JSON was retrieved directly from the 
-authors' GitHub repository.
-\footnote{https://github.com/omnilabNLP/LogicNLI/tree/main}
+The dataset selected for this project is \textbf{LogicNLI}~\cite{tian-etal-2021-diagnosing}, an open-source diagnostic benchmark hosted by the Hugging Face hub.
+\correction{REVISION REQUIRED: Move this GitHub link from a footnote into the formal references file (refs.bib) and cite it properly here.}
+The dataset in JSON was retrieved directly from the authors' GitHub repository.\footnote{https://github.com/omnilabNLP/LogicNLI/tree/main}
+\correction{INSERT REQUIRED: Expand origin context here. Explain who created LogicNLI, why it was created, what specific kinds of logical reasoning patterns it tests, and why its synthetic composition benefits this study.}
 There have been no obstacles in acquiring the dataset, as it is publicly 
-available and well-documented thanks to the work of the authors. The dataset is 
-stored locally in a structured directory within the project repository, 
-ensuring easy access for preprocessing and analysis.
+available and well-documented thanks to the work of the authors.
+The dataset is stored locally in a structured directory within the project repository, ensuring easy access for preprocessing and analysis.
 
 \subsection{Exploration}
-% Describe the basic characteristics of the data, including whatever plots you 
-% have generated so far.
 Initial exploratory data analysis revealed a highly uniform, balanced, and 
-synthetically controlled dataset structure across its 20,000 entries. The 
-target \texttt{labels} field contains a near-perfect balanced split across its 
+synthetically controlled dataset structure across its 20,000 entries.
+The target \texttt{labels} field contains a near-perfect balanced split across its 
 classification categories (Entailment, Contradiction, Self-Contradiction, and 
 Neutral) eliminating the risk of majority-class bias during probe calibration.
-
 A structural analysis of the text fields highlights the specific syntactic attributes of the dataset:
 
 \begin{itemize}
     \item \textbf{Facts Array:} This field contains flat, atomic assertions of 
     absolute truth (e.g., \texttt{["Alice is in the garden.", 
-    "Bob is hungry."]}). These strings exhibit zero logical connectives, 
+    "Bob is hungry."]}).
+    These strings exhibit zero logical connectives, 
     maintaining a short average string length of 4 to 6 tokens.
     \item \textbf{Rules Array:} This field holds the propositional conditional 
     formulas (e.g., \texttt{["If Alice is in the garden, then Alice is 
     reading."]} or structures introducing logical equivalence and 
-    conjunction (\texttt{"and"})). These strings demonstrate higher token 
+    conjunction (\texttt{"and"})).
+    These strings demonstrate higher token 
     complexities and specific syntactic anchors that dictate the relationship 
     edges.
     \item \textbf{Statements and Labels:} The \texttt{statements} field 
@@ -195,20 +182,20 @@ A structural analysis of the text fields highlights the specific syntactic attri
     value defined by the formal deduction of the combined rules and facts.
 \end{itemize}
 
+\correction{INSERT REQUIRED: Include raw data record examples here to explicitly ground the contents of the dataset for the reader.}
+
 Exploratory token length histograms further confirmed tight distribution peaks, 
 ensuring that the model's intermediate hidden layers will not suffer from 
 sequence padding distortions during batch processing.
 
 \subsection{Preparation}
-% Describe any methods you have done to prepare the data for analysis, 
-% including missing data imputation, new feature creation, etc.
 Because the linear probes require distinct feature-target pairs to map out 
 Llama's internal vector space, substantial preprocessing and feature 
 engineering were executed to transform the raw dataset into a token-level 
-sequence classification task. No missing data or null fields were detected due 
+sequence classification task.
+No missing data or null fields were detected due 
 to the synthetic nature of LogicNLI, bypassing the need for standard 
 statistical imputation.
-
 The data preparation workflow consists of two critical pipeline stages:
 \begin{enumerate}
     \item \textbf{Rule-Based Target Transformation and Fact-Rule Matching:} A 
@@ -247,21 +234,21 @@ The data preparation workflow consists of two critical pipeline stages:
 \section{Methodology}
 
 \subsection{Techniques}
-% What is your intended modelling technique?  This should include a description 
-% of whether this is a supervised or unsupervised approach, what algorithms you 
-% will use to solve your model, your approach to test and training splits, and 
-% importantly, how will you validate your findings?
+\correction{REVISION REQUIRED: This section is currently too brief. Add a foundational description of transformer architecture mechanics, intermediate activations, and the structural information you expect them to contain.}
+
 To extract and verify the logical structures embedded within Meta's Llama 
 3.2-3B model, this practicum implements a supervised learning paradigm using 
 diagnostic probing---specifically, the linear classification approach described 
-by Alain, et al.
-\cite{alain2018understandingintermediatelayersusing} 
+by Alain, et al.~\cite{alain2018understandingintermediatelayersusing}. 
+\correction{REVISION REQUIRED: Do not simply reference Alain et al. Add a concise technical description explaining their structural linear classification methodology.}
 Rather than treating the transformer as an end-to-end text generation system, 
 this approach treats the internal intermediate activations as a 
 high-dimensional feature space from which structured semantic primitives can be 
 decoded. 
 
 \subsubsection{Algorithmic Formulation and Modeling}
+\correction{REVISION REQUIRED: Prior to introducing the formula below, explicitly define "shallow linear classification probes", "hidden state activation vectors", and "discrete logical class Y" in plain, clear language.}
+
 The foundational modeling technique utilizes shallow linear classification 
 probes optimized via standard Logistic Regression with $L_2$ regularization. 
 Mathematically, given a dataset of hidden state activation vectors 
@@ -273,61 +260,68 @@ term boundaries or connective relations):
 $$\hat{Y} = \sigma(W \cdot X + b)$$
 
 where $\sigma$ represents the softmax function.
+\correction{REVISION REQUIRED: Explain explicitly why the probe learns matrix $W$ and how it is applied downstream during evaluation to interpret layer data.}
 
 \subsubsection{Train-Test Splits and Validation Strategy}
-The experimental validation follows a rigorous cross-validation protocol using 
-the pre-partitioned LogicNLI splits (\texttt{train}, \texttt{dev}, and 
-\texttt{test}):
+\correction{REVISION REQUIRED: Change "cross-validation protocol" to "predefined train/dev/test split strategy". Provide explicit metrics: total count of records per split, class distributions, baseline comparison configurations, and clarify if individual probes are assigned to implication, conjunction, negation, and atomic terms.}
+
+The experimental validation follows a rigorous \correction{cross-validation} protocol using the pre-partitioned LogicNLI splits (\texttt{train}, \texttt{dev}, and \texttt{test}):
 
 \begin{itemize}
     \item \textbf{Calibration Split:} The probes are trained using activation 
     vectors extracted strictly from the \texttt{train} split.
     \item \textbf{Model Selection and Layer Auditing (Dev Split):} The 
     validation framework uses the \texttt{dev} split to audit the model 
-    layer-by-layer. Probes will be independently trained and evaluated across 
-    layers 8 through 16 to map the trajectory of logical synthesis. The layer 
-    yielding the highest F1-score on the dev set will be selected as the 
+    layer-by-layer.
+    Probes will be independently trained and evaluated across 
+    layers 8 through 16 to map the trajectory of logical synthesis.
+    \correction{INSERT REQUIRED: Justify selecting layers 8--16. Note if this range choice stems from historical interpretability literature or localized empirical assumptions.}
+    The layer yielding the highest F1-score on the dev set will be selected as the 
     optimal extraction layer.
     \item \textbf{Generalization Verification (Test Split):} Final model 
     performance is reported strictly using vectors from the unseen 
-    \texttt{test} split. Out-of-sample generalization will be quantified using 
+    \texttt{test} split.
+    Out-of-sample generalization will be quantified using 
     Precision, Recall, and F1-score relative to the ground-truth target 
     structures.
 \end{itemize}
 
 \subsection{Process Validation}
-% Describe any collaboration you have had with your sponsor or stakeholders to 
-% validate your intended approach.  Discuss why you have chosen the Techniques 
-% you describe above.
 The selection of a parameter-level probing methodology over standard 
 autoregressive token generation was heavily shaped by preliminary research 
-consultations with my thesis advisor. The overarching academic goal was to 
-ensure this project delivered a high-quality, meaningful contribution to 
-mechanistic interpretability by focusing on two core criteria: drastically 
-increasing the ease of human verifiability in arbitrary text and optimizing 
-performance under strict, low-compute constraints.
+consultations with my thesis advisor.
+\correction{REVISION REQUIRED: Elaborate thoroughly on this technical choice. Explain why capturing internal parameter layer mechanics is preferable to autoregressive token prediction loops.}
 
+\correction{REVISION REQUIRED: Soften or replace abstract descriptions like "high-quality, meaningful contribution" and "human verifiability". Detail explicitly what guidance your advisor provided, what decisions were confirmed, and how it restructured your engineering path.}
+The overarching academic goal was to ensure this project delivered a high-quality, meaningful contribution to mechanistic interpretability by focusing on two core criteria: drastically increasing the ease of human verifiability in arbitrary text and optimizing performance under strict, low-compute constraints.
 During the scoping phase, discussions with my advisor focused on the inherent 
 limitations of using standard generative workflows for truth and fact-checking 
-tasks. Forcing an LLM to output structural text or a natural language 
+tasks.
+Forcing an LLM to output structural text or a natural language 
 explanation often introduces stochastic hallucinations and abstract reasoning 
 errors that a human reviewer cannot easily audit without manual 
 fact-checking~\cite{guo2022surveyautomatedfactchecking}.
 To ensure a higher standard of human verifiability, the choice to deploy 
 diagnostic linear probes directly on the model's internal residual stream was 
-validated. By extracting the raw latent geometries and mapping them directly to 
-mathematical nodes and directed edges, we eliminate the black-box nature of 
-text generation. This methodology allows an observer to easily verify 
+validated.
+
+\correction{REVISION REQUIRED: Tone down this absolute claim. Change "eliminate the black-box nature" to a nuanced alternative: e.g., "linear probing may improve interpretability by testing whether specific logical labels are decodable from internal representations". ensure every assertion maintains verifiable backing.}
+By extracting the raw latent geometries and mapping them directly to 
+mathematical nodes and directed edges, we \correction{eliminate the black-box nature} of 
+text generation.
+This methodology allows an observer to easily verify 
 conclusions based purely on the explicit, visualizable logical consistency of 
 the statements made in the text.
-
 Furthermore, this technique directly addresses the research requirement for 
-compute efficiency. Rather than relying on massive, closed-source models or 
+compute efficiency.
+Rather than relying on massive, closed-source models or 
 computationally expensive fine-tuning loops, this approach utilizes a compact 
-3B-parameter model and shallow classification heads. This design ensures that 
+3B-parameter model and shallow classification heads.
+This design ensures that 
 the entire extraction and verification architecture can perform with high 
 structural precision while operating entirely within local, consumer-grade 
-hardware constraints (such as an RTX 4070 Ti). This validation process 
+hardware constraints (such as an RTX 4070 Ti).
+This validation process 
 guarantees that the methodology yields a reproducible, low-overhead framework 
 that successfully bridges deep learning vector spaces with verifiable symbolic 
 graph networks.
@@ -336,7 +330,6 @@ graph networks.
 \section{Results}
 % This section is optional for this progress report.  It corresponds to the 
 % Evaluation phase of the data science method.
-
 TBD. I hope I have enough time try single-layer and multi-layer probes, and a 
 couple different open models to see how results change by model size.
 
@@ -344,7 +337,6 @@ couple different open models to see how results change by model size.
 \section{Deliverables}
 % This section is optional for this progress report.  It corresponds to the 
 % Deployment phase of the data science method.
-
 TBD
 
 \cleardoublepage
