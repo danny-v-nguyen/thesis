@@ -316,17 +316,56 @@ The data preparation workflow consists of two critical pipeline stages:
 \section{Methodology}
 
 \subsection{Techniques}
-\correction{REVISION REQUIRED: This section is currently too brief. Add a foundational description of transformer architecture mechanics, intermediate activations, and the structural information you expect them to contain.}
+To extract and verify the logical structures embedded within Meta's Llama 3.2-3B 
+model, this practicum utilizes a mechanistic interpretability framework centered 
+on diagnostic linear ``probing''.
 
-To extract and verify the logical structures embedded within Meta's Llama 
-3.2-3B model, this practicum implements a supervised learning paradigm using 
-diagnostic probing---specifically, the linear classification approach described 
-by Alain, et al.~\cite{alain2018understandingintermediatelayersusing}. 
-\correction{REVISION REQUIRED: Do not simply reference Alain et al. Add a concise technical description explaining their structural linear classification methodology.}
-Rather than treating the transformer as an end-to-end text generation system, 
-this approach treats the internal intermediate activations as a 
-high-dimensional feature space from which structured semantic primitives can be 
-decoded. 
+\subsubsection{Transformers}
+In the standard Transformer architecture, input sequences are processed through 
+a stack of $L$ sequential transformer blocks. For any given token at position 
+$i$ and layer $l$, the model generates a hidden state activation vector 
+$h_i^{(l)} \in \mathbb{R}^d$. This vector serves as the distributed, 
+high-dimensional representation of the token's contextual state, encoding the 
+compositional hierarchy of syntactic dependencies and semantic features derived 
+from the preceding attention and feed-forward operations.
+
+These activations persist within the ``residual stream'', an architectural design 
+that facilitates the additive accumulation of information across the network's 
+depth. In this framework, each transformer block $l$ performs an incremental 
+update $h_i^{(l+1)} = h_i^{(l)} + \text{sublayer}(h_i^{(l)})$, ensuring that 
+the residual stream serves as a continuous conduit for information propagation. 
+This project posits that this latent space encodes propositional logical 
+structures—such as implications, negations, and conjunctive relations—as 
+geometric properties within the manifold of the hidden state embeddings, 
+independent of, and prior to, the final logit projection onto the vocabulary 
+space.
+
+By applying diagnostic linear classification ``probes'' to these frozen activation 
+vectors, the linear separability of these logical relations can be formally 
+tested. Specifically, if a logical relation $Y \in \{0, 1\}$ is decodable via a 
+weight matrix $W$, it provides empirical evidence that the information is 
+explicitly formatted in a linearly recoverable configuration within the model's 
+internal representation of the input.
+
+\subsubsection{Diagnostic Linear Classification Probing}
+To facilitate the extraction of latent logical structures, this project 
+implements diagnostic linear classification, utilizing the methodology 
+established by Alain and Bengio (2018). The core principle of linear probing 
+involves treating the internal activation vectors of a frozen transformer model 
+as a fixed feature space. By training a simple, low-capacity linear model—a 
+``probe"—to map these high-dimensional hidden state vectors to discrete logical 
+class labels, the linear separability of internal concept representations within 
+the model's latent geometry can be empirically assessed.
+
+In contrast to end-to-end fine-tuning, which modifies the parameters of the base 
+architecture, linear probing relies on the gradient descent optimization of a 
+shallow classifier using frozen activation outputs. High classification accuracy 
+on held-out test sets provides empirical evidence that the target logical 
+relations are explicitly formatted in a linearly recoverable configuration at 
+the probed layer. Conversely, insufficient classification performance suggests 
+that the information is either absent from the latent representation or encoded 
+within a non-linear manifold that necessitates a more complex, high-capacity 
+decodable mapping.
 
 \subsubsection{Algorithmic Formulation and Modeling}
 \correction{REVISION REQUIRED: Prior to introducing the formula below, explicitly define "shallow linear classification probes", "hidden state activation vectors", and "discrete logical class Y" in plain, clear language.}
