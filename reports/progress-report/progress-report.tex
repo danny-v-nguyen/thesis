@@ -69,38 +69,76 @@
 \pagenumbering{roman}
 \tableofcontents
 \listoftables
+\listoffigures
 \newpage
 \pagenumbering{arabic}
 
 \section{Introduction}
-In the modern media landscape, the velocity and volume at which information 
-spreads make manual verification insufficient, leaving professional journalists 
-and publishers working under severe time constraints.
-\correction{REVISION REQUIRED: Reframe away from full "fact-checking". Update the narrative below to emphasize logical-structure extraction from synthetic reasoning instances instead of general domain fact-checking.}
-This problem has catalyzed a growing interest in fact-checking systems capable 
-of parsing arbitrary text, retrieving evidence, and predicting the veracity of 
-assertions~\cite{cheng2025empoweringllmslogicalreasoning,guo2022surveyautomatedfactchecking}.
-However, contemporary semantic pipelines frequently rely on generative large 
-language models (LLMs) to output structured configurations like JSON, 
-introducing critical flaws: they are highly prone to hallucination, 
-fragile under slight parsing variances, and computationally expensive at scale~\cite{jin2022logicalfallacydetection, lalwani2025autoformalizingnaturallanguagefirstorder, yang2023couplinglargelanguagemodels}.
+Translating natural language into formal predicate logic is a fundamental 
+prerequisite for automated reasoning, yet the inherent ambiguity of human 
+language makes this process notoriously difficult for current generative 
+pipelines. When tasked with outputting structured logical configurations, 
+generative LLMs often succumb to hallucination and parsing fragility, rendering 
+the resulting logical structures unreliable~\cite{jin2022logicalfallacydetection, 
+lalwani2025autoformalizingnaturallanguagefirstorder, lu-etal-2022-parsing,
+yang2023couplinglargelanguagemodels}. 
 
-To overcome these limitations, this practicum aims to define a low-compute, 
-symbolic framework to extract the underlying predicate logic from synthetic 
-natural language reasoning examples using frozen transformer activations.
-By deploying a compact, open-weights model---Meta's Llama 3.2-3B---this practicum 
-extracts high-dimensional activation vectors from the model's intermediate 
-residual stream layers.
-Rather than relying on text generation, these numerical 
-parameters will feed into shallow, linear classification probes trained to 
-deterministically isolate atomic assertions and identify propositional 
-relationships (e.g., implication, negation, and conjunction) directly from the 
-embeddings within a model's latent space~\cite{alain2018understandingintermediatelayersusing, marks2024geometrytruthemergentlinear}.
+This practicum proposes a shift in methodology: bypassing text-generation in 
+favor of parameter-level probing. Rather than forcing models to generate 
+structured output, we embrace the model's existing internal representations. 
+The central objective is to explore the model's internal geometry to reveal 
+whether logical relationships such as: implication, negation, and 
+conjunction; are explicitly encoded within the hidden state vector embeddings 
+of Meta's Llama 3.2-3B \cite{alain2018understandingintermediatelayersusing, 
+marks2024geometrytruthemergentlinear}. By analyzing these internal activation 
+patterns, this practicum aims to determine if verifiable predicate logic can 
+be extracted deterministically from the latent space of a compact transformer, 
+offering a robust, low-compute alternative to stochastic generative parsing.
 
-\correction{INSERT REQUIRED: Provide practical engineering examples here to illustrate the challenge and show how a sentence maps into the targeted structural logic.}
-\\
-\textbf{Example 1 (Implication):} "If a student studies, then they pass." $\rightarrow$ Target extraction: $\text{Studies} \rightarrow \text{Passes}$. \\
-\textbf{Example 2 (Negation):} "Alice is not in the office." $\rightarrow$ Target extraction: $\neg\text{Office(Alice)}$.
+An example of the training and subsequent inference behavior of a negation
+detection probe follows:
+
+\begin{itemize}
+    \item \textbf{Input:}
+    \begin{itemize}
+        \item Natural Language Text Statement: ``Eli is not soft.''
+        \item Atomic Elements: [``Eli'', ``soft'']
+    \end{itemize} 
+    \item \textbf{Output:} Log-Odds Score of Negation Presence between the Atomic Elements
+\end{itemize}
+
+likewise for an implication detection probe:
+
+\begin{itemize}
+    \item \textbf{Input:}
+    \begin{itemize}
+        \item Natural Language Text Statement: ``If someone is soft, he is poised and not scared.''
+        \item Atomic Elements: [``soft'', ``poised'', ``not scared'']
+    \end{itemize} 
+    \item \textbf{Output:} Log-Odds Score of Implication Presence between the Atomic Elements
+\end{itemize}
+
+With the same principle mirrored for training classification probes for other 
+desired logical relationships such as equivalence, conjunction, and disjunction.
+
+A nominal example of a pipeline utilizing successfully trained probes is 
+proposed in Figure~\ref{intro-example-text} with the corresponding 
+visualization of the resulting graph in Figure~\ref{intro-example-graph}.
+
+\begin{figure}[h!t]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/intro-example-text.pdf}
+    \caption{Pipeline from natural language to logical graph representation.}
+    \label{intro-example-text}
+\end{figure}
+
+\begin{figure}[h!t]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/intro-example-graph.pdf}
+    \caption{Visualization of the logical graph extracted from the natural language example.}
+    \label{intro-example-graph}
+\end{figure}
+
 
 \newpage
 \section{Objectives}
