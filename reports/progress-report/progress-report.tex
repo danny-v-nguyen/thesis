@@ -320,7 +320,7 @@ To extract and verify the logical structures embedded within Meta's Llama 3.2-3B
 model, this practicum utilizes a mechanistic interpretability framework centered 
 on diagnostic linear ``probing''.
 
-\subsubsection{Transformers}
+\paragraph{Transformers}
 In the standard Transformer architecture, input sequences are processed through 
 a stack of $L$ sequential transformer blocks. For any given token at position 
 $i$ and layer $l$, the model generates a hidden state activation vector 
@@ -342,12 +342,12 @@ space.
 
 By applying diagnostic linear classification ``probes'' to these frozen activation 
 vectors, the linear separability of these logical relations can be formally 
-tested. Specifically, if a logical relation $Y \in \{0, 1\}$ is decodable via a 
-weight matrix $W$, it provides empirical evidence that the information is 
-explicitly formatted in a linearly recoverable configuration within the model's 
-internal representation of the input.
+tested. Specifically, if a discrete logical relation $Y \in \{0, 1\}$ is 
+decodable via a weight matrix $W$, it provides empirical evidence that the 
+information is explicitly formatted in a linearly recoverable configuration 
+within the model's internal representation of the input.
 
-\subsubsection{Diagnostic Linear Classification Probing}
+\paragraph{Diagnostic Linear Classification Probing}
 To facilitate the extraction of latent logical structures, this project 
 implements diagnostic linear classification, utilizing the methodology 
 established by Alain and Bengio (2018). The core principle of linear probing 
@@ -368,20 +368,45 @@ within a non-linear manifold that necessitates a more complex, high-capacity
 decodable mapping.
 
 \subsubsection{Algorithmic Formulation and Modeling}
-\correction{REVISION REQUIRED: Prior to introducing the formula below, explicitly define "shallow linear classification probes", "hidden state activation vectors", and "discrete logical class Y" in plain, clear language.}
+To quantify the presence of logical relations within the transformer's latent 
+space, this project employs shallow linear classification probes. A ``hidden 
+state activation vector" is the high-dimensional numerical output of a 
+transformer block at a specific layer, representing the model's contextual 
+understanding of an input token. A ``shallow linear probe" is a low-capacity 
+classifier (specifically, logistic regression) designed to identify patterns in 
+these vectors without modifying the underlying transformer parameters. The 
+``discrete logical class $Y$" refers to the target category—such as the presence 
+of an implication or a negation—that the probe is trained to predict from the 
+hidden state activation vector.
 
-The foundational modeling technique utilizes shallow linear classification 
-probes optimized via standard Logistic Regression with $L_2$ regularization. 
-Mathematically, given a dataset of hidden state activation vectors 
-$X \in \mathbb{R}^{d}$ extracted from a specific intermediate transformer layer 
-$l$ (where $d = 2048$ for Llama 3.2-3B), the probe seeks to learn a weight 
-matrix $W$ and bias vector $b$ to predict the discrete logical class $Y$ (e.g., 
-term boundaries or connective relations):
+The classification process is optimized via Logistic Regression with $L_2$ 
+regularization to prevent over-fitting to the training samples. Given a dataset 
+of hidden state activation vectors $X \in \Reals^{d}$ extracted from a specific 
+intermediate transformer layer $l$ (where $d = 2048$ for Llama 3.2-3B), the 
+probe learns a weight matrix $W$ and bias vector $b$ to map the input hidden 
+state $X$ to the discrete logical class $Y$:
 
 $$\hat{Y} = \sigma(W \cdot X + b)$$
 
-where $\sigma$ represents the softmax function.
-\correction{REVISION REQUIRED: Explain explicitly why the probe learns matrix $W$ and how it is applied downstream during evaluation to interpret layer data.}
+where $\sigma$ denotes the sigmoid function. The weight matrix $W$ acts as a 
+learned linear decision boundary within the $d$-dimensional embedding space. 
+By optimizing $W$ via gradient descent, the probe identifies the hyperplane 
+that optimally separates the hidden state vectors corresponding to the presence 
+versus the absence of a logical relation. The output $\hat{Y}$ represents the 
+predicted probability of the logical class. This mapping is derived from the 
+linear log-odds (logit), where $W \cdot X + b$ defines the decision boundary in 
+the latent space.
+
+Once trained, $W$ serves as a diagnostic tool for logical decoding. During 
+evaluation, new hidden state vectors are projected through the learned $W$ and 
+$b$; the resulting scalar output $\hat{Y}$ indicates the model's internal 
+assignment of a logical class to that specific token position. High 
+classification accuracy on unseen test data demonstrates that the logical 
+relation $Y$ is not merely implicit but is explicitly organized as a linearly 
+separable feature in the model's internal representation, thereby validating the 
+model's capacity to internalize structured logical operations. Conversely, poor 
+classification performance suggests the absence of a linearly recoverable 
+representation of the target logical relation.
 
 \subsubsection{Train-Test Splits and Validation Strategy}
 \correction{REVISION REQUIRED: Change "cross-validation protocol" to "predefined train/dev/test split strategy". Provide explicit metrics: total count of records per split, class distributions, baseline comparison configurations, and clarify if individual probes are assigned to implication, conjunction, negation, and atomic terms.}
