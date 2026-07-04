@@ -122,21 +122,21 @@ With the same principle mirrored for training classification probes for other
 desired logical relationships such as equivalence, conjunction, and disjunction.
 
 A nominal example of a pipeline utilizing successfully trained probes is 
-proposed in Figure~\ref{intro-example-text} with the corresponding 
-visualization of the resulting graph in Figure~\ref{intro-example-graph}.
+proposed in Figure~\ref{fig:intro-example-text} with the corresponding 
+visualization of the resulting graph in Figure~\ref{fig:intro-example-graph}.
 
 \begin{figure}[h!t]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/intro-example-text.pdf}
     \caption{Pipeline from natural language to logical graph representation.}
-    \label{intro-example-text}
+    \label{fig:intro-example-text}
 \end{figure}
 
 \begin{figure}[h!t]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/intro-example-graph.pdf}
     \caption{Visualization of the logical graph extracted from the natural language example.}
-    \label{intro-example-graph}
+    \label{fig:intro-example-graph}
 \end{figure}
 
 
@@ -186,21 +186,35 @@ objectives are outlined below:
 \section{Data}
 
 \subsection{Ingestion}
-The dataset selected for this project is \textbf{LogicNLI}~\cite{tian-etal-2021-diagnosing}, an open-source diagnostic benchmark hosted by the Hugging Face hub.
-\correction{REVISION REQUIRED: Move this GitHub link from a footnote into the formal references file (refs.bib) and cite it properly here.}
-The dataset in JSON was retrieved directly from the authors' GitHub repository.\footnote{https://github.com/omnilabNLP/LogicNLI/tree/main}
-\correction{INSERT REQUIRED: Expand origin context here. Explain who created LogicNLI, why it was created, what specific kinds of logical reasoning patterns it tests, and why its synthetic composition benefits this study.}
-There have been no obstacles in acquiring the dataset, as it is publicly 
-available and well-documented thanks to the work of the authors.
-The dataset is stored locally in a structured directory within the project repository, ensuring easy access for preprocessing and analysis.
+The dataset selected for this project is LogicNLI, an open-source diagnostic 
+benchmark hosted on the Hugging Face hub and developed by Tian et al.. LogicNLI 
+was specifically created to address growing concerns regarding whether modern 
+language models (LMs) truly possess reasoning capabilities or if they merely 
+rely on spurious statistical correlations.
+
+As a Natural Language Inference (NLI)-style dataset, LogicNLI is designed to 
+isolate First-Order Logical (FOL) reasoning from ``common sense'' and domain 
+knowledge. It accomplishes this by utilizing a synthetic composition consisting 
+of triplets of ``facts'', ``rules'', and ``statements'' that test a model's 
+ability to handle fundamental logical operators; such as conjunction, disjunction, 
+negation, implication, equivalence, and universal and existential quantifiers. 
+This synthetic approach is highly beneficial for this study because it provides 
+a controlled environment to evaluate model performance across four key 
+diagnostic perspectives: overall accuracy, robustness to irrelevant information, 
+more-hop generalization, and proof-based traceability\cite{tian-etal-2021-diagnosing}.
+
+The data is publicly available and well-documented. For this project the dataset 
+is stored locally in a structured directory within the project repository, 
+ensuring easy access for preprocessing and analysis.
 
 \subsection{Exploration}
 Initial exploratory data analysis revealed a highly uniform, balanced, and 
 synthetically controlled dataset structure across its 20,000 entries.
-The target \texttt{labels} field contains a near-perfect balanced split across its 
-classification categories (Entailment, Contradiction, Self-Contradiction, and 
-Neutral) eliminating the risk of majority-class bias during probe calibration.
-A structural analysis of the text fields highlights the specific syntactic attributes of the dataset:
+The target \texttt{labels} field contains a near-perfect balanced split across 
+its classification categories (Entailment, Contradiction, Self-Contradiction, 
+and Neutral) eliminating the risk of majority-class bias during probe 
+calibration. A structural analysis of the text fields highlights the specific 
+syntactic attributes of the dataset:
 
 \begin{itemize}
     \item \textbf{Facts Array:} This field contains flat, atomic assertions of 
@@ -220,7 +234,37 @@ A structural analysis of the text fields highlights the specific syntactic attri
     value defined by the formal deduction of the combined rules and facts.
 \end{itemize}
 
-\correction{INSERT REQUIRED: Include raw data record examples here to explicitly ground the contents of the dataset for the reader.}
+An abbreviated example of one raw record from LogicNLI's dataset is shown in 
+Figure~\ref{fig:logicnli-example}.
+
+\begin{figure}[h!tbp]
+    \centering
+    \begin{small}
+    \begin{verbatim}
+{
+  "facts": [
+    "Eli is not soft.", "Patricia is civil.", "Broderick is soft.", 
+    "Paul is civil.", "Miles is not southern.", "Paul is not scared.", 
+    "Ronald is jittery.", "Broderick is not scared.", 
+    "Broderick is not poised.", "Paul is not poised.", 
+    "Eli is not jittery.", "Eli is not poised."
+  ],
+  "rules": [
+    "If someone is southern, then he is neither jittery nor soft.",
+    "If someone is jittery or soft, then he is scared.",
+    "As long as someone is soft, he is poised and not scared.",
+    "Someone who is not jittery is always both civil and not soft."
+    ...
+  ],
+  "statements": ["Patricia is scared.", "Eli is not soft."],
+  "labels": ["entailment", "entailment"]
+}
+    \end{verbatim}
+    \end{small}
+    \caption{Example data record from the LogicNLI dataset, illustrating the 
+    synthetic structure of facts, rules, and logical statements.}
+    \label{fig:logicnli-example}
+\end{figure}
 
 Exploratory token length histograms further confirmed tight distribution peaks, 
 ensuring that the model's intermediate hidden layers will not suffer from 
