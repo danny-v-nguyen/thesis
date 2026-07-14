@@ -6,38 +6,29 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from torch.utils.data import Dataset, DataLoader
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, f1_score
+from sklearn.metrics import f1_score, accuracy_score
 from tqdm import tqdm
 
 # ==========================================
-# 1. PATH CONFIGURATION
+# 1. CONFIGURATION & LAYERS TO PROBE
 # ==========================================
-# Directory where intermediate extracted features and final probe will be stored
-CACHE_DIR = "./probe_cache"
+# We will probe these layers to see the logical evolution in the model's middle layers
+TARGET_LAYERS = [10, 11, 12, 13, 14]
+
+CACHE_DIR = "./probe_cache_multi"
 os.makedirs(CACHE_DIR, exist_ok=True)
-
-PROBE_SAVE_PATH = os.path.join(CACHE_DIR, "logistic_regression_probe.pkl")
-
-# File paths for saving/resuming extracted features
-FEATURE_PATHS = {
-    "Train": {
-        "X": os.path.join(CACHE_DIR, "X_train.npy"),
-        "y": os.path.join(CACHE_DIR, "y_train.npy")
-    },
-    "Dev": {
-        "X": os.path.join(CACHE_DIR, "X_dev.npy"),
-        "y": os.path.join(CACHE_DIR, "y_dev.npy")
-    },
-    "Test": {
-        "X": os.path.join(CACHE_DIR, "X_test.npy"),
-        "y": os.path.join(CACHE_DIR, "y_test.npy")
-    }
-}
 
 LABEL_MAP = {"fact": 0, "implication": 1, "negation": 2}
 
+# Determine paths dynamically for each targeted layer
+def get_feature_paths(split_name, layer):
+    return {
+        "X": os.path.join(CACHE_DIR, f"X_{split_name}_layer{layer}.npy"),
+        "y": os.path.join(CACHE_DIR, f"y_{split_name}_layer{layer}.npy")
+    }
+
 # ==========================================
-# 2. PYTORCH BATCHING DATASET
+# 2. PYTORCH DATASET
 # ==========================================
 class LogicNLIDataset(Dataset):
     def __init__(self, csv_path):
@@ -53,120 +44,167 @@ class LogicNLIDataset(Dataset):
         return self.sentences[idx], self.labels[idx]
 
 # ==========================================
-# 3. BATTERED EXTRACTION ENGINE
+# 3. MULTI-LAYER EXTRACTION ENGINE
 # ==========================================
-def extract_features_batched(csv_path, batch_size=32, split_name="Split"):
+def extract_features_multi_layer(csv_path, batch_size=32, split_name="Split"):
     """
-    Extracts features or resumes from a saved .npy checkpoint if it exists.
+    Extracts features for all TARGET_LAYERS in parallel. 
+    Resumes from cache if all target layer files already exist.
     """
-    x_cache_path = FEATURE_PATHS[split_name]["X"]
-    y_cache_path = FEATURE_PATHS[split_name]["y"]
+    # Check if all layers are already cached for this split
+    all_cached = True
+    for layer in TARGET_LAYERS:
+        paths = get_feature_paths(split_name, layer)
+        if not (os.path.exists(paths["X"]) and os.path.exists(paths["y"])):
+            all_cached = False
+            break
 
-    # --- RESUME / CHECKPOINT CHECK ---
-    if os.path.exists(x_cache_path) and os.path.exists(y_cache_path):
-        print(f"--> Found cached features for [{split_name}]. Loading from disk to resume instantly...")
-        X = np.load(x_cache_path)
-        y = np.load(y_cache_path)
-        return X, y
+    if all_cached:
+        print(f"--> [All Layers Cached] Resuming [{split_name}] instantly from disk.")
+        data_by_layer = {}
+        for layer in TARGET_LAYERS:
+            paths = get_feature_paths(split_name, layer)
+            data_by_layer[layer] = (np.load(paths["X"]), np.load(paths["y"]))
+        return data_by_layer
 
-    # If no cache exists, load model infrastructure dynamically to preserve VRAM/RAM until needed
-    print(f"--> No cache found for [{split_name}]. Initializing model for extraction...")
+    print(f"--> [Extraction Needed] Initializing Llama 3.2-3B for [{split_name}] extraction...")
     
     global model, tokenizer, extracted_activations
     if 'model' not in globals():
-        print("Loading Llama 3.2-3B...")
         model_id = "meta-llama/Llama-3.2-3B"
         tokenizer = AutoTokenizer.from_pretrained(model_id)
         tokenizer.pad_token = tokenizer.eos_token
         tokenizer.padding_side = "right" 
         
-        model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.float16, device_map="auto")
+        # Explicitly load model on GPU (fp16)
+        model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.float16, device_map="auto")
         
         extracted_activations = {}
-        def residual_stream_hook(module, input, output):
-            if isinstance(output, (tuple, list)):
-                extracted_activations["hidden_states"] = output[0]
-            else:
-                extracted_activations["hidden_states"] = output
+        
+        # Dynamically create hooks for each target layer
+        def make_hook(layer_idx):
+            def hook(module, input, output):
+                # Ensure batch dims are preserved dynamically
+                if isinstance(output, (tuple, list)):
+                    extracted_activations[f"layer_{layer_idx}"] = output[0]
+                else:
+                    extracted_activations[f"layer_{layer_idx}"] = output
+            return hook
 
-        target_layer = model.model.layers[12]
-        target_layer.register_forward_hook(residual_stream_hook)
+        # Register forward hooks on all target layers
+        for layer in TARGET_LAYERS:
+            target_layer_module = model.model.layers[layer]
+            target_layer_module.register_forward_hook(make_hook(layer))
 
     dataset = LogicNLIDataset(csv_path)
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
     
-    X_list = []
+    # Storage arrays for each target layer
+    X_lists = {layer: [] for layer in TARGET_LAYERS}
     Y_list = []
     
     progress_description = f"Extracting {split_name:<5}"
-    
     for batch_sentences, batch_labels in tqdm(dataloader, desc=progress_description, unit="batch"):
-        inputs = tokenizer(
-            list(batch_sentences), 
-            padding=True, 
-            truncation=True, 
-            return_tensors="pt"
-        )
+        inputs = tokenizer(list(batch_sentences), padding=True, truncation=True, return_tensors="pt")
         inputs = {k: v.to(model.device) for k, v in inputs.items()}
         
         with torch.no_grad():
             model(**inputs)
             
-        layer_hidden_states = extracted_activations["hidden_states"]
         attention_mask = inputs["attention_mask"]
         
-        # Masked mean-pooling
-        input_mask_expanded = attention_mask.unsqueeze(-1).expand(layer_hidden_states.size()).float()
-        sum_embeddings = torch.sum(layer_hidden_states * input_mask_expanded, dim=1)
-        sum_mask = input_mask_expanded.sum(dim=1)
-        sum_mask = torch.clamp(sum_mask, min=1e-9)
-        mean_pooled_batch = (sum_embeddings / sum_mask).detach().cpu().numpy()
-        
-        X_list.append(mean_pooled_batch)
+        # Perform masked mean pooling for every captured layer
+        for layer in TARGET_LAYERS:
+            layer_hidden_states = extracted_activations[f"layer_{layer}"]
+            
+            # Masked Mean-pooling calculations
+            input_mask_expanded = attention_mask.unsqueeze(-1).expand(layer_hidden_states.size()).float()
+            sum_embeddings = torch.sum(layer_hidden_states * input_mask_expanded, dim=1)
+            sum_mask = input_mask_expanded.sum(dim=1)
+            sum_mask = torch.clamp(sum_mask, min=1e-9)
+            mean_pooled_batch = (sum_embeddings / sum_mask).detach().cpu().numpy()
+            
+            X_lists[layer].append(mean_pooled_batch)
+            
         Y_list.extend(batch_labels.numpy())
         
-    X = np.vstack(X_list)
-    y = np.array(Y_list)
-
-    # Save features to disk to enable resuming later
-    print(f"Saving extracted [{split_name}] features to disk...")
-    np.save(x_cache_path, X)
-    np.save(y_cache_path, y)
-    
-    return X, y
+    # Stack, save, and cache arrays for each layer
+    results = {}
+    y_final = np.array(Y_list)
+    for layer in TARGET_LAYERS:
+        X_final = np.vstack(X_lists[layer])
+        paths = get_feature_paths(split_name, layer)
+        
+        np.save(paths["X"], X_final)
+        np.save(paths["y"], y_final)
+        results[layer] = (X_final, y_final)
+        
+    return results
 
 # ==========================================
-# 4. RUN PIPELINE
+# 4. RUN PIPELINE & COMPARE
 # ==========================================
 if __name__ == "__main__":
     BATCH_SIZE = 32 
 
-    # 1. Extract/Resume Dataset Splits
-    X_train, y_train = extract_features_batched("./data/logicnli_probing_targets-train.csv", batch_size=BATCH_SIZE, split_name="Train")
-    X_dev, y_dev = extract_features_batched("./data/logicnli_probing_targets-dev.csv", batch_size=BATCH_SIZE, split_name="Dev")
-    X_test, y_test = extract_features_batched("./data/logicnli_probing_targets-test.csv", batch_size=BATCH_SIZE, split_name="Test")
+    # Extract/Resume for all layers
+    train_data = extract_features_multi_layer("./data/logicnli_probing_targets-train.csv", batch_size=BATCH_SIZE, split_name="Train")
+    dev_data = extract_features_multi_layer("./data/logicnli_probing_targets-dev.csv", batch_size=BATCH_SIZE, split_name="Dev")
+    test_data = extract_features_multi_layer("./data/logicnli_probing_targets-test.csv", batch_size=BATCH_SIZE, split_name="Test")
     
-    # Clean up model from GPU memory to make room for downstream work
+    # Safely free GPU VRAM before running ML classifiers
     if 'model' in globals():
         del model
         torch.cuda.empty_cache()
 
-    # 2. Train and Serialize the Probe
-    print("\nTraining Linear Probe...")
-    probe = LogisticRegression(l1_ratio=0, max_iter=10000)
-    probe.fit(X_train, y_train)
-    print("Training complete.")
+    # Results tracker
+    layer_metrics = []
 
-    # Save the trained probe model to disk
-    with open(PROBE_SAVE_PATH, "wb") as f:
-        pickle.dump(probe, f)
-    print(f"Saved trained probe classifier to: {PROBE_SAVE_PATH}")
-    
-    # 3. Evaluate
-    print("\nEvaluating on Validation (Dev) set...")
-    dev_preds = probe.predict(X_dev)
-    print(f"Validation Macro F1-Score: {f1_score(y_dev, dev_preds, average='macro'):.4f}")
-    
-    print("\n=== FINAL TEST EVALUATION ===")
-    test_preds = probe.predict(X_test)
-    print(classification_report(y_test, test_preds, target_names=list(LABEL_MAP.keys())))
+    print("\n--- Training and Evaluating Probes Across Layers ---")
+    for layer in TARGET_LAYERS:
+        print(f"Processing Layer {layer}...")
+        
+        X_tr, y_tr = train_data[layer]
+        X_de, y_de = dev_data[layer]
+        X_te, y_te = test_data[layer]
+        
+        # Train linear probe for this layer
+        probe = LogisticRegression(C=1.0, l1_ratio=0.0, max_iter=1000)
+        probe.fit(X_tr, y_tr)
+        
+        # Save probe model to disk
+        probe_path = os.path.join(CACHE_DIR, f"probe_layer_{layer}.pkl")
+        with open(probe_path, "wb") as f:
+            pickle.dump(probe, f)
+            
+        # Run evaluations
+        dev_preds = probe.predict(X_de)
+        test_preds = probe.predict(X_te)
+        
+        # Calculate per-class metrics
+        class_f1s = f1_score(y_te, test_preds, average=None)  # [fact_f1, implication_f1, negation_f1]
+        macro_f1 = f1_score(y_te, test_preds, average='macro')
+        accuracy = accuracy_score(y_te, test_preds)
+        
+        layer_metrics.append({
+            "Layer": layer,
+            "Accuracy": accuracy,
+            "Macro F1": macro_f1,
+            "Fact F1": class_f1s[0],
+            "Implication F1": class_f1s[1],
+            "Negation F1": class_f1s[2]
+        })
+
+    # Render results in a clean comparison table
+    df_results = pd.DataFrame(layer_metrics)
+    print("\n" + "="*65)
+    print("                LAYER COMPARISON SUMMARY")
+    print("="*65)
+    print(df_results.to_string(index=False, formatters={
+        "Accuracy": "{:.4f}".format,
+        "Macro F1": "{:.4f}".format,
+        "Fact F1": "{:.4f}".format,
+        "Implication F1": "{:.4f}".format,
+        "Negation F1": "{:.4f}".format,
+    }))
+    print("="*65)
