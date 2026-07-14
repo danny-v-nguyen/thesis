@@ -1,0 +1,3043 @@
+Sentence,Label
+Eli is not soft.,fact
+Patricia is civil.,fact
+Broderick is soft.,fact
+Paul is civil.,fact
+Miles is not southern.,fact
+Paul is not scared.,fact
+Ronald is jittery.,fact
+Broderick is not scared.,fact
+Broderick is not poised.,fact
+Paul is not poised.,fact
+Eli is not jittery.,fact
+Eli is not poised.,fact
+"If someone is southern, then he is neither jittery nor soft.",implication
+"If someone is jittery or soft, then he is scared.",implication
+"If there is someone who is southern, then Patricia is scared.",implication
+"If there is someone who is either not southern or not scared, then Patricia is poised.",implication
+"If there is at least one people who is either southern or not civil, then Paul is soft and Broderick is not poised.",implication
+It can be concluded that Broderick is scared once knowing that Miles is not soft.,implication
+It can be concluded that Eli is not jittery once knowing that Olive is not civil and Broderick is poised.,implication
+"As long as someone is soft, he is poised and not scared.",implication
+Someone who is not jittery is always both civil and not soft.,implication
+Ronald is not scared.,negation
+Paul is not southern.,negation
+Olive is not soft.,negation
+Eli is not southern.,negation
+Patricia is not scared.,negation
+Eli is not soft.,negation
+Ronald is not civil.,negation
+Broderick is not poised.,negation
+Paul is not soft.,negation
+Patricia is not civil.,negation
+Adler is angry.,fact
+Wiley is short.,fact
+Rosa is short.,fact
+Rosa is not angry.,fact
+Rosa is not poised.,fact
+Wiley is not poised.,fact
+Wiley is not angry.,fact
+Rosa is shiny.,fact
+Wiley is not different.,fact
+Cary is short.,fact
+Blaine is not different.,fact
+Dan is poised.,fact
+"If there is at least one people who is different or poised, then Wiley is talkative.",implication
+"If everyone is talkative or not poised, then Rosa is not angry.",implication
+"If Dan is shiny or Adler is different, then Wiley is short.",implication
+It can be concluded that Adler is angry and Blaine is not different once knowing that Rosa is not short.,implication
+Wiley being talkative or Adler being short implies that Wiley is different.,implication
+"If there is at least one people who is angry, then Dan is not talkative.",implication
+"If Blaine is poised and Blaine is not angry, then Rosa is different and Rosa is shiny.",implication
+"If there is someone who is not short, then Adler is talkative.",implication
+"If someone is short or not shiny, then he is not angry.",implication
+Rosa is not shiny.,negation
+Cary is not poised.,negation
+Adler is not talkative.,negation
+Lewis is not shiny.,negation
+Rosa is not poised.,negation
+Wiley is not different.,negation
+Wiley is not talkative.,negation
+Wiley is not angry.,negation
+Cary is not angry.,negation
+Juliana is giant.,fact
+Burgess is not technical.,fact
+Blaine is not gleaming.,fact
+Tristan is not gleaming.,fact
+Luther is not alert.,fact
+Lyndon is not technical.,fact
+Lyndon is not attractive.,fact
+Blaine is giant.,fact
+Tristan is not giant.,fact
+Luther is not giant.,fact
+Blaine is technical.,fact
+Tristan is not technical.,fact
+"If someone is not attractive, then he is both technical and gleaming.",implication
+"If someone is both technical and not loving, then he is giant.",implication
+"If someone is alert or he is not loving, then he is not giant.",implication
+"If there is someone who is either alert or not loving, then Blaine is giant.",implication
+Someone who is both alert and technical is always giant.,implication
+"If someone is he or not technical is not attractive, then he is gleaming.",implication
+"If there is at least one people who is alert or not loving, then Luther is not technical.",implication
+"If there is at least one people who is alert, then Lyndon is technical and Juliana is not loving.",implication
+Blaine is not giant.,negation
+Lyndon is not alert.,negation
+Jack is not loving.,negation
+Burgess is not gleaming.,negation
+Luther is not alert.,negation
+Tristan is not gleaming.,negation
+Juliana is not loving.,negation
+Wade is not faithful.,fact
+Wade is not fearless.,fact
+Lewis is reasonable.,fact
+Molly is not average.,fact
+Nigel is fearless.,fact
+Lewis is sparkling.,fact
+Owen is bewildered.,fact
+Molly is not bewildered.,fact
+Cara is fearless.,fact
+Molly is not faithful.,fact
+Owen is reasonable.,fact
+Lewis is not average.,fact
+"If all people are fearless, then Tyra is reasonable.",implication
+"If there is someone who is either fearless or faithful, then Tyra is not bewildered and Nigel is reasonable.",implication
+"If someone is not sparkling, then he is both average and faithful.",implication
+"If there is someone who is either not sparkling or not fearless, then Molly is bewildered.",implication
+"If there is someone who is not reasonable, then Cara is fearless and Nigel is not average.",implication
+"If there is at least one people who is both faithful and not reasonable, then Owen is bewildered.",implication
+Owen is not average.,negation
+Nigel is not average.,negation
+Lewis is not reasonable.,negation
+Tyra is not average.,negation
+Nigel is not reasonable.,negation
+Molly is not bewildered.,negation
+Cara is not faithful.,negation
+Wade is not faithful.,negation
+Cara is not average.,negation
+Wade is not average.,negation
+Nigel is not bewildered.,negation
+Molly is not average.,negation
+Wade is not fearless.,negation
+Ronald is long.,fact
+Ronald is not cultural.,fact
+Adler is not bad.,fact
+Adler is not sore.,fact
+Quincy is not sore.,fact
+Aaron is alert.,fact
+Luther is sore.,fact
+Adler is not alert.,fact
+Luther is average.,fact
+Wiley is not bad.,fact
+Ronald is not sore.,fact
+Christina is not cultural.,fact
+"If there is at least one people who is neither long nor bad, then Wiley is alert.",implication
+Someone who is bad is always both sore and not alert.,implication
+"If someone who is not long is also not alert, then he is sore.",implication
+"If all people are not sore, then Wiley is average.",implication
+"If someone is not cultural or not alert, then he is average.",implication
+"If there is someone who is both long and not cultural, then Aaron is bad.",implication
+It can be concluded that Wiley is bad once knowing that Quincy is not sore or Quincy is not long.,implication
+"If Christina is long and Christina is not alert, then Luther is average.",implication
+"If there is at least one people who is not long, then Ronald is cultural.",implication
+Wiley is not alert.,negation
+Aaron is not average.,negation
+Wiley is not cultural.,negation
+Ronald is not average.,negation
+Wiley is not bad.,negation
+Ronald is not long.,negation
+Luther is not long.,negation
+Luther is not sore.,negation
+Ronald is not cultural.,negation
+Luther is not average.,negation
+Eli is fair.,fact
+Shane is not fair.,fact
+Joey is not educational.,fact
+Halsey is new.,fact
+Aaron is fair.,fact
+Eli is not anxious.,fact
+Joey is fair.,fact
+Eli is educational.,fact
+Halsey is awful.,fact
+Shane is not educational.,fact
+Halbert is fair.,fact
+Halsey is short.,fact
+All not awful people are not educational.,implication
+"If there is at least one people who is both short and anxious, then Halsey is fair.",implication
+"If Halbert is new and Eli is not awful, then Halsey is anxious and Eli is not fair.",implication
+"If Halbert is not educational and Roderick is short, then Joey is awful.",implication
+"If Halsey is not new or Halbert is not awful, then Halsey is not educational.",implication
+Halsey being not short implies that Halbert is not awful.,implication
+"If Roderick is short, then Halsey is fair.",implication
+"If there is at least one people who is new, then Halsey is educational and Roderick is fair.",implication
+Eli is not educational.,negation
+Roderick is not fair.,negation
+Shane is not new.,negation
+Shane is not awful.,negation
+Udolf is bewildered.,fact
+Lowell is dry.,fact
+George is bewildered.,fact
+Russell is not southern.,fact
+Lowell is not bewildered.,fact
+Adam is not careful.,fact
+Seymour is not dry.,fact
+Adam is not anxious.,fact
+Crosby is careful.,fact
+Udolf is careful.,fact
+Adam is southern.,fact
+Russell is anxious.,fact
+It can be concluded that Lowell is sparkling once knowing that George is not bewildered or George is southern.,implication
+It can be concluded that Seymour is not dry once knowing that Seymour is not sparkling or Lowell is careful.,implication
+George being southern implies that Russell is bewildered.,implication
+"If someone is dry, then he is both anxious and not careful.",implication
+"If there is at least one people who is both bewildered and not southern, then Adam is careful.",implication
+"If there is at least one people who is not careful, then George is not sparkling.",implication
+"If all people are sparkling or not bewildered, then Seymour is not dry.",implication
+"As long as someone is southern, he is sparkling and careful.",implication
+"If there is someone who is not dry, then Russell is not southern and Crosby is not bewildered.",implication
+Lowell is not bewildered.,negation
+Seymour is not southern.,negation
+Udolf is not careful.,negation
+Russell is not southern.,negation
+Udolf is not bewildered.,negation
+Adam is not bewildered.,negation
+Lowell is not dry.,negation
+George is not careful.,negation
+George is not dry.,negation
+Lowell is not southern.,negation
+Russell is not careful.,negation
+Joseph is not technical.,fact
+Leroy is not impossible.,fact
+George is supportive.,fact
+Molly is not octagonal.,fact
+Broderick is not octagonal.,fact
+Lamont is impossible.,fact
+Joseph is not faithful.,fact
+George is not faithful.,fact
+George is octagonal.,fact
+Lamont is not supportive.,fact
+Broderick is impossible.,fact
+Brandan is technical.,fact
+"If all people are not supportive or not faithful, then Leroy is careful.",implication
+Leroy being not faithful implies that Joseph is not supportive and George is not octagonal.,implication
+Someone who is not supportive is always both faithful and not impossible.,implication
+"If there is at least one people who is faithful or not technical, then Brandan is supportive.",implication
+"If someone is octagonal or he is impossible, then he is not supportive.",implication
+"If there is at least one people who is faithful, then George is careful.",implication
+Broderick being supportive or Leroy being impossible implies that Leroy is careful.,implication
+Someone who is careful is always impossible.,implication
+"If George is not supportive or Leroy is not careful, then Leroy is faithful.",implication
+It can be concluded that Brandan is not faithful once knowing that Leroy is not octagonal.,implication
+"If Leroy is technical, then Brandan is not faithful and Molly is supportive.",implication
+It can be concluded that Brandan is technical and Leroy is not impossible once knowing that Molly is octagonal.,implication
+Molly is not impossible.,negation
+Leroy is not impossible.,negation
+Leroy is not technical.,negation
+Joseph is not faithful.,negation
+George is not supportive.,negation
+Broderick is not faithful.,negation
+Lamont is not impossible.,negation
+Lamont is not faithful.,negation
+Joseph is not impossible.,negation
+George is not faithful.,negation
+Gregory is not hungry.,fact
+Ronald is mushy.,fact
+Keith is teak.,fact
+Crosby is poised.,fact
+Shane is frank.,fact
+Gregory is poised.,fact
+Shane is not poised.,fact
+Keith is mushy.,fact
+Noel is not frank.,fact
+George is frank.,fact
+George is wicked.,fact
+Keith is frank.,fact
+"If someone is either mushy or not poised, then he is hungry and not wicked.",implication
+"If Gregory is not poised, then Shane is mushy.",implication
+"If there is at least one people who is wicked, then Shane is not poised and George is not frank.",implication
+"If there is nobody who is not, then Shane is teak and Shane is not poised.",implication
+"If there is at least one people who is poised or not hungry, then George is not mushy.",implication
+"If there is at least one people who is both wicked and not teak, then Crosby is poised.",implication
+"If Gregory is not teak and Crosby is wicked, then Keith is not mushy.",implication
+"If there is at least one people who is both hungry and wicked, then Noel is teak.",implication
+Noel is not mushy.,negation
+Shane is not mushy.,negation
+Shane is not wicked.,negation
+Shane is not hungry.,negation
+George is not mushy.,negation
+Ronald is not teak.,negation
+Crosby is not hungry.,negation
+Keith is not mushy.,negation
+Crosby is not wicked.,negation
+Abel is not bewildered.,fact
+Aaron is cultural.,fact
+Seymour is cultural.,fact
+Abel is able.,fact
+Maurice is jolly.,fact
+Cara is bewildered.,fact
+Maurice is cultural.,fact
+Abel is cultural.,fact
+Algernon is not jolly.,fact
+Algernon is not new.,fact
+Seymour is bewildered.,fact
+Maurice is new.,fact
+"If Algernon is not jolly or Maurice is able, then Cara is cultural.",implication
+"If there is at least one people who is both bewildered and not octagonal, then Algernon is jolly.",implication
+Someone who is not new is always both bewildered and cultural.,implication
+"If there is someone who is not new, then Lesley is not jolly and Lesley is octagonal.",implication
+"If someone is both jolly and not bewildered, then he is not cultural.",implication
+"If there is someone who is either new or not able, then Cara is not cultural.",implication
+"If there is someone who is not bewildered, then Cara is jolly.",implication
+Someone who is eithor not jolly or not able is always new.,implication
+"If there is at least one people who is bewildered, then Lesley is not cultural and Seymour is octagonal.",implication
+Algernon is not cultural.,negation
+Abel is not octagonal.,negation
+Maurice is not octagonal.,negation
+Abel is not able.,negation
+Lesley is not bewildered.,negation
+Cara is not octagonal.,negation
+Abel is not cultural.,negation
+Cara is not bewildered.,negation
+Aaron is not jolly.,negation
+Molly is frank.,fact
+Joseph is not wonderful.,fact
+Jasper is not poised.,fact
+Rose is octagonal.,fact
+Juliana is not substantial.,fact
+Juliana is talkative.,fact
+Molly is not talkative.,fact
+Juliana is wonderful.,fact
+Clarence is substantial.,fact
+Clarence is not frank.,fact
+Rose is talkative.,fact
+Jasper is not wonderful.,fact
+"If Molly is talkative or Molly is poised, then Joseph is substantial.",implication
+"If there is someone who is both substantial and frank, then Joseph is octagonal and Juliana is talkative.",implication
+"If there is at least one people who is poised or octagonal, then Juliana is not talkative.",implication
+"If Juliana is wonderful, then Molly is poised.",implication
+"If there is someone who is substantial, then Juliana is not frank.",implication
+"If there is someone who is octagonal, then Joseph is substantial and Juliana is frank.",implication
+"If Jasper is poised and Clarence is octagonal, then Rose is not wonderful.",implication
+"If there is someone who is not wonderful, then Juliana is not frank.",implication
+Joseph is not substantial.,negation
+Molly is not talkative.,negation
+Juliana is not poised.,negation
+Molly is not substantial.,negation
+Juliana is not octagonal.,negation
+Clarence is not substantial.,negation
+Graciela is not talkative.,negation
+Joseph is not wonderful.,negation
+Molly is not poised.,negation
+Graciela is not octagonal.,negation
+Molly is not wonderful.,negation
+Juliana is not wonderful.,negation
+Crosby is asleep.,fact
+Cyril is asleep.,fact
+Cyril is not zany.,fact
+Kody is bewildered.,fact
+Tristin is not melodic.,fact
+Godwin is not bad.,fact
+Tristin is asleep.,fact
+Cyril is not bad.,fact
+Kody is not melodic.,fact
+Cyril is not bewildered.,fact
+Godwin is zany.,fact
+Cyril is strong.,fact
+"If there is someone who is either asleep or not strong, then Barrett is bad.",implication
+"If everyone is not strong, then Crosby is zany and Barrett is not asleep.",implication
+"If someone is both zany and not bad, then he is not strong.",implication
+"If there is someone who is either bad or not asleep, then Crosby is melodic.",implication
+Kody being strong implies that Godfrey is not asleep.,implication
+"As long as someone is zany, he is strong and melodic.",implication
+"If someone is bewildered or not strong, then he is not bad.",implication
+"If there is someone who is bewildered, then Barrett is not strong.",implication
+"If there is at least one people who is not strong, then Cyril is melodic and Godwin is not zany.",implication
+It can be concluded that Tristin is zany once knowing that Kody is not asleep or Cyril is melodic.,implication
+Tristin is not asleep.,negation
+Crosby is not melodic.,negation
+Godfrey is not zany.,negation
+Tristin is not zany.,negation
+Cyril is not zany.,negation
+Kody is not melodic.,negation
+Godwin is not bad.,negation
+Godwin is not zany.,negation
+Barrett is not bad.,negation
+Tristin is not bad.,negation
+Tristin is not melodic.,negation
+Tyra is not persistent.,fact
+Juliana is new.,fact
+Cyril is not persistent.,fact
+Christopher is new.,fact
+Unwin is new.,fact
+Cyril is southern.,fact
+George is not persistent.,fact
+Tyra is not new.,fact
+Christopher is southern.,fact
+George is not strong.,fact
+Montague is not attractive.,fact
+Cyril is not attractive.,fact
+"If Unwin is not strong and Juliana is not southern, then Tyra is not attractive.",implication
+All persistent people are not new.,implication
+"If all people are not new, then Montague is not attractive and Montague is southern.",implication
+"As long as someone is either southern or not attractive, he is not strong and not new.",implication
+All persistent people are southern.,implication
+"If someone is southern, then he is both new and not fat.",implication
+Montague being new implies that Tyra is fat.,implication
+Montague is not fat.,negation
+Montague is not southern.,negation
+Tyra is not persistent.,negation
+Christopher is not new.,negation
+Juliana is not attractive.,negation
+George is not attractive.,negation
+Montague is not strong.,negation
+George is not new.,negation
+Juliana is not persistent.,negation
+Cyril is not attractive.,negation
+Christopher is not attractive.,negation
+Clarence is lovely.,fact
+Katelynn is not shiny.,fact
+Seymour is not shiny.,fact
+Katelynn is southern.,fact
+Clarence is not creative.,fact
+Seymour is not lovely.,fact
+Brandi is not cultural.,fact
+Lyndon is not lovely.,fact
+Seymour is cultural.,fact
+Luka is shiny.,fact
+Katelynn is cultural.,fact
+Lyndon is not creative.,fact
+It can be concluded that Katelynn is not southern once knowing that Brandi is cultural or Seymour is creative.,implication
+"If there is someone who is shiny, then Lewis is not cultural and Seymour is creative.",implication
+"If there is at least one people who is not creative or not southern, then Brandi is not hollow.",implication
+Someone who is cultural is always both shiny and not creative.,implication
+Someone who is both southern and lovely is always not cultural.,implication
+"If Katelynn is southern, then Seymour is not cultural and Lewis is shiny.",implication
+"If there is at least one people who is neither cultural nor southern, then Seymour is creative.",implication
+Lewis is not hollow.,negation
+Brandi is not hollow.,negation
+Seymour is not cultural.,negation
+Seymour is not creative.,negation
+Luka is not creative.,negation
+Brandi is not cultural.,negation
+Katelynn is not creative.,negation
+Lewis is not cultural.,negation
+Katelynn is not cultural.,negation
+Gregory is not soft.,fact
+Max is not significant.,fact
+Max is hollow.,fact
+Conrad is not significant.,fact
+Adler is not significant.,fact
+Lamont is combative.,fact
+Max is not precious.,fact
+Cary is hollow.,fact
+Adler is not combative.,fact
+Cary is significant.,fact
+Seymour is significant.,fact
+Conrad is not fearless.,fact
+Someone who is significant is always not fearless.,implication
+"If someone is not precious, then he is neither hollow nor soft.",implication
+"If someone is not soft or not significant, then he is hollow.",implication
+All not significant people are hollow.,implication
+"If someone is fearless, then he is not significant.",implication
+"If Adler is hollow, then Adler is not fearless and Lamont is not soft.",implication
+Conrad is not precious.,negation
+Lamont is not hollow.,negation
+Conrad is not significant.,negation
+Cary is not precious.,negation
+Gregory is not hollow.,negation
+Conrad is not soft.,negation
+Conrad is not fearless.,negation
+Conrad is not combative.,negation
+Lamont is not combative.,negation
+Seymour is not precious.,negation
+Cary is not fearless.,negation
+Adler is not combative.,negation
+Montague is not bad.,fact
+Ansel is energetic.,fact
+Iver is bewildered.,fact
+Barry is not bad.,fact
+Jasper is not bewildered.,fact
+Barry is wild.,fact
+Ansel is not bad.,fact
+Barry is bewildered.,fact
+Luka is not poor.,fact
+Ansel is bewildered.,fact
+Jasper is not bad.,fact
+Lowell is energetic.,fact
+"If there is at least one people who is not wild, then Montague is bewildered and Luka is not poor.",implication
+"If Ansel is bewildered, then Montague is wild.",implication
+"If someone who is not wild is also bad, then he is not bewildered.",implication
+"If someone is poor or he is bad, then he is energetic.",implication
+Lowell being not supportive or Barry being not energetic implies that Ansel is not wild.,implication
+"As long as someone is energetic, he is supportive and wild.",implication
+It can be concluded that Montague is not poor once knowing that Barry is bewildered or Iver is energetic.,implication
+"If someone is not energetic or not bad, then he is not bewildered.",implication
+It can be concluded that Luka is not supportive once knowing that Luka is bewildered.,implication
+Lowell being not wild implies that Luka is poor and Ansel is bad.,implication
+"If there is at least one people who is supportive or not wild, then Barry is bewildered.",implication
+Ansel is not supportive.,negation
+Luka is not poor.,negation
+Iver is not bewildered.,negation
+Montague is not bewildered.,negation
+Ansel is not bewildered.,negation
+Montague is not energetic.,negation
+Barry is not wild.,negation
+Ansel is not energetic.,negation
+Barry is not bewildered.,negation
+Eli is not average.,fact
+Juliana is not civil.,fact
+Lamont is not octagonal.,fact
+Janine is several.,fact
+Eli is hollow.,fact
+Janine is not hollow.,fact
+Juliana is not average.,fact
+Juliana is not fair.,fact
+Eli is several.,fact
+Christina is hollow.,fact
+Janine is civil.,fact
+Lamont is hollow.,fact
+It can be concluded that Eli is fair and Juliana is average once knowing that Lamont is civil.,implication
+"If Luka is not hollow, then Juliana is fair.",implication
+"If there is at least one people who is civil or average, then Luka is not octagonal.",implication
+"If there is at least one people who is average, then Janine is octagonal and Juliana is several.",implication
+"If there is someone who is both octagonal and hollow, then Luka is not average and Janine is not civil.",implication
+It can be concluded that Luka is fair once knowing that Janine is civil.,implication
+"If Lamont is not fair, then Lamont is several and Eli is octagonal.",implication
+Someone who is eithor hollow or not fair is always not several.,implication
+"If there is someone who is hollow, then Janine is not average and Christina is not civil.",implication
+Juliana is not average.,negation
+Eli is not hollow.,negation
+Christina is not average.,negation
+Lamont is not fair.,negation
+Luka is not civil.,negation
+Barry is not civil.,negation
+Eli is not average.,negation
+Barry is not average.,negation
+Christina is not fair.,negation
+Christopher is not teak.,fact
+Jack is not dry.,fact
+Christopher is new.,fact
+Jack is not supportive.,fact
+Molly is new.,fact
+Luka is not teak.,fact
+Kayleigh is not new.,fact
+Montague is anxious.,fact
+Montague is teak.,fact
+Molly is dry.,fact
+Kayleigh is not supportive.,fact
+Quincy is not anxious.,fact
+"If there is at least one people who is teak, then Montague is anxious and Luka is not supportive.",implication
+"If someone is new or dry, then he is not supportive.",implication
+It can be concluded that Quincy is not supportive once knowing that Jack is teak or Quincy is new.,implication
+Someone who is new is always supportive.,implication
+"If there is at least one people who is both anxious and supportive, then Molly is not busy.",implication
+Someone who is not teak is always both anxious and new.,implication
+"If there is someone who is not new, then Molly is not busy.",implication
+Quincy is not new.,negation
+Molly is not new.,negation
+Luka is not anxious.,negation
+Montague is not dry.,negation
+Molly is not busy.,negation
+Quincy is not anxious.,negation
+Christopher is not teak.,negation
+Molly is not teak.,negation
+Luka is not supportive.,negation
+Kayleigh is not supportive.,negation
+Barnaby is not happy.,fact
+Christina is happy.,fact
+Ansel is happy.,fact
+Lewis is bewildered.,fact
+Ansel is substantial.,fact
+Cary is not old.,fact
+Quincy is substantial.,fact
+Quincy is not witty.,fact
+Quincy is bewildered.,fact
+Quincy is happy.,fact
+Cary is bewildered.,fact
+Barnaby is not sudden.,fact
+"If there is at least one people who is both old and sudden, then Lewis is not substantial.",implication
+"If someone who is sudden is also bewildered, then he is happy.",implication
+"if there is at least one people who is sudden and not witty, then Barnaby is substantial and Quincy is happy.",implication
+It can be concluded that Barnaby is sudden once knowing that Morgan is not happy and Morgan is witty.,implication
+"If someone is he or not happy is bewildered, then he is not old.",implication
+Lewis is not witty.,negation
+Quincy is not witty.,negation
+Lewis is not bewildered.,negation
+Lewis is not old.,negation
+Quincy is not old.,negation
+Quincy is not bewildered.,negation
+Christina is not witty.,negation
+Quincy is not happy.,negation
+Ansel is not happy.,negation
+Godwin is not combative.,fact
+Patricia is not bewildered.,fact
+Russell is not busy.,fact
+Godwin is not stubborn.,fact
+Russell is combative.,fact
+Russell is stubborn.,fact
+Lowell is not melodic.,fact
+Patricia is busy.,fact
+Aldrich is not busy.,fact
+Aldrich is not combative.,fact
+Lowell is not busy.,fact
+Patricia is not broad-minded.,fact
+Someone who is eithor combative or not broad-minded is always bewildered.,implication
+It can be concluded that Patricia is melodic once knowing that Godwin is not stubborn and Lyndon is not broad-minded.,implication
+"if there is at least one people who is not combative and not busy, then Lowell is not melodic and Lowell is not broad-minded.",implication
+"If there is at least one people who is neither combative nor bewildered, then Lowell is not melodic.",implication
+"If someone is combative, then he is both broad-minded and not melodic.",implication
+"As long as someone is not stubborn, he is melodic and combative.",implication
+It can be concluded that Aldrich is not busy and Aaron is bewildered once knowing that Aaron is not combative.,implication
+All not broad-minded people are busy.,implication
+Aldrich being not melodic and Aldrich being not busy imply that Lowell is broad-minded.,implication
+"If someone is stubborn or not busy, then he is broad-minded.",implication
+Lowell is not bewildered.,negation
+Aldrich is not busy.,negation
+Aaron is not bewildered.,negation
+Lowell is not melodic.,negation
+Godwin is not bewildered.,negation
+Aldrich is not broad-minded.,negation
+Lowell is not busy.,negation
+Aaron is not broad-minded.,negation
+Godwin is not combative.,negation
+Godwin is not melodic.,negation
+Tyra is not shiny.,fact
+Whitney is not asleep.,fact
+Aldrich is aggressive.,fact
+Tyra is not asleep.,fact
+Terry is not sore.,fact
+Aldrich is shiny.,fact
+Tyra is hard.,fact
+Orson is not aggressive.,fact
+Aldrich is not asleep.,fact
+Orson is not different.,fact
+Rose is asleep.,fact
+Tyra is different.,fact
+"If all people are not sore, then Whitney is not aggressive.",implication
+"If Whitney is hard, then Rose is sore and Juliana is shiny.",implication
+"If someone is neither hard nor aggressive, then he is not sore.",implication
+"If Rose is aggressive and Juliana is hard, then Aldrich is not shiny.",implication
+Someone who is aggressive is always not shiny.,implication
+"If there is someone who is not aggressive, then Rose is not shiny and Whitney is not sore.",implication
+"If Terry is different, then Orson is asleep and Whitney is hard.",implication
+"If there is at least one people who is not aggressive, then Orson is not hard and Juliana is different.",implication
+Orson is not hard.,negation
+Whitney is not sore.,negation
+Orson is not asleep.,negation
+Aldrich is not shiny.,negation
+Tyra is not hard.,negation
+Aldrich is not aggressive.,negation
+Terry is not sore.,negation
+Tyra is not aggressive.,negation
+Morgan is not hungry.,fact
+Keith is hungry.,fact
+Ernest is not recent.,fact
+Leroy is not gleaming.,fact
+Keith is not recent.,fact
+Cara is not lovely.,fact
+Cary is not precious.,fact
+Leroy is not lovely.,fact
+Morgan is not recent.,fact
+Leroy is not precious.,fact
+Leroy is fat.,fact
+Ernest is not hungry.,fact
+"If Leroy is fat, then Leroy is hungry and Ernest is lovely.",implication
+"If all people are fat, then Cary is not gleaming.",implication
+"If there is someone who is both gleaming and not recent, then Ronald is not precious and Cara is not hungry.",implication
+"If there is someone who is not fat, then Cary is lovely and Ernest is hungry.",implication
+"As long as someone is not lovely, he is precious and not gleaming.",implication
+"If someone who is not lovely is also fat, then he is hungry.",implication
+"If Cary is gleaming, then Cary is lovely.",implication
+"If there is someone who is either fat or not hungry, then Cary is not lovely.",implication
+"If there is someone who is both precious and hungry, then Morgan is not gleaming.",implication
+Ernest is not hungry.,negation
+Ernest is not gleaming.,negation
+Ernest is not fat.,negation
+Cara is not precious.,negation
+Ernest is not lovely.,negation
+Morgan is not recent.,negation
+Leroy is not gleaming.,negation
+Cara is not recent.,negation
+Leroy is not hungry.,negation
+Keith is not recent.,negation
+Jasper is broad-minded.,fact
+Benedict is not aggressive.,fact
+Brandi is prickly.,fact
+Lamont is prickly.,fact
+Benedict is not prickly.,fact
+Janine is sore.,fact
+Nigel is sparkling.,fact
+Nigel is not sore.,fact
+Nigel is not broad-minded.,fact
+Janine is sparkling.,fact
+Jasper is impossible.,fact
+Jasper is not sparkling.,fact
+Someone who is eithor sore or not aggressive is always not impossible.,implication
+"If there is at least one people who is neither sore nor aggressive, then Janine is not prickly.",implication
+It can be concluded that Brandi is sparkling once knowing that Benedict is aggressive.,implication
+Max being not impossible implies that Max is not sore and Lamont is sparkling.,implication
+Someone who is not sore is always not broad-minded.,implication
+"If there is at least one people who is prickly, then Benedict is not impossible and Lamont is sore.",implication
+Someone who is not sore is always not aggressive.,implication
+Jasper is not broad-minded.,negation
+Janine is not impossible.,negation
+Nigel is not sore.,negation
+Lamont is not aggressive.,negation
+Benedict is not broad-minded.,negation
+Jasper is not impossible.,negation
+Joseph is graceful.,fact
+Janine is not graceful.,fact
+Tristin is not graceful.,fact
+Janine is not careful.,fact
+Tristin is graceful.,fact
+Janine is not attractive.,fact
+Janine is graceful.,fact
+Tristin is strong.,fact
+Joseph is not broad-minded.,fact
+Janine is broad-minded.,fact
+Maurice is graceful.,fact
+Joseph is strong.,fact
+"If Peyton is careful, then Owen is not strong and Aaron is not attractive.",implication
+"If there is at least one people who is broad-minded, then Maurice is attractive and Maurice is not careful.",implication
+"If Maurice is not strong and Peyton is not graceful, then Owen is broad-minded and Maurice is attractive.",implication
+"If there is someone who is both graceful and graceful, then Aaron is not attractive.",implication
+"If there is at least one people who is broad-minded, then Peyton is careful and Janine is graceful.",implication
+"If Joseph is not broad-minded and Joseph is not careful, then Aaron is not attractive.",implication
+"If there is someone who is not strong, then Peyton is graceful and Maurice is graceful.",implication
+Joseph is not graceful.,negation
+Owen is not careful.,negation
+Peyton is not careful.,negation
+Tristin is not broad-minded.,negation
+Aaron is not broad-minded.,negation
+Tristin is not graceful.,negation
+Tristin is not attractive.,negation
+Owen is not strong.,negation
+Aaron is not careful.,negation
+Peyton is not graceful.,negation
+Janine is not attractive.,negation
+Tristin is not strong.,negation
+Peyton is not attractive.,negation
+Janine is not careful.,negation
+Jasper is not able.,fact
+Jack is not frank.,fact
+Jasper is civil.,fact
+George is not civil.,fact
+Burgess is frank.,fact
+Roderick is jolly.,fact
+Myra is not civil.,fact
+Roderick is precious.,fact
+Jack is jolly.,fact
+Burgess is not able.,fact
+Miles is not jolly.,fact
+Jasper is jolly.,fact
+It can be concluded that Roderick is not able once knowing that Burgess is jolly.,implication
+"If there is someone who is both able and jolly, then Jasper is not frank.",implication
+"If there is at least one people who is not frank or not civil, then Roderick is able.",implication
+"If there is someone who is able, then George is not frank and Jack is not technical.",implication
+"If there is nobody who is not, then Jack is not frank.",implication
+"If there is at least one people who is not frank or not precious, then Roderick is not able.",implication
+"If someone is frank, then he is neither precious nor civil.",implication
+It can be concluded that George is not technical once knowing that Burgess is not jolly or Roderick is not civil.,implication
+"If someone is he or not precious is technical, then he is not jolly.",implication
+Roderick being able implies that Burgess is precious and Jack is not civil.,implication
+Burgess is not precious.,negation
+Burgess is not technical.,negation
+Roderick is not precious.,negation
+George is not technical.,negation
+Miles is not jolly.,negation
+George is not jolly.,negation
+Jack is not frank.,negation
+Roderick is not frank.,negation
+Myra is not able.,negation
+Jack is not jolly.,negation
+Burgess is not able.,negation
+Jasper is not civil.,negation
+Kenyon is attractive.,fact
+Christopher is not shiny.,fact
+Kenyon is not shiny.,fact
+Christopher is not teak.,fact
+Shane is not able.,fact
+Morgan is not attractive.,fact
+Jack is graceful.,fact
+Christopher is attractive.,fact
+Jack is not able.,fact
+Jack is not shiny.,fact
+Morgan is able.,fact
+Jack is not teak.,fact
+"If there is someone who is either attractive or graceful, then Jack is not able.",implication
+Someone who is not shiny is always attractive.,implication
+Someone who is shiny or not attractive is always hot and graceful.,implication
+Someone who is both able and not graceful is always not teak.,implication
+"If someone is neither able nor shiny, then he is not teak.",implication
+"If there is someone who is shiny, then Jack is not attractive and Morgan is hot.",implication
+Noel being not able and Shane being attractive imply that Morgan is teak.,implication
+"As long as someone is not graceful and not able, he is shiny and not teak.",implication
+"If there is someone who is hot, then Christopher is shiny and Christopher is attractive.",implication
+Morgan is not hot.,negation
+Shane is not hot.,negation
+Christopher is not attractive.,negation
+Christopher is not shiny.,negation
+Christopher is not teak.,negation
+Shane is not teak.,negation
+Noel is not attractive.,negation
+Kenyon is not attractive.,negation
+Cyril is not technical.,fact
+Max is not alert.,fact
+Barry is impossible.,fact
+Max is lovely.,fact
+Cyril is impossible.,fact
+Cyril is not attractive.,fact
+Shane is technical.,fact
+Tristan is not lovely.,fact
+Lamont is not alert.,fact
+Max is not impossible.,fact
+Lamont is attractive.,fact
+Max is not technical.,fact
+"If there is someone who is either attractive or careful, then Lesley is impossible and Cyril is alert.",implication
+"If someone is both lovely and alert, then he is attractive.",implication
+"If someone is impossible and not careful, then he is not technical and not alert.",implication
+"If someone who is not lovely is also impossible, then he is attractive.",implication
+"If there is someone who is both careful and not impossible, then Shane is not attractive and Lamont is technical.",implication
+Someone who is eithor attractive or lovely is always impossible.,implication
+"If Shane is attractive or Shane is not alert, then Shane is impossible.",implication
+"If there is someone who is either not alert or not technical, then Tristan is impossible.",implication
+"If there is someone who is not careful, then Lesley is attractive and Lamont is impossible.",implication
+Lamont is not attractive.,negation
+Lesley is not technical.,negation
+Max is not alert.,negation
+Max is not lovely.,negation
+Barry is not lovely.,negation
+Tristan is not careful.,negation
+Ronald is not frank.,fact
+Christopher is asleep.,fact
+Gerald is awful.,fact
+Gerald is not civil.,fact
+Christopher is frank.,fact
+Christopher is new.,fact
+Jack is not civil.,fact
+Julie is new.,fact
+Ronald is not asleep.,fact
+Ronald is awful.,fact
+Jack is awful.,fact
+Brandi is civil.,fact
+"If there is someone who is not awful, then Ronald is not asleep.",implication
+It can be concluded that Peyton is not frank once knowing that Christopher is not asleep and Gerald is not new.,implication
+"If there is at least one people who is not new, then Peyton is awful.",implication
+"If someone is not asleep or not awful, then he is broad-minded.",implication
+Someone who is eithor broad-minded or civil is always not new.,implication
+"If Ronald is asleep, then Brandi is not frank and Julie is not broad-minded.",implication
+"If there is at least one people who is new or civil, then Julie is broad-minded.",implication
+"If someone is not new, then he is not frank.",implication
+"If Jack is frank and Gerald is asleep, then Gerald is new.",implication
+"If there is at least one people who is both broad and not asleep-minded, then Christopher is new.",implication
+Gerald is not new.,negation
+Ronald is not asleep.,negation
+Julie is not new.,negation
+Christopher is not new.,negation
+Christopher is not asleep.,negation
+Jack is not civil.,negation
+Brandi is not frank.,negation
+Christopher is not civil.,negation
+Ronald is not broad-minded.,negation
+Brandi is not civil.,negation
+Jack is poor.,fact
+Lesley is not fearless.,fact
+Lamont is wonderful.,fact
+Lamont is not poor.,fact
+Lesley is not combative.,fact
+Iver is not bewildered.,fact
+Blaine is not fearless.,fact
+Lancelot is stubborn.,fact
+Lamont is stubborn.,fact
+Lancelot is not bewildered.,fact
+Lancelot is wonderful.,fact
+Lancelot is poor.,fact
+"If someone is he or not wonderful is combative, then he is not poor.",implication
+"If someone who is poor is also stubborn, then he is fearless.",implication
+"If there is someone who is both combative and not poor, then Jack is bewildered.",implication
+Olive being fearless implies that Lamont is bewildered and Lancelot is combative.,implication
+"If someone is not bewildered, then he is both poor and not stubborn.",implication
+"If someone is stubborn, then he is not bewildered.",implication
+It can be concluded that Blaine is stubborn once knowing that Jack is poor and Lamont is not fearless.,implication
+"If there is someone who is not fearless, then Iver is not bewildered.",implication
+"If there is someone who is either not fearless or not stubborn, then Jack is not wonderful.",implication
+Jack is not bewildered.,negation
+Lamont is not poor.,negation
+Iver is not poor.,negation
+Olive is not bewildered.,negation
+Jack is not wonderful.,negation
+Olive is not fearless.,negation
+Iver is not stubborn.,negation
+Lesley is not bewildered.,negation
+Udolf is fancy.,fact
+Gerald is not zany.,fact
+Kody is shiny.,fact
+Udolf is not zany.,fact
+Leroy is not crowded.,fact
+Owen is not reasonable.,fact
+George is not crowded.,fact
+Leroy is zany.,fact
+Nigel is not crowded.,fact
+Kody is wonderful.,fact
+George is zany.,fact
+Udolf is reasonable.,fact
+It can be concluded that George is crowded once knowing that George is fancy or Kody is zany.,implication
+"If someone is shiny, then he is not zany.",implication
+"If there is at least one people who is not reasonable, then Gerald is fancy and Udolf is not wonderful.",implication
+"If there is at least one people who is not zany, then George is shiny and George is fancy.",implication
+"If all people are not crowded, then Owen is wonderful and Gerald is not fancy.",implication
+"If there is someone who is either shiny or crowded, then Kody is not reasonable.",implication
+"If there is at least one people who is shiny, then Nigel is not zany.",implication
+"If there is someone who is wonderful, then Kody is not crowded and Nigel is reasonable.",implication
+Someone who is wonderful is always fancy.,implication
+Kody is not fancy.,negation
+George is not fancy.,negation
+George is not wonderful.,negation
+Nigel is not zany.,negation
+Udolf is not zany.,negation
+Owen is not zany.,negation
+Udolf is not shiny.,negation
+Gerald is not shiny.,negation
+Nigel is not crowded.,negation
+Sandra is not creative.,fact
+Sandra is putrid.,fact
+Ralph is creative.,fact
+Olive is southern.,fact
+Connor is not witty.,fact
+Terry is putrid.,fact
+Sandra is witty.,fact
+Ralph is gleaming.,fact
+Ralph is not strong.,fact
+Ralph is southern.,fact
+Godfrey is not strong.,fact
+Noel is southern.,fact
+Noel being strong or Ralph being not creative implies that Connor is not putrid.,implication
+"If there is at least one people who is both witty and not putrid, then Noel is not southern.",implication
+"If there is someone who is not creative, then Connor is strong and Olive is not putrid.",implication
+"If all people are not creative, then Sandra is not southern.",implication
+"If someone is not strong, then he is neither witty nor creative.",implication
+"If Olive is not strong, then Terry is southern and Olive is creative.",implication
+"If there is at least one people who is witty, then Noel is not creative.",implication
+"If someone is neither creative nor gleaming, then he is not putrid.",implication
+"If there is someone who is either not southern or not gleaming, then Terry is not creative.",implication
+"If someone is not witty, then he is creative.",implication
+Terry is not putrid.,negation
+Noel is not witty.,negation
+Ralph is not gleaming.,negation
+Connor is not witty.,negation
+Terry is not gleaming.,negation
+Terry is not witty.,negation
+Olive is not witty.,negation
+Ralph is not strong.,negation
+Sandra is not creative.,negation
+Terry is not southern.,negation
+Burgess is not wild.,fact
+Ronald is average.,fact
+Christina is not able.,fact
+Keith is decent.,fact
+Burgess is able.,fact
+Christina is wild.,fact
+Keith is not able.,fact
+Aaron is wild.,fact
+Aaron is not straightforward.,fact
+Burgess is average.,fact
+Maurice is not old.,fact
+Ronald is wild.,fact
+"If everyone is not wild, then Aaron is able and Burgess is not old.",implication
+"If Joseph is not average, then Keith is not old.",implication
+"If there is someone who is both decent and old, then Aaron is wild.",implication
+"If someone is both able and old, then he is not wild.",implication
+Joseph being old and Maurice being wild imply that Burgess is not average.,implication
+"If someone is neither able nor average, then he is not wild.",implication
+"If there is someone who is both decent and wild, then Maurice is straightforward.",implication
+Christina is not able.,negation
+Ronald is not average.,negation
+Aaron is not wild.,negation
+Keith is not able.,negation
+Christina is not average.,negation
+Maurice is not average.,negation
+Christina is not old.,negation
+Burgess is not average.,negation
+Maurice is not old.,negation
+Burgess is not able.,negation
+Maurice is bad.,fact
+Lewis is poised.,fact
+Lyndon is sparkling.,fact
+Dan is poised.,fact
+Rose is not graceful.,fact
+Rose is crowded.,fact
+Leroy is poised.,fact
+Morgan is not graceful.,fact
+Lewis is graceful.,fact
+Morgan is sparkling.,fact
+Lewis is not crowded.,fact
+Lyndon is not crowded.,fact
+"If there is at least one people who is not poised, then Lewis is not sparkling and Lyndon is crowded.",implication
+"If someone is graceful or he is not poised, then he is sparkling.",implication
+"If there is at least one people who is bad, then Lewis is fancy.",implication
+"If someone is not crowded, then he is both fancy and not graceful.",implication
+"If there is at least one people who is not crowded, then Rose is poised.",implication
+It can be concluded that Dan is not poised once knowing that Rose is not fancy.,implication
+"If there is at least one people who is poised or not graceful, then Lyndon is bad.",implication
+"If there is at least one people who is not crowded or not bad, then Rose is not fancy.",implication
+"If there is someone who is crowded, then Maurice is bad.",implication
+Morgan is not graceful.,negation
+Lyndon is not sparkling.,negation
+Morgan is not sparkling.,negation
+Rose is not fancy.,negation
+Maurice is not poised.,negation
+Rose is not crowded.,negation
+Maurice is not graceful.,negation
+Leroy is not sparkling.,negation
+Lewis is not graceful.,negation
+Lyndon is not bad.,negation
+Lewis is not fancy.,negation
+Katelynn is granite.,fact
+Katelynn is not expensive.,fact
+Roderick is not expensive.,fact
+Roderick is not new.,fact
+Sandra is not granite.,fact
+Morgan is not supportive.,fact
+Sigmund is granite.,fact
+Morgan is not granite.,fact
+Roderick is not anxious.,fact
+Sigmund is not anxious.,fact
+Morgan is reasonable.,fact
+Ansel is not anxious.,fact
+Someone who is not supportive is always both expensive and not new.,implication
+"If Lamont is not new and Katelynn is not granite, then Ansel is expensive.",implication
+"If there is someone who is reasonable, then Roderick is not supportive and Ansel is not granite.",implication
+"If someone is neither new nor reasonable, then he is not anxious.",implication
+"If Sigmund is expensive and Roderick is granite, then Morgan is new and Lamont is not supportive.",implication
+Someone who is not reasonable is always neither expensive nor anxious.,implication
+"If Sigmund is anxious, then Roderick is new.",implication
+"If there is someone who is both supportive and not expensive, then Ansel is granite.",implication
+"If there is someone who is granite, then Sigmund is anxious and Sigmund is not reasonable.",implication
+Ansel is not anxious.,negation
+Roderick is not supportive.,negation
+Ansel is not reasonable.,negation
+Sigmund is not expensive.,negation
+Roderick is not expensive.,negation
+Sigmund is not supportive.,negation
+Crosby is not wonderful.,fact
+Lowell is not bad.,fact
+Conrad is low.,fact
+Conrad is wonderful.,fact
+Tyra is bad.,fact
+Lowell is low.,fact
+Godwin is bad.,fact
+Luka is not bad.,fact
+Luka is not wicked.,fact
+Godwin is not wonderful.,fact
+Lowell is not wonderful.,fact
+Godwin is wicked.,fact
+"If there is someone who is either not low or not fearless, then Lowell is not wonderful.",implication
+"If there is someone who is either low or wonderful, then Luka is not wicked and Conrad is not bad.",implication
+"If someone is anxious or wicked, then he is wonderful.",implication
+"If there is someone who is not anxious, then Lowell is not wicked and Tyra is low.",implication
+"If Crosby is anxious and Conrad is not wonderful, then Godwin is wicked.",implication
+Luka is not fearless.,negation
+Luka is not low.,negation
+Crosby is not wonderful.,negation
+Crosby is not low.,negation
+Conrad is not low.,negation
+Crosby is not fearless.,negation
+Luka is not bad.,negation
+Godwin is not wonderful.,negation
+Lancelot is cultural.,fact
+Unwin is not cultural.,fact
+Graciela is not faithful.,fact
+Lancelot is not broad-minded.,fact
+Max is able.,fact
+Benedict is not able.,fact
+Brigham is broad-minded.,fact
+Graciela is not broad-minded.,fact
+Benedict is lovely.,fact
+Christopher is not broad-minded.,fact
+Max is cultural.,fact
+Benedict is not broad-minded.,fact
+"If there is someone who is cultural, then Graciela is not lovely.",implication
+It can be concluded that Brigham is not broad-minded once knowing that Lancelot is cultural or Unwin is not able.,implication
+It can be concluded that Max is not amused once knowing that Max is not cultural.,implication
+It can be concluded that Unwin is not broad-minded and Brigham is not able once knowing that Graciela is cultural.,implication
+It can be concluded that Benedict is not amused once knowing that Graciela is not cultural and Christopher is not able.,implication
+"If there is at least one people who is cultural, then Unwin is not faithful.",implication
+"If there is someone who is both able and not faithful, then Graciela is cultural.",implication
+"If Brigham is broad-minded, then Christopher is not amused and Benedict is able.",implication
+"If there is at least one people who is amused, then Lancelot is cultural and Benedict is not broad-minded.",implication
+Benedict is not lovely.,negation
+Max is not cultural.,negation
+Brigham is not broad-minded.,negation
+Lancelot is not broad-minded.,negation
+Unwin is not amused.,negation
+Unwin is not cultural.,negation
+Christopher is not broad-minded.,negation
+Benedict is not able.,negation
+Max is not able.,negation
+Christopher is not faithful.,negation
+Christopher is not lovely.,negation
+Keith is soft.,fact
+Morgan is not soft.,fact
+Eli is broad-minded.,fact
+Maurice is fearless.,fact
+Morgan is not faithful.,fact
+Iver is soft.,fact
+Keith is not faithful.,fact
+Maurice is average.,fact
+Patricia is wild.,fact
+Iver is faithful.,fact
+Morgan is not average.,fact
+Eli is wild.,fact
+Someone who is fearless is always both soft and wild.,implication
+"If someone is not wild or not soft, then he is fearless.",implication
+"As long as someone is wild, he is average and not fearless.",implication
+"If Maurice is not wild and Patricia is not soft, then Iver is average and Iver is faithful.",implication
+"If there is someone who is not broad-minded, then Maurice is not faithful and Ansel is soft.",implication
+"If Morgan is not broad-minded and Iver is average, then Patricia is not fearless.",implication
+It can be concluded that Keith is not faithful once knowing that Maurice is not fearless or Ansel is average.,implication
+Iver being soft and Maurice being not average imply that Eli is not broad-minded.,implication
+Keith is not wild.,negation
+Eli is not wild.,negation
+Morgan is not average.,negation
+Maurice is not broad-minded.,negation
+Iver is not faithful.,negation
+Eli is not fearless.,negation
+Morgan is not faithful.,negation
+Iver is not broad-minded.,negation
+Morgan is not broad-minded.,negation
+Morgan is not soft.,negation
+Montague is aggressive.,fact
+Ansel is impossible.,fact
+Cyril is not wicked.,fact
+Ansel is not wicked.,fact
+Katelynn is drab.,fact
+Montague is not drab.,fact
+Ansel is not mushy.,fact
+Joseph is not wicked.,fact
+Olive is drab.,fact
+Joseph is broad-minded.,fact
+Ansel is not drab.,fact
+Montague is not wicked.,fact
+Montague being mushy and Katelynn being not wicked imply that Ansel is not aggressive.,implication
+"If there is at least one people who is not mushy, then Whitney is not aggressive and Cyril is impossible.",implication
+"If there is someone who is either broad-minded or impossible, then Olive is aggressive.",implication
+"If there is nobody who is not, then Cyril is not broad-minded and Ansel is aggressive.",implication
+"If there is at least one people who is mushy, then Katelynn is broad-minded and Joseph is not aggressive.",implication
+Olive being wicked or Cyril being broad-minded implies that Katelynn is aggressive.,implication
+"If there is someone who is both wicked and not mushy, then Montague is not drab.",implication
+Whitney being not impossible implies that Cyril is not mushy and Joseph is broad-minded.,implication
+Joseph is not mushy.,negation
+Montague is not aggressive.,negation
+Ansel is not drab.,negation
+Ansel is not mushy.,negation
+Olive is not broad-minded.,negation
+Montague is not wicked.,negation
+Whitney is not aggressive.,negation
+Joey is not able.,fact
+Howard is not former.,fact
+Joey is not impossible.,fact
+Jack is not average.,fact
+Lyndon is not average.,fact
+Molly is not able.,fact
+Molly is impossible.,fact
+Roderick is not average.,fact
+Howard is scared.,fact
+Joey is former.,fact
+Howard is average.,fact
+Roderick is impossible.,fact
+"If there is someone who is either not former or not impossible, then Noel is scared.",implication
+"If Lyndon is not impossible, then Jack is not scared and Jack is former.",implication
+Someone who is not average is always scared.,implication
+Jack being not impossible implies that Howard is able and Joey is not bored.,implication
+"If someone is not bored, then he is neither scared nor average.",implication
+"If there is at least one people who is able, then Molly is former.",implication
+"If someone is either not former or not able, then he is impossible and not scared.",implication
+"If someone is impossible, then he is not former.",implication
+"If there is someone who is neither scared nor former, then Noel is not able.",implication
+It can be concluded that Joey is not impossible once knowing that Howard is able.,implication
+Lyndon is not impossible.,negation
+Molly is not impossible.,negation
+Roderick is not average.,negation
+Noel is not able.,negation
+Noel is not scared.,negation
+Joey is not bored.,negation
+Joey is not average.,negation
+Joey is not former.,negation
+Howard is not able.,negation
+Roderick is not bored.,negation
+Max is not hard.,fact
+Noel is not average.,fact
+Roderick is not jolly.,fact
+Roderick is average.,fact
+Cara is not several.,fact
+Cara is average.,fact
+Keith is hard.,fact
+Jack is hard.,fact
+Noel is several.,fact
+Jack is giant.,fact
+Roderick is not giant.,fact
+Rose is jolly.,fact
+"As long as someone is not several, he is not old and not hard.",implication
+"If there is at least one people who is either hard or not old, then Max is not average and Rose is jolly.",implication
+"If there is someone who is both old and hard, then Noel is giant.",implication
+"If there is at least one people who is old or not jolly, then Rose is several.",implication
+"If there is at least one people who is jolly, then Cara is average and Keith is not hard.",implication
+"As long as someone is old and not several, he is not hard and not jolly.",implication
+"If someone is not average, then he is not old.",implication
+"If there is someone who is giant, then Max is not hard and Jack is old.",implication
+Roderick is not jolly.,negation
+Jack is not hard.,negation
+Roderick is not giant.,negation
+Jack is not jolly.,negation
+Rose is not old.,negation
+Noel is not hard.,negation
+Cara is not giant.,negation
+Roderick is not old.,negation
+Rose is not average.,negation
+Rose is not fearless.,fact
+Rose is not hungry.,fact
+Halbert is not cultural.,fact
+Gerald is hungry.,fact
+Benedict is anxious.,fact
+Rose is sudden.,fact
+Eli is hungry.,fact
+Halbert is southern.,fact
+Gerald is cultural.,fact
+Shane is anxious.,fact
+Benedict is fearless.,fact
+Benedict is southern.,fact
+Someone who is eithor not sudden or not fearless is always not southern.,implication
+"If there is someone who is sudden, then Eli is not fearless and Shane is southern.",implication
+"if there is at least one people who is southern and hungry, then Eli is not cultural and Eli is not sudden.",implication
+Gerald being not fearless or Rose being not hungry implies that Rose is not anxious.,implication
+Eli being not anxious or Shane being southern implies that Shane is hungry.,implication
+"If there is at least one people who is fearless, then Gerald is not anxious and Keith is not sudden.",implication
+"If there is someone who is southern, then Benedict is not anxious.",implication
+"If someone is both anxious and not hungry, then he is southern.",implication
+Someone who is not southern is always both hungry and not cultural.,implication
+Benedict is not fearless.,negation
+Rose is not sudden.,negation
+Gerald is not southern.,negation
+Eli is not cultural.,negation
+Halbert is not cultural.,negation
+Rose is not hungry.,negation
+Rose is not fearless.,negation
+Julie is immediate.,fact
+Aaron is immediate.,fact
+Julie is octagonal.,fact
+Morgan is not immediate.,fact
+Gregory is not bewildered.,fact
+Gregory is cheap.,fact
+Gregory is not aggressive.,fact
+Gregory is not southern.,fact
+Gregory is not immediate.,fact
+Aaron is octagonal.,fact
+Lancelot is not immediate.,fact
+Lancelot is not octagonal.,fact
+Someone who is neither bewildered nor immediate is always southern.,implication
+"If all people are octagonal, then Ronald is not bewildered and Gregory is not cheap.",implication
+"If there is at least one people who is not bewildered or not aggressive, then Lancelot is immediate.",implication
+"If there is someone who is immediate, then Aaron is not octagonal.",implication
+It can be concluded that Blaine is not cheap and Ronald is not southern once knowing that Morgan is not bewildered.,implication
+"If Morgan is immediate, then Gregory is octagonal.",implication
+"If Julie is southern, then Julie is not immediate.",implication
+It can be concluded that Lancelot is immediate once knowing that Ronald is not aggressive or Lancelot is not southern.,implication
+"If there is at least one people who is not southern, then Lancelot is not aggressive.",implication
+Morgan is not immediate.,negation
+Gregory is not octagonal.,negation
+Gregory is not immediate.,negation
+Aaron is not immediate.,negation
+Gregory is not bewildered.,negation
+Lancelot is not bewildered.,negation
+Julie is not octagonal.,negation
+Lancelot is not octagonal.,negation
+Julie is not cheap.,negation
+Barnaby is not drab.,fact
+Lancelot is busy.,fact
+Joey is not wild.,fact
+Lowell is wild.,fact
+Barnaby is not hard.,fact
+Christina is wild.,fact
+Joey is creative.,fact
+Joey is anxious.,fact
+Joey is busy.,fact
+Christina is hard.,fact
+Molly is not busy.,fact
+Clarence is busy.,fact
+"If there is someone who is either creative or busy, then Molly is wild.",implication
+"If there is someone who is wild, then Molly is not drab and Lowell is not hard.",implication
+"If there is at least one people who is hard, then Clarence is creative.",implication
+"If Lowell is anxious or Barnaby is busy, then Lowell is not drab.",implication
+It can be concluded that Molly is not hard and Molly is busy once knowing that Molly is not drab.,implication
+"If all people are busy or not wild, then Clarence is not creative.",implication
+"If there is at least one people who is both busy and not anxious, then Clarence is not wild.",implication
+Someone who is eithor hard or not anxious is always not wild.,implication
+Someone who is eithor creative or not busy is always anxious.,implication
+"If there is at least one people who is not wild or not anxious, then Clarence is hard.",implication
+It can be concluded that Molly is not busy once knowing that Clarence is not creative and Lowell is wild.,implication
+Lowell is not wild.,negation
+Barnaby is not hard.,negation
+Joey is not anxious.,negation
+Clarence is not wild.,negation
+Lowell is not anxious.,negation
+Christina is not busy.,negation
+Molly is not hard.,negation
+Joey is not creative.,negation
+Christina is not anxious.,negation
+Christopher is not several.,fact
+Shane is not several.,fact
+Algernon is not cultural.,fact
+Shane is alert.,fact
+Algernon is not bored.,fact
+Aaron is graceful.,fact
+Algernon is not anxious.,fact
+Halbert is not bored.,fact
+Halbert is graceful.,fact
+Owen is cultural.,fact
+Aaron is not alert.,fact
+Halbert is not anxious.,fact
+"If someone is both anxious and not several, then he is bored.",implication
+It can be concluded that Barrett is cultural once knowing that Algernon is not anxious.,implication
+"If someone is alert or cultural, then he is graceful.",implication
+"If someone who is not alert is also bored, then he is not cultural.",implication
+Someone who is both anxious and alert is always cultural.,implication
+"If there is at least one people who is not graceful, then Barrett is several.",implication
+"If there is someone who is not cultural, then Shane is not bored and Christopher is anxious.",implication
+"If someone who is not bored is also not alert, then he is not graceful.",implication
+Christopher being bored implies that Barrett is several and Shane is not cultural.,implication
+Aaron is not graceful.,negation
+Halbert is not graceful.,negation
+Algernon is not anxious.,negation
+Algernon is not alert.,negation
+Christopher is not graceful.,negation
+Owen is not cultural.,negation
+Shane is not alert.,negation
+Shane is not graceful.,negation
+Shane is not bored.,negation
+Aaron is not bored.,negation
+Sandra is careful.,fact
+Brigham is loving.,fact
+Godwin is bad.,fact
+Peyton is different.,fact
+Ralph is not different.,fact
+Noel is bad.,fact
+Brigham is not bad.,fact
+Howard is not lovely.,fact
+Sandra is different.,fact
+Ralph is bad.,fact
+Noel is not careful.,fact
+Ralph is not lovely.,fact
+Someone who is not loving and not bad is always lovely and not combative.,implication
+"If someone is both combative and not bad, then he is not different.",implication
+"If someone who is not different is also loving, then he is bad.",implication
+"If there is at least one people who is different or loving, then Ralph is combative.",implication
+"If someone is both combative and not bad, then he is lovely.",implication
+"If Godwin is careful, then Sandra is combative and Peyton is not loving.",implication
+"If someone is bad, then he is both different and not lovely.",implication
+"If there is at least one people who is not careful, then Ralph is not loving.",implication
+"If there is at least one people who is loving, then Peyton is not bad.",implication
+"If there is at least one people who is not careful, then Howard is not lovely and Noel is different.",implication
+Howard is not loving.,negation
+Noel is not bad.,negation
+Ralph is not careful.,negation
+Brigham is not bad.,negation
+Sandra is not bad.,negation
+Noel is not lovely.,negation
+Sandra is not different.,negation
+Ralph is not lovely.,negation
+Howard is not different.,negation
+Godwin is not bad.,negation
+Rolf is sparkling.,fact
+Broderick is not civil.,fact
+Lamont is sparkling.,fact
+Rolf is long.,fact
+Owen is not poor.,fact
+Myra is not technical.,fact
+Rolf is not poor.,fact
+Myra is not civil.,fact
+Lamont is not cheap.,fact
+Montague is not cheap.,fact
+Montague is not poor.,fact
+Broderick is not sparkling.,fact
+"If someone is or or not poor, then he is cheap.",implication
+"If there is at least one people who is not cheap, then Myra is civil and Montague is poor.",implication
+"If everyone is poor, then Montague is long.",implication
+"If there is someone who is either poor or not technical, then Rolf is long.",implication
+"As long as someone is technical and not cheap, he is not long and not poor.",implication
+"If there is someone who is either sparkling or poor, then Leroy is not long.",implication
+"If all people are cheap or not sparkling, then Broderick is not long.",implication
+Montague is not technical.,negation
+Myra is not civil.,negation
+Leroy is not sparkling.,negation
+Montague is not cheap.,negation
+Myra is not poor.,negation
+Myra is not technical.,negation
+Rolf is not long.,negation
+Rolf is not cheap.,negation
+Tristin is alert.,fact
+Tristin is not substantial.,fact
+Sandra is not alert.,fact
+Barnaby is alert.,fact
+Barnaby is not energetic.,fact
+Tristin is not energetic.,fact
+Noel is wonderful.,fact
+Tristin is not fair.,fact
+Barnaby is fair.,fact
+Noel is not alert.,fact
+Cara is not fancy.,fact
+Adler is not energetic.,fact
+"If there is someone who is not substantial, then Adler is alert and Blaine is not wonderful.",implication
+"If there is someone who is both wonderful and energetic, then Sandra is fair and Tristin is not substantial.",implication
+"If someone is not fair, then he is wonderful.",implication
+It can be concluded that Sandra is fancy once knowing that Cara is fair.,implication
+"If someone who is not substantial is also fair, then he is not fancy.",implication
+All wonderful people are substantial.,implication
+Adler being not fair implies that Cara is alert and Cara is not wonderful.,implication
+"If Tristin is fancy and Adler is wonderful, then Cara is not energetic and Adler is alert.",implication
+Someone who is both substantial and not fair is always not wonderful.,implication
+"If someone is not fancy, then he is not alert.",implication
+Sandra is not substantial.,negation
+Barnaby is not wonderful.,negation
+Tristin is not fancy.,negation
+Noel is not energetic.,negation
+Tristin is not alert.,negation
+Barnaby is not substantial.,negation
+Tristin is not wonderful.,negation
+Tristin is not fair.,negation
+Christina is supportive.,fact
+Wade is not mushy.,fact
+Joseph is supportive.,fact
+Joseph is mushy.,fact
+Wade is not reasonable.,fact
+Joseph is not precious.,fact
+Whitney is not broad-minded.,fact
+Whitney is not precious.,fact
+Jack is not supportive.,fact
+Joseph is not reasonable.,fact
+Christina is not oval.,fact
+Barry is not broad-minded.,fact
+"If Whitney is not reasonable, then Wade is broad-minded.",implication
+"If Terry is supportive and Christina is broad-minded, then Wade is not oval.",implication
+Wade being not precious and Wade being mushy imply that Joseph is not supportive.,implication
+"If there is at least one people who is broad-minded or not supportive, then Christina is precious.",implication
+Someone who is broad-minded is always both oval and not supportive.,implication
+"As long as someone is not mushy, he is supportive and not broad-minded.",implication
+"If there is someone who is neither oval nor supportive, then Christina is not reasonable.",implication
+"If someone is not oval, then he is neither reasonable nor broad-minded.",implication
+"As long as someone is not reasonable, he is oval and not supportive.",implication
+Christina is not precious.,negation
+Wade is not supportive.,negation
+Wade is not oval.,negation
+Whitney is not broad-minded.,negation
+Wade is not precious.,negation
+Wade is not reasonable.,negation
+Christina is not supportive.,negation
+Quincy is not fat.,fact
+Eli is happy.,fact
+Quincy is not happy.,fact
+Eli is new.,fact
+Juliana is new.,fact
+Quincy is new.,fact
+Kody is fat.,fact
+Joey is awful.,fact
+Brigham is not jittery.,fact
+Aaron is not fat.,fact
+Kody is not jittery.,fact
+Kody is not new.,fact
+Brigham being significant implies that Kody is not jittery and Joey is not new.,implication
+Someone who is eithor jittery or fat is always not significant.,implication
+It can be concluded that Kody is awful once knowing that Aaron is not happy.,implication
+"If there is someone who is not awful, then Brigham is not new.",implication
+"If there is someone who is both awful and not happy, then Juliana is significant.",implication
+Joey being not happy implies that Kody is significant.,implication
+"If Quincy is not significant, then Eli is not new and Joey is jittery.",implication
+"If there is at least one people who is new, then Joey is fat.",implication
+"As long as someone is new, he is significant and not awful.",implication
+Joey is not awful.,negation
+Eli is not awful.,negation
+Juliana is not happy.,negation
+Eli is not significant.,negation
+Joey is not happy.,negation
+Joey is not significant.,negation
+Joey is not jittery.,negation
+Eli is not fat.,negation
+Eli is not new.,negation
+Quincy is not significant.,negation
+Quincy is not jittery.,negation
+Eli is not jittery.,negation
+Juliana is not fat.,negation
+Lesley is not energetic.,fact
+Lesley is crowded.,fact
+Max is faithful.,fact
+Dan is not faithful.,fact
+Clarence is not energetic.,fact
+Cara is wonderful.,fact
+Clarence is angry.,fact
+Max is long.,fact
+Christina is not angry.,fact
+Cara is energetic.,fact
+Cara is long.,fact
+Christina is not long.,fact
+"If there is someone who is not long, then Christina is wonderful.",implication
+"If someone is both crowded and not angry, then he is not long.",implication
+"If there is someone who is long, then Max is not crowded and Cara is not angry.",implication
+"If there is someone who is wonderful, then Dan is not energetic.",implication
+Lesley being not wonderful or Clarence being angry implies that Dan is not long.,implication
+"If someone is faithful or not wonderful, then he is not long.",implication
+"If someone who is angry is also faithful, then he is energetic.",implication
+Christina being not crowded implies that Christina is energetic.,implication
+"If someone is not long, then he is both energetic and not wonderful.",implication
+Max is not energetic.,negation
+Clarence is not long.,negation
+Lesley is not crowded.,negation
+Max is not crowded.,negation
+Dan is not wonderful.,negation
+Conrad is not energetic.,negation
+Clarence is not energetic.,negation
+Christina is not wonderful.,negation
+Cara is not energetic.,negation
+Joey is short.,fact
+Adler is sour.,fact
+Desiree is gleaming.,fact
+Lesley is attractive.,fact
+Lesley is not short.,fact
+Desiree is poor.,fact
+Joey is attractive.,fact
+Sigmund is graceful.,fact
+Molly is not poor.,fact
+Joey is not sour.,fact
+Aaron is not graceful.,fact
+Joey is poor.,fact
+"If there is someone who is either graceful or not short, then Desiree is attractive and Molly is poor.",implication
+It can be concluded that Molly is sour and Desiree is short once knowing that Desiree is gleaming.,implication
+"If someone is graceful, then he is neither gleaming nor short.",implication
+Someone who is eithor or or not poor is always graceful.,implication
+Lesley being not sour implies that Aaron is graceful and Lesley is short.,implication
+It can be concluded that Joey is poor once knowing that Joey is not graceful and Molly is not attractive.,implication
+It can be concluded that Adler is not short once knowing that Molly is not attractive and Sigmund is not poor.,implication
+"If there is someone who is short, then Aaron is not gleaming and Sigmund is not sour.",implication
+Someone who is graceful is always neither gleaming nor sour.,implication
+"If Aaron is poor, then Lesley is sour.",implication
+Molly is not short.,negation
+Joey is not sour.,negation
+Aaron is not short.,negation
+Molly is not poor.,negation
+Desiree is not poor.,negation
+Adler is not short.,negation
+Adler is not attractive.,negation
+Desiree is not graceful.,negation
+Sigmund is not attractive.,negation
+Graciela is not hollow.,fact
+Lancelot is strong.,fact
+Graciela is strong.,fact
+Roderick is not strong.,fact
+Roderick is busy.,fact
+Conrad is careful.,fact
+Whitney is strong.,fact
+Conrad is putrid.,fact
+Lancelot is not careful.,fact
+Sandra is not strong.,fact
+Graciela is wonderful.,fact
+Molly is strong.,fact
+Someone who is hollow or not strong is always not putrid and not careful.,implication
+"If someone is careful, then he is not putrid.",implication
+Sandra being not strong implies that Whitney is not wonderful.,implication
+"If someone is hollow or not strong, then he is not wonderful.",implication
+"If there is at least one people who is not wonderful, then Conrad is busy.",implication
+"If someone is he or not putrid is not busy, then he is careful.",implication
+Graciela being putrid and Lancelot being not careful imply that Graciela is not hollow.,implication
+Whitney is not hollow.,negation
+Whitney is not wonderful.,negation
+Graciela is not careful.,negation
+Molly is not putrid.,negation
+Lancelot is not wonderful.,negation
+Sandra is not wonderful.,negation
+Roderick is not careful.,negation
+Sandra is not strong.,negation
+Roderick is not strong.,negation
+Owen is octagonal.,fact
+Molly is not sour.,fact
+Owen is not significant.,fact
+Tristan is not wild.,fact
+Luther is significant.,fact
+Adam is not wild.,fact
+Adam is not wonderful.,fact
+Morgan is sour.,fact
+Tristan is sour.,fact
+Godwin is sour.,fact
+Owen is wonderful.,fact
+Molly is not wild.,fact
+"If there is nobody who is not, then Owen is significant.",implication
+"If there is at least one people who is not significant, then Godwin is not putrid and Molly is wild.",implication
+"If someone is wonderful or he is sour, then he is wild.",implication
+Owen being putrid implies that Molly is not octagonal and Adam is not wonderful.,implication
+All not sour people are not significant.,implication
+"If everyone is not significant, then Godwin is wonderful and Luther is not octagonal.",implication
+"If someone is wild, then he is wonderful.",implication
+"If there is someone who is wild, then Godwin is octagonal and Morgan is sour.",implication
+It can be concluded that Owen is not wonderful once knowing that Molly is sour and Molly is not wild.,implication
+Luther is not wonderful.,negation
+Adam is not wonderful.,negation
+Luther is not sour.,negation
+Morgan is not sour.,negation
+Adam is not sour.,negation
+Morgan is not significant.,negation
+Owen is not octagonal.,negation
+Owen is not sour.,negation
+Tristan is not sour.,negation
+Godwin is not significant.,negation
+Owen is not putrid.,negation
+Dan is not zany.,fact
+Kenyon is not sour.,fact
+Terry is aggressive.,fact
+Lesley is zany.,fact
+Kenyon is aggressive.,fact
+Melvin is not comfortable.,fact
+Melvin is happy.,fact
+Kenyon is happy.,fact
+Dan is comfortable.,fact
+Christopher is zany.,fact
+Terry is not sour.,fact
+Christopher is not comfortable.,fact
+"If Terry is bad, then Melvin is zany.",implication
+"If someone is not bad or not aggressive, then he is sour.",implication
+"If Melvin is aggressive or Melvin is not bad, then Terry is not comfortable.",implication
+"If Melvin is comfortable and Melvin is not bad, then Graciela is aggressive.",implication
+"If someone is he or not bad is happy, then he is not aggressive.",implication
+"If there is someone who is neither comfortable nor happy, then Terry is not aggressive and Terry is sour.",implication
+"If someone is he or not zany is happy, then he is not comfortable.",implication
+Someone who is comfortable and not aggressive is always sour and not bad.,implication
+"If there is at least one people who is not happy, then Melvin is not bad.",implication
+Terry is not sour.,negation
+Lesley is not sour.,negation
+Melvin is not zany.,negation
+Terry is not aggressive.,negation
+Graciela is not comfortable.,negation
+Melvin is not comfortable.,negation
+Kenyon is not aggressive.,negation
+Lesley is not aggressive.,negation
+Dan is not zany.,negation
+Terry is not bad.,negation
+Jasper is technical.,fact
+Jasper is not hot.,fact
+Terry is not substantial.,fact
+Aldrich is not gleaming.,fact
+Barrett is not average.,fact
+Aldrich is not substantial.,fact
+Adam is not hot.,fact
+Adam is not average.,fact
+Adam is gleaming.,fact
+Barrett is not substantial.,fact
+Gerald is not substantial.,fact
+Gerald is not technical.,fact
+Barrett being gleaming implies that Terry is technical and Gerald is average.,implication
+Someone who is not average is always both technical and not hot.,implication
+"If there is at least one people who is not substantial, then Lesley is fancy and Gerald is hot.",implication
+It can be concluded that Aldrich is not fancy once knowing that Adam is average.,implication
+Someone who is gleaming or not substantial is always fancy and not average.,implication
+"If someone is hot, then he is neither technical nor fancy.",implication
+"If someone is average or fancy, then he is not technical.",implication
+Lesley being not technical and Aldrich being gleaming imply that Barrett is not substantial.,implication
+"If there is someone who is either not fancy or not average, then Terry is gleaming.",implication
+Lesley is not gleaming.,negation
+Aldrich is not hot.,negation
+Adam is not substantial.,negation
+Adam is not hot.,negation
+Jasper is not average.,negation
+Terry is not fancy.,negation
+Barrett is not hot.,negation
+Lesley is not hot.,negation
+Aldrich is not technical.,negation
+Blaine is straightforward.,fact
+Aldrich is frank.,fact
+Aldrich is not straightforward.,fact
+Brandi is not busy.,fact
+Aldrich is gleaming.,fact
+Aldrich is busy.,fact
+Barry is not frank.,fact
+Cyril is busy.,fact
+Barry is not busy.,fact
+Brandi is poised.,fact
+Aldrich is not poised.,fact
+Cyril is energetic.,fact
+It can be concluded that Brandi is frank once knowing that Cyril is not busy or Barry is gleaming.,implication
+"If there is at least one people who is not straightforward, then Barry is not busy and Cyril is gleaming.",implication
+Someone who is eithor gleaming or poised is always not busy.,implication
+Burgess being not straightforward implies that Blaine is energetic.,implication
+"If someone is straightforward and poised, then he is busy and not energetic.",implication
+"As long as someone is either not busy or not energetic, he is gleaming and not frank.",implication
+It can be concluded that Cyril is gleaming once knowing that Blaine is not busy and Burgess is poised.,implication
+It can be concluded that Aldrich is energetic once knowing that Aldrich is not poised or Burgess is straightforward.,implication
+"If there is someone who is not gleaming, then Burgess is not frank.",implication
+Barry being poised or Cyril being frank implies that Blaine is busy.,implication
+Brandi is not energetic.,negation
+Burgess is not poised.,negation
+Barry is not frank.,negation
+Brandi is not poised.,negation
+Cyril is not poised.,negation
+Aldrich is not busy.,negation
+Aldrich is not frank.,negation
+Tristin is not busy.,negation
+Miles is not long.,fact
+Godwin is not long.,fact
+Neal is long.,fact
+Godwin is not bad.,fact
+Ronald is not attractive.,fact
+Godwin is fearless.,fact
+Myra is bewildered.,fact
+Kayleigh is not bewildered.,fact
+Lancelot is long.,fact
+Neal is anxious.,fact
+Kayleigh is attractive.,fact
+Myra is bad.,fact
+All bad people are not anxious.,implication
+"If there is at least one people who is fearless, then Ronald is bewildered and Godwin is not anxious.",implication
+"If there is someone who is either bewildered or not bad, then Miles is not fearless.",implication
+Someone who is eithor bewildered or not long is always bad.,implication
+"If Godwin is attractive or Lancelot is fearless, then Ronald is not bad.",implication
+"If everyone is attractive, then Kayleigh is anxious and Kayleigh is not long.",implication
+All not bewildered people are not attractive.,implication
+"If Kayleigh is not attractive or Miles is not long, then Lancelot is fearless.",implication
+Ronald is not bad.,negation
+Ronald is not bewildered.,negation
+Godwin is not bad.,negation
+Miles is not long.,negation
+Neal is not fearless.,negation
+Ronald is not attractive.,negation
+Myra is not attractive.,negation
+Myra is not bad.,negation
+Lancelot is not fearless.,negation
+Myra is not anxious.,negation
+Kayleigh is not bad.,negation
+Kayleigh is not attractive.,negation
+Leroy is cultural.,fact
+Seymour is not angry.,fact
+Crosby is not cultural.,fact
+Lancelot is able.,fact
+Seymour is not cultural.,fact
+Iver is not scared.,fact
+Leroy is scared.,fact
+Quincy is not angry.,fact
+Lancelot is not graceful.,fact
+Iver is not jittery.,fact
+Iver is not able.,fact
+Quincy is able.,fact
+"If someone is jittery or he is not scared, then he is cultural.",implication
+"If Iver is not able, then Quincy is not scared and Iver is cultural.",implication
+"If everyone is scared or graceful, then Seymour is able.",implication
+"If Godwin is cultural or Crosby is not graceful, then Godwin is jittery.",implication
+All angry people are not able.,implication
+Quincy being not scared implies that Quincy is jittery.,implication
+Someone who is both able and not jittery is always scared.,implication
+All not able people are not jittery.,implication
+Leroy is not cultural.,negation
+Quincy is not able.,negation
+Iver is not able.,negation
+Crosby is not scared.,negation
+Quincy is not angry.,negation
+Iver is not jittery.,negation
+Iver is not graceful.,negation
+Quincy is not graceful.,negation
+Lancelot is not cultural.,negation
+Iver is not scared.,negation
+Crosby is not cultural.,negation
+Patricia is not angry.,fact
+Lowell is not graceful.,fact
+Jasper is not wonderful.,fact
+Jasper is wild.,fact
+Neal is wild.,fact
+Lowell is not anxious.,fact
+Jasper is anxious.,fact
+Neal is not wonderful.,fact
+Crosby is wild.,fact
+Crosby is not graceful.,fact
+Janine is wild.,fact
+Terry is not angry.,fact
+"If Patricia is wonderful, then Terry is not sparkling.",implication
+"If there is someone who is wild, then Lowell is sparkling and Terry is angry.",implication
+Crosby being anxious implies that Terry is sparkling and Crosby is not angry.,implication
+"If there is at least one people who is not angry, then Terry is wonderful and Janine is anxious.",implication
+"If there is at least one people who is sparkling, then Patricia is angry.",implication
+"If there is at least one people who is either angry or not sparkling, then Janine is not graceful and Jasper is anxious.",implication
+Someone who is wonderful is always graceful.,implication
+Crosby being sparkling implies that Terry is not angry.,implication
+"If there is someone who is either angry or graceful, then Lowell is wonderful.",implication
+Neal is not sparkling.,negation
+Patricia is not sparkling.,negation
+Patricia is not angry.,negation
+Terry is not graceful.,negation
+Terry is not angry.,negation
+Crosby is not graceful.,negation
+Lowell is not graceful.,negation
+Jasper is not anxious.,negation
+Jasper is not graceful.,negation
+Clarence is octagonal.,fact
+Christina is wild.,fact
+Lewis is former.,fact
+Christina is southern.,fact
+Adam is former.,fact
+Tristin is not wild.,fact
+Godfrey is former.,fact
+Maurice is bad.,fact
+Clarence is not bad.,fact
+Adam is not significant.,fact
+Tristin is significant.,fact
+Maurice is not wild.,fact
+"If there is at least one people who is former, then Godfrey is not wild and Tristin is not southern.",implication
+"If there is someone who is not wild, then Clarence is not former and Maurice is not southern.",implication
+"As long as someone is wild, he is southern and bad.",implication
+Tristin being bad implies that Christina is southern.,implication
+"If everyone is octagonal or not wild, then Godfrey is bad.",implication
+"If Adam is not southern or Tristin is significant, then Adam is wild.",implication
+"If someone is bad or he is not former, then he is octagonal.",implication
+Someone who is not bad is always not significant.,implication
+"If someone is either octagonal or significant, then he is southern and not former.",implication
+Adam is not wild.,negation
+Adam is not southern.,negation
+Tristin is not significant.,negation
+Godfrey is not octagonal.,negation
+Tristin is not southern.,negation
+Clarence is not bad.,negation
+Adam is not significant.,negation
+Lewis is not bad.,negation
+Tristin is not bad.,negation
+Kayleigh is long.,fact
+Paul is wonderful.,fact
+Brandi is not bad.,fact
+Unwin is wicked.,fact
+Paul is new.,fact
+Brandi is sparkling.,fact
+Paul is not sparkling.,fact
+Brandi is not wonderful.,fact
+Ralph is not wicked.,fact
+Blaine is long.,fact
+Ralph is not sparkling.,fact
+Unwin is wonderful.,fact
+"If there is someone who is not long, then Blaine is not new.",implication
+"If someone is both wonderful and not new, then he is sparkling.",implication
+"If there is someone who is bad, then Brandi is not new and Blaine is not wicked.",implication
+Someone who is wicked is always not wonderful.,implication
+"If Sigmund is wonderful and Kayleigh is not new, then Brandi is bad.",implication
+"If Unwin is wonderful or Unwin is sparkling, then Ralph is not long.",implication
+It can be concluded that Ralph is wicked once knowing that Unwin is not wonderful.,implication
+"If someone is both wonderful and not long, then he is not sparkling.",implication
+"If Sigmund is not new and Kayleigh is sparkling, then Sigmund is wicked.",implication
+"If Ralph is bad, then Blaine is long.",implication
+Ralph is not sparkling.,negation
+Ralph is not wicked.,negation
+Brandi is not sparkling.,negation
+Sigmund is not wonderful.,negation
+Brandi is not bad.,negation
+Brandi is not wonderful.,negation
+Kayleigh is not sparkling.,negation
+Barnaby is long.,fact
+Peyton is long.,fact
+Morgan is not old.,fact
+Peyton is not sore.,fact
+Melvin is not putrid.,fact
+Peyton is old.,fact
+Owen is not fat.,fact
+Owen is old.,fact
+Owen is not different.,fact
+Aaron is sore.,fact
+Peyton is not putrid.,fact
+Melvin is long.,fact
+Barnaby being not putrid and Morgan being sore imply that Barnaby is not different and Melvin is fat.,implication
+Someone who is neither different nor old is always not long.,implication
+"If there is at least one people who is neither fat nor putrid, then Barnaby is not different.",implication
+"If Melvin is not putrid or Barry is not different, then Barry is not sore.",implication
+Someone who is long is always both old and putrid.,implication
+Someone who is not old is always fat.,implication
+"If there is at least one people who is not putrid, then Owen is not old.",implication
+Someone who is long is always both different and not sore.,implication
+"If someone who is not old is also not fat, then he is not putrid.",implication
+Barnaby is not old.,negation
+Aaron is not old.,negation
+Peyton is not long.,negation
+Melvin is not long.,negation
+Morgan is not long.,negation
+Peyton is not old.,negation
+Peyton is not fat.,negation
+Peyton is not different.,negation
+Barry is not sore.,negation
+Owen is not long.,negation
+Halsey is not frank.,fact
+Joseph is emotional.,fact
+Leroy is bewildered.,fact
+Noel is cheap.,fact
+Joseph is not sore.,fact
+Noel is not impossible.,fact
+Noel is not bewildered.,fact
+Halsey is not sore.,fact
+Nigel is emotional.,fact
+Noel is not frank.,fact
+Halsey is not impossible.,fact
+Nigel is cheap.,fact
+"If Leroy is sore and Joseph is not impossible, then Leroy is not bewildered.",implication
+"If there is someone who is either bewildered or not cheap, then Nigel is not frank.",implication
+"If Leroy is not cheap or Joseph is not sore, then Leroy is not frank.",implication
+Jasper being sore implies that Nigel is not emotional.,implication
+"If there is someone who is emotional, then Noel is sore.",implication
+"If someone is cheap and not frank, then he is not emotional and not sore.",implication
+"If there is someone who is both impossible and not cheap, then Nigel is not bewildered.",implication
+"If someone is cheap or not emotional, then he is frank.",implication
+"If everyone is not emotional, then Joseph is sore and Leroy is not cheap.",implication
+Someone who is eithor impossible or not cheap is always emotional.,implication
+Nigel is not emotional.,negation
+Noel is not bewildered.,negation
+Halsey is not frank.,negation
+Joseph is not cheap.,negation
+Noel is not sore.,negation
+Noel is not impossible.,negation
+Joseph is not emotional.,negation
+Joseph is not sore.,negation
+Halsey is not impossible.,negation
+Leroy is not impossible.,negation
+Leroy is not sore.,negation
+Halsey is not bewildered.,negation
+Nigel is not cheap.,negation
+Godfrey is aggressive.,fact
+Iver is not unfriendly.,fact
+Brandi is aggressive.,fact
+Gregory is not different.,fact
+Iver is not putrid.,fact
+Godfrey is not dry.,fact
+Bret is not putrid.,fact
+Gregory is aggressive.,fact
+Godfrey is putrid.,fact
+Bret is dry.,fact
+Iver is not cultural.,fact
+Brandi is different.,fact
+"If there is at least one people who is not dry, then Godfrey is putrid.",implication
+"If there is at least one people who is different or not aggressive, then Noel is dry.",implication
+"If there is someone who is cultural, then Gregory is unfriendly and Gregory is different.",implication
+"If there is someone who is aggressive, then Brandi is not putrid and Barnaby is dry.",implication
+"As long as someone is not unfriendly, he is aggressive and not dry.",implication
+"If there is someone who is either aggressive or not different, then Godfrey is putrid.",implication
+"If Brandi is not dry and Noel is unfriendly, then Gregory is putrid.",implication
+All not different people are cultural.,implication
+"If someone is not cultural, then he is different.",implication
+"If there is someone who is putrid, then Barnaby is dry.",implication
+Barnaby is not aggressive.,negation
+Gregory is not different.,negation
+Noel is not dry.,negation
+Barnaby is not unfriendly.,negation
+Brandi is not dry.,negation
+Iver is not dry.,negation
+Gregory is not cultural.,negation
+Barnaby is not dry.,negation
+Iver is not unfriendly.,negation
+Brandi is not unfriendly.,negation
+Cara is not frank.,fact
+Brigham is not wonderful.,fact
+Miles is not energetic.,fact
+Peyton is not wonderful.,fact
+Julie is not wonderful.,fact
+Max is not wonderful.,fact
+Max is frank.,fact
+Myra is not zany.,fact
+Myra is wonderful.,fact
+Myra is frank.,fact
+Myra is not energetic.,fact
+Miles is not zany.,fact
+Someone who is both careful and energetic is always frank.,implication
+"If someone is frank, then he is neither careful nor wonderful.",implication
+Someone who is careful is always energetic.,implication
+"If there is someone who is both careful and not wonderful, then Cara is zany.",implication
+Miles being different implies that Brigham is energetic.,implication
+"If someone is not frank, then he is not energetic.",implication
+"If there is someone who is zany, then Cara is not frank.",implication
+"If there is at least one people who is not wonderful or not zany, then Miles is different.",implication
+"If there is someone who is not frank, then Miles is zany and Brigham is careful.",implication
+"If there is someone who is not zany, then Max is not different.",implication
+Max is not wonderful.,negation
+Brigham is not careful.,negation
+Myra is not careful.,negation
+Julie is not careful.,negation
+Max is not zany.,negation
+Brigham is not energetic.,negation
+Myra is not wonderful.,negation
+Miles is not careful.,negation
+Myra is not energetic.,negation
+Brigham is not frank.,negation
+Dan is not bewildered.,fact
+Sigmund is not wild.,fact
+Eli is lovely.,fact
+Eli is bewildered.,fact
+Eli is not wild.,fact
+Rolf is granite.,fact
+Miles is not reasonable.,fact
+Rolf is not wild.,fact
+Sigmund is octagonal.,fact
+Miles is octagonal.,fact
+Rolf is not bewildered.,fact
+Ernest is granite.,fact
+"If there is someone who is both reasonable and lovely, then Rolf is not bewildered.",implication
+All reasonable people are bewildered.,implication
+"If there is someone who is lovely, then Dan is not octagonal.",implication
+All bewildered people are not reasonable.,implication
+Someone who is neither reasonable nor octagonal is always not lovely.,implication
+"If there is someone who is either not bewildered or not octagonal, then Eli is not wild.",implication
+Someone who is eithor octagonal or not bewildered is always wild.,implication
+Someone who is eithor lovely or not bewildered is always not reasonable.,implication
+"If there is someone who is either granite or not bewildered, then Miles is wild.",implication
+"As long as someone is octagonal, he is not reasonable and not bewildered.",implication
+Miles is not wild.,negation
+Ernest is not bewildered.,negation
+Kayleigh is not reasonable.,negation
+Rolf is not granite.,negation
+Dan is not octagonal.,negation
+Rolf is not reasonable.,negation
+Ernest is not granite.,negation
+Rolf is not wild.,negation
+Miles is not lovely.,negation
+Sigmund is not lovely.,negation
+Dan is not reasonable.,negation
+Sigmund is not wild.,negation
+Brigham is bewildered.,fact
+Joseph is not bewildered.,fact
+Leroy is not persistent.,fact
+Ernest is not poised.,fact
+Leroy is not beautiful.,fact
+Ernest is not beautiful.,fact
+Brigham is awful.,fact
+Howard is not awful.,fact
+Joseph is not poised.,fact
+Howard is beautiful.,fact
+Leroy is poised.,fact
+Howard is not bewildered.,fact
+"If someone is fancy, then he is neither poised nor bewildered.",implication
+"If there is at least one people who is not bewildered, then Joseph is beautiful.",implication
+"If there is at least one people who is not poised, then Joseph is beautiful and Howard is persistent.",implication
+Leroy being poised and Joseph being persistent imply that Brigham is not awful.,implication
+"If there is at least one people who is not persistent or not poised, then Brigham is not beautiful.",implication
+"If there is someone who is not fancy, then Myra is not beautiful and Brigham is bewildered.",implication
+"If there is at least one people who is not persistent, then Joseph is beautiful.",implication
+Ernest being fancy implies that Leroy is bewildered and Leroy is not persistent.,implication
+"If someone is not poised or not fancy, then he is beautiful.",implication
+Howard is not awful.,negation
+Max is not beautiful.,negation
+Brigham is not poised.,negation
+Howard is not bewildered.,negation
+Max is not fancy.,negation
+Max is not bewildered.,negation
+Brigham is not fancy.,negation
+Max is not persistent.,negation
+Leroy is not poised.,negation
+Joseph is not persistent.,negation
+Leroy is not persistent.,negation
+Brigham is not beautiful.,negation
+Ansel is not loving.,fact
+Barnaby is supportive.,fact
+Aaron is not hungry.,fact
+Aaron is not emotional.,fact
+Russell is loving.,fact
+Ansel is not hungry.,fact
+Halsey is loving.,fact
+Cyril is not busy.,fact
+Russell is busy.,fact
+Aaron is not busy.,fact
+Conrad is not hungry.,fact
+Conrad is loving.,fact
+"If someone is either hungry or supportive, then he is emotional and loving.",implication
+"If all people are not supportive, then Halsey is not hungry.",implication
+Someone who is both supportive and not loving is always not busy.,implication
+"If Halsey is not emotional, then Russell is not careful.",implication
+Halsey being not loving implies that Conrad is not emotional and Halsey is careful.,implication
+"If someone is careful, then he is emotional.",implication
+"If there is at least one people who is both emotional and not supportive, then Aaron is not loving.",implication
+Conrad is not busy.,negation
+Cyril is not supportive.,negation
+Aaron is not emotional.,negation
+Conrad is not hungry.,negation
+Halsey is not hungry.,negation
+Aaron is not busy.,negation
+Tristan is fat.,fact
+Tristan is not straightforward.,fact
+Tristan is not hard.,fact
+Halsey is not hard.,fact
+Lewis is straightforward.,fact
+Noel is not fat.,fact
+Tristan is not shiny.,fact
+Lewis is not dry.,fact
+Tristan is zany.,fact
+Noel is dry.,fact
+Noel is shiny.,fact
+Lewis is shiny.,fact
+"If all people are not straightforward or not fat, then Noel is shiny.",implication
+"If there is someone who is both dry and hard, then Lewis is fat.",implication
+"If there is at least one people who is not straightforward or not shiny, then Tristan is fat.",implication
+"If someone is hard or he is straightforward, then he is not zany.",implication
+"If someone is both zany and not shiny, then he is fat.",implication
+Someone who is fat and not shiny is always not straightforward and not dry.,implication
+Noel is not hard.,negation
+Rolf is not fat.,negation
+Noel is not straightforward.,negation
+Sigmund is not hard.,negation
+Tristan is not hard.,negation
+Tristan is not zany.,negation
+Sigmund is not zany.,negation
+Lewis is not fat.,negation
+Noel is not fat.,negation
+Eli is not educational.,fact
+Unwin is not stubborn.,fact
+Godfrey is old.,fact
+Luka is not stubborn.,fact
+Godfrey is not technical.,fact
+Eli is technical.,fact
+Halbert is educational.,fact
+Aaron is not old.,fact
+Aaron is not technical.,fact
+Eli is not old.,fact
+Roderick is not old.,fact
+Eli is not talkative.,fact
+"If someone is either not old or not technical, then he is stubborn and not educational.",implication
+"If there is someone who is technical, then Godfrey is stubborn and Halbert is not educational.",implication
+"If there is at least one people who is not old, then Aaron is stubborn and Halbert is gleaming.",implication
+Halbert being stubborn implies that Roderick is not talkative.,implication
+"If Roderick is stubborn, then Aaron is educational and Unwin is technical.",implication
+"If there is at least one people who is gleaming or educational, then Aaron is stubborn.",implication
+"If Roderick is not stubborn, then Roderick is technical and Unwin is not old.",implication
+"If someone is not stubborn, then he is both gleaming and not talkative.",implication
+Halbert is not gleaming.,negation
+Halbert is not old.,negation
+Halbert is not talkative.,negation
+Eli is not stubborn.,negation
+Aaron is not gleaming.,negation
+Aaron is not technical.,negation
+Unwin is not gleaming.,negation
+Roderick is not talkative.,negation
+Godfrey is not stubborn.,negation
+Unwin is not old.,negation
+Olive is beautiful.,fact
+Noel is not different.,fact
+Noel is not dry.,fact
+Algernon is creative.,fact
+Lancelot is creative.,fact
+Noel is beautiful.,fact
+Halsey is civil.,fact
+Olive is civil.,fact
+Olive is different.,fact
+Noel is civil.,fact
+Barrett is octagonal.,fact
+Halsey is not different.,fact
+Someone who is dry is always both civil and not octagonal.,implication
+"If someone is dry or not octagonal, then he is civil.",implication
+"If there is at least one people who is not octagonal or not civil, then Barrett is beautiful.",implication
+It can be concluded that Noel is dry once knowing that Lancelot is civil.,implication
+"If there is someone who is either not civil or not creative, then Olive is octagonal.",implication
+Noel being not beautiful implies that Lancelot is octagonal and Noel is not civil.,implication
+"If there is at least one people who is beautiful, then Algernon is civil and Olive is not octagonal.",implication
+Barnaby is not civil.,negation
+Olive is not civil.,negation
+Algernon is not octagonal.,negation
+Olive is not different.,negation
+Noel is not different.,negation
+Olive is not creative.,negation
+Barrett is not octagonal.,negation
+Noel is not beautiful.,negation
+Olive is not beautiful.,negation
+Olive is not octagonal.,negation
+Cara is not wonderful.,fact
+Burgess is not emotional.,fact
+Howard is not awful.,fact
+Conrad is awful.,fact
+Burgess is not wonderful.,fact
+Howard is wonderful.,fact
+Kayleigh is dry.,fact
+Tyra is not wonderful.,fact
+Howard is dry.,fact
+Kayleigh is drab.,fact
+Howard is emotional.,fact
+Tyra is dry.,fact
+Kayleigh being not emotional or Cara being not dry implies that Conrad is drab.,implication
+"If there is at least one people who is both drab and not awful, then Tyra is not wonderful.",implication
+"As long as someone is either wonderful or emotional, he is not awful and not drab.",implication
+"If there is someone who is either drab or not dry, then Tyra is wonderful and Howard is emotional.",implication
+"If everyone is drab or not wonderful, then Howard is emotional.",implication
+"If there is someone who is awful, then Kayleigh is emotional and Burgess is wonderful.",implication
+"If Tyra is not wonderful and Broderick is drab, then Burgess is dry.",implication
+Howard is not awful.,negation
+Tyra is not wonderful.,negation
+Kayleigh is not drab.,negation
+Tyra is not emotional.,negation
+Conrad is not drab.,negation
+Cara is not wonderful.,negation
+Howard is not emotional.,negation
+Cara is not awful.,negation
+Burgess is not wonderful.,negation
+Howard is not crowded.,fact
+Tyra is putrid.,fact
+Rosa is not bewildered.,fact
+Howard is not bewildered.,fact
+Rosa is not putrid.,fact
+Godfrey is strong.,fact
+Adam is jolly.,fact
+Kenyon is crowded.,fact
+Rose is not lovely.,fact
+Rose is not strong.,fact
+Tyra is not lovely.,fact
+Rosa is strong.,fact
+Someone who is eithor not putrid or not strong is always not bewildered.,implication
+"If someone is both strong and not bewildered, then he is putrid.",implication
+Someone who is both jolly and putrid is always lovely.,implication
+"If there is at least one people who is both bewildered and not lovely, then Howard is jolly.",implication
+"If there is at least one people who is lovely or not strong, then Godfrey is not crowded.",implication
+"If someone is jolly or not putrid, then he is lovely.",implication
+"If Howard is not jolly and Howard is putrid, then Kenyon is not bewildered.",implication
+"If someone is not crowded and not jolly, then he is putrid and not strong.",implication
+All putrid people are jolly.,implication
+Godfrey is not strong.,negation
+Tyra is not putrid.,negation
+Rose is not strong.,negation
+Tyra is not strong.,negation
+Rosa is not jolly.,negation
+Godfrey is not bewildered.,negation
+Rose is not lovely.,negation
+Rosa is not crowded.,negation
+Howard is not crowded.,negation
+Rose is not bewildered.,negation
+Ansel is poor.,fact
+Ansel is not decent.,fact
+Desiree is stubborn.,fact
+Maurice is decent.,fact
+Ansel is stubborn.,fact
+Rose is strong.,fact
+Montague is not able.,fact
+Joseph is able.,fact
+Joseph is not decent.,fact
+Maurice is fancy.,fact
+Seymour is fancy.,fact
+Desiree is decent.,fact
+Maurice being not poor and Joseph being decent imply that Montague is not strong and Rose is not fancy.,implication
+"If there is someone who is both stubborn and not able, then Montague is not decent.",implication
+Someone who is not stubborn is always poor.,implication
+"If there is someone who is both fancy and not stubborn, then Ansel is not poor.",implication
+"If Desiree is not strong, then Maurice is not fancy and Montague is not decent.",implication
+"If there is at least one people who is either decent or poor, then Ansel is stubborn and Ansel is fancy.",implication
+"If someone who is stubborn is also not poor, then he is decent.",implication
+"If Maurice is decent, then Desiree is strong.",implication
+Someone who is both stubborn and not decent is always strong.,implication
+"If there is someone who is strong, then Ansel is not fancy and Seymour is not stubborn.",implication
+Montague is not fancy.,negation
+Joseph is not able.,negation
+Seymour is not fancy.,negation
+Maurice is not fancy.,negation
+Rose is not decent.,negation
+Seymour is not able.,negation
+Ansel is not fancy.,negation
+Montague is not stubborn.,negation
+Joseph is not stubborn.,negation
+Montague is not able.,negation
+Joseph is not decent.,negation
+Joseph is not fancy.,negation
+Maurice is not strong.,negation
+Seymour is not stubborn.,negation
+Ernest is not average.,fact
+Christopher is not average.,fact
+Benedict is not dry.,fact
+Godwin is combative.,fact
+Connor is not graceful.,fact
+Christopher is dry.,fact
+Godwin is not graceful.,fact
+Godwin is drab.,fact
+Godwin is not average.,fact
+Ernest is not educational.,fact
+Noel is not combative.,fact
+Benedict is not drab.,fact
+"If there is someone who is not graceful, then Ernest is average and Connor is not combative.",implication
+Ernest being dry implies that Noel is not average and Ernest is not combative.,implication
+"If there is someone who is either graceful or not dry, then Godwin is not drab.",implication
+"If Lancelot is dry, then Ernest is drab and Godwin is not combative.",implication
+"If there is at least one people who is combative, then Godwin is not graceful.",implication
+"If there is someone who is either educational or not drab, then Lancelot is not dry.",implication
+"If Connor is not drab, then Ernest is combative and Connor is dry.",implication
+"As long as someone is not average, he is educational and graceful.",implication
+"If Ernest is drab or Christopher is not graceful, then Godwin is average.",implication
+Ernest is not average.,negation
+Benedict is not educational.,negation
+Godwin is not dry.,negation
+Godwin is not average.,negation
+Connor is not combative.,negation
+Noel is not combative.,negation
+Noel is not educational.,negation
+Godwin is not graceful.,negation
+Ernest is not educational.,negation
+Ernest is not dry.,negation
+Brandi is not different.,fact
+Julie is alert.,fact
+Leroy is long.,fact
+Leroy is not poised.,fact
+Julie is long.,fact
+Tristan is poised.,fact
+Cyril is not faithful.,fact
+Tristan is not different.,fact
+Cyril is not different.,fact
+Cyril is long.,fact
+Brandi is long.,fact
+Shane is poised.,fact
+Someone who is eithor faithful or not poised is always not short.,implication
+"If there is at least one people who is either short or not different, then Julie is alert and Cyril is faithful.",implication
+"If Julie is not poised or Tristan is different, then Leroy is long.",implication
+"If Brandi is alert or Cyril is short, then Cyril is not poised.",implication
+"If there is at least one people who is alert or not poised, then Shane is not long.",implication
+"If someone is neither poised nor short, then he is not alert.",implication
+"If everyone is alert, then Neal is not different and Julie is faithful.",implication
+"If someone is not faithful, then he is alert.",implication
+"If someone is he or not long is not different, then he is alert.",implication
+Leroy is not faithful.,negation
+Tristan is not different.,negation
+Shane is not short.,negation
+Cyril is not different.,negation
+Leroy is not alert.,negation
+Brandi is not poised.,negation
+Cyril is not long.,negation
+Cyril is not faithful.,negation
+Udolf is careful.,fact
+Luther is educational.,fact
+Rolf is not anxious.,fact
+Godfrey is not educational.,fact
+Melvin is not anxious.,fact
+Adam is anxious.,fact
+Neal is sore.,fact
+Udolf is anxious.,fact
+Godfrey is careful.,fact
+Neal is not lovely.,fact
+Godfrey is anxious.,fact
+Godfrey is able.,fact
+"If someone is lovely, then he is careful.",implication
+"If there is at least one people who is educational, then Neal is not able and Melvin is anxious.",implication
+Udolf being not able and Melvin being sore imply that Godfrey is educational.,implication
+It can be concluded that Rolf is not careful once knowing that Godfrey is sore or Rolf is educational.,implication
+"If Godfrey is educational, then Rolf is sore and Udolf is not anxious.",implication
+"If there is at least one people who is lovely, then Neal is not sore and Luther is anxious.",implication
+It can be concluded that Godfrey is sore once knowing that Udolf is lovely and Rolf is careful.,implication
+"If there is at least one people who is careful or not educational, then Luther is sore.",implication
+"If there is someone who is sore, then Godfrey is educational.",implication
+Adam is not sore.,negation
+Rolf is not educational.,negation
+Luther is not educational.,negation
+Neal is not educational.,negation
+Udolf is not sore.,negation
+Godfrey is not educational.,negation
+Rolf is not lovely.,negation
+Rolf is not sore.,negation
+Godfrey is not able.,negation
+Rolf is not careful.,negation
+Neal is not wonderful.,fact
+Janine is fat.,fact
+Tyra is cultural.,fact
+Lewis is jittery.,fact
+George is jittery.,fact
+Neal is not able.,fact
+Neal is expensive.,fact
+George is fat.,fact
+Tyra is not expensive.,fact
+Clarence is able.,fact
+Clarence is not fat.,fact
+Neal is not jittery.,fact
+"If someone who is able is also fat, then he is not expensive.",implication
+"If there is at least one people who is jittery or expensive, then George is not cultural.",implication
+Neal being expensive implies that Tyra is not jittery and Janine is wonderful.,implication
+"If there is at least one people who is not able, then Barry is not wonderful and Clarence is not jittery.",implication
+It can be concluded that Tyra is not wonderful and Neal is not cultural once knowing that Lewis is not expensive.,implication
+"If there is someone who is able, then Clarence is not expensive.",implication
+"If someone who is not cultural is also wonderful, then he is jittery.",implication
+It can be concluded that George is not cultural once knowing that Lewis is jittery.,implication
+"If there is at least one people who is not jittery, then Clarence is expensive and Neal is cultural.",implication
+Clarence is not able.,negation
+Tyra is not jittery.,negation
+George is not expensive.,negation
+Clarence is not fat.,negation
+Neal is not wonderful.,negation
+Neal is not fat.,negation
+Lewis is not cultural.,negation
+Tyra is not able.,negation
+George is not jittery.,negation
+Tyra is not fat.,negation
+Terry is alert.,fact
+Barrett is not asleep.,fact
+Halsey is southern.,fact
+Barrett is not southern.,fact
+Barrett is alert.,fact
+Terry is angry.,fact
+Terry is drab.,fact
+Halsey is not alert.,fact
+Benedict is not southern.,fact
+Katelynn is not alert.,fact
+Halsey is angry.,fact
+Benedict is drab.,fact
+"If there is at least one people who is both asleep and not straightforward, then Katelynn is not southern.",implication
+"If someone is drab, then he is both southern and not angry.",implication
+Halsey being drab implies that Halsey is not asleep and Tyra is angry.,implication
+Halsey being not alert and Terry being not angry imply that Tyra is southern.,implication
+"If there is at least one people who is angry or not southern, then Terry is asleep.",implication
+"If there is at least one people who is straightforward or not southern, then Adam is alert.",implication
+"If someone is drab or not southern, then he is not angry.",implication
+"If someone is not drab, then he is both straightforward and not asleep.",implication
+Terry is not southern.,negation
+Terry is not asleep.,negation
+Halsey is not southern.,negation
+Adam is not angry.,negation
+Katelynn is not alert.,negation
+Benedict is not southern.,negation
+Terry is not straightforward.,negation
+Halsey is not drab.,negation
+Tyra is not straightforward.,negation
+Tyra is not angry.,negation
+Barrett is not asleep.,negation
+Barrett is not alert.,negation
+Desiree is anxious.,fact
+Desiree is not soft.,fact
+Roderick is soft.,fact
+Katelynn is immediate.,fact
+Olive is anxious.,fact
+Roderick is not anxious.,fact
+Lancelot is not octagonal.,fact
+Desiree is not immediate.,fact
+Katelynn is not anxious.,fact
+Lancelot is anxious.,fact
+Joey is not octagonal.,fact
+Roderick is immediate.,fact
+"If there is at least one people who is not soft, then Lancelot is anxious and Joey is not octagonal.",implication
+"If there is someone who is either anxious or not asleep, then Desiree is not immediate and Lancelot is anxious.",implication
+"If Desiree is asleep, then Roderick is not anxious.",implication
+Someone who is not octagonal is always neither asleep nor anxious.,implication
+"If there is someone who is not anxious, then Orson is octagonal.",implication
+"If there is someone who is either immediate or not soft, then Katelynn is not asleep.",implication
+Someone who is eithor anxious or not immediate is always soft.,implication
+"If someone is soft, then he is anxious.",implication
+"If there is at least one people who is both immediate and octagonal, then Katelynn is not anxious.",implication
+It can be concluded that Katelynn is immediate once knowing that Lancelot is anxious or Lancelot is not anxious.,implication
+Katelynn is not anxious.,negation
+Lancelot is not soft.,negation
+Olive is not soft.,negation
+Lancelot is not anxious.,negation
+Katelynn is not immediate.,negation
+Orson is not anxious.,negation
+Roderick is not anxious.,negation
+Joey is not anxious.,negation
+Orson is not soft.,negation
+Rolf is not several.,fact
+Sigmund is not precious.,fact
+Godwin is precious.,fact
+Sigmund is fearless.,fact
+Rolf is precious.,fact
+Rose is not stubborn.,fact
+Conrad is jittery.,fact
+Brandi is not fearless.,fact
+Brandi is not sour.,fact
+Rolf is jittery.,fact
+Owen is stubborn.,fact
+Godwin is not fearless.,fact
+"If there is nobody who is not, then Godwin is not jittery.",implication
+"If there is someone who is either several or not sour, then Brandi is not stubborn.",implication
+"If there is at least one people who is not sour, then Owen is not stubborn and Conrad is not several.",implication
+"If someone who is several is also not sour, then he is stubborn.",implication
+"If there is at least one people who is either sour or jittery, then Brandi is not several and Conrad is stubborn.",implication
+"If Rolf is not fearless, then Conrad is not jittery.",implication
+It can be concluded that Godwin is jittery and Owen is not fearless once knowing that Godwin is not precious.,implication
+It can be concluded that Sigmund is precious once knowing that Godwin is not jittery and Sigmund is not several.,implication
+"If Rolf is several or Brandi is fearless, then Brandi is not precious.",implication
+"If Godwin is not jittery and Conrad is several, then Owen is sour.",implication
+Someone who is precious is always not several.,implication
+Rose is not fearless.,negation
+Owen is not stubborn.,negation
+Sigmund is not fearless.,negation
+Brandi is not several.,negation
+Brandi is not sour.,negation
+Rolf is not precious.,negation
+Godwin is not fearless.,negation
+Godwin is not precious.,negation
+Rolf is not several.,negation
+Rosa is mushy.,fact
+Unwin is teak.,fact
+Brandan is mushy.,fact
+Unwin is not broad-minded.,fact
+Brandan is broad-minded.,fact
+Kody is not asleep.,fact
+Sigmund is average.,fact
+Rosa is not asleep.,fact
+Iver is not asleep.,fact
+Sigmund is not teak.,fact
+Sigmund is not asleep.,fact
+Iver is teak.,fact
+Kody being not teak implies that Rosa is not average.,implication
+Someone who is not teak is always not mushy.,implication
+"If Iver is wicked and Brandan is mushy, then Brandan is not broad-minded and Unwin is not asleep.",implication
+"If someone is not asleep, then he is both average and not teak.",implication
+Someone who is mushy is always both asleep and not wicked.,implication
+"If everyone is not mushy, then Iver is broad-minded.",implication
+"If there is at least one people who is not asleep, then Rosa is not teak and Unwin is wicked.",implication
+Montague being not mushy implies that Montague is broad-minded.,implication
+"If there is someone who is neither asleep nor teak, then Montague is not average.",implication
+"If someone is both broad-minded and asleep, then he is wicked.",implication
+"If there is someone who is not average, then Brandan is mushy.",implication
+Brandan is not mushy.,negation
+Unwin is not wicked.,negation
+Sigmund is not average.,negation
+Montague is not teak.,negation
+Brandan is not teak.,negation
+Sigmund is not asleep.,negation
+Kody is not average.,negation
+Sigmund is not teak.,negation
+Iver is not asleep.,negation
+Montague is not wicked.,negation
+Unwin is not asleep.,negation
+Jack is not wild.,fact
+Max is not wild.,fact
+Quincy is not oval.,fact
+Jasper is not recent.,fact
+Halsey is not putrid.,fact
+Quincy is not precious.,fact
+Ernest is not technical.,fact
+Quincy is putrid.,fact
+Jack is oval.,fact
+Max is not putrid.,fact
+Morgan is wild.,fact
+Jack is precious.,fact
+"If all people are technical, then Max is putrid and Max is wild.",implication
+"If someone who is putrid is also wild, then he is recent.",implication
+Someone who is not putrid is always both wild and technical.,implication
+"If there is at least one people who is either technical or not precious, then Ernest is not oval and Morgan is not recent.",implication
+"If all people are not technical, then Max is not wild.",implication
+"If someone is not putrid, then he is not oval.",implication
+It can be concluded that Jack is putrid once knowing that Jack is not recent or Jack is technical.,implication
+Quincy is not oval.,negation
+Halsey is not putrid.,negation
+Halsey is not recent.,negation
+Halsey is not wild.,negation
+Quincy is not putrid.,negation
+Max is not oval.,negation
+Morgan is not technical.,negation
+Morgan is not recent.,negation
+Max is not putrid.,negation
+Halsey is not oval.,negation
+Max is not recent.,negation
+Max is not wild.,negation
+Barry is not fat.,fact
+Barry is not scared.,fact
+Roderick is fat.,fact
+Rolf is not attractive.,fact
+Udolf is not drab.,fact
+Rolf is not scared.,fact
+Udolf is not hungry.,fact
+Udolf is not wicked.,fact
+Udolf is not scared.,fact
+Owen is not scared.,fact
+Joey is not hungry.,fact
+Joey is wicked.,fact
+"If there is at least one people who is either hungry or not scared, then Roderick is not wicked and Rolf is not drab.",implication
+"If there is at least one people who is not drab, then Roderick is not fat.",implication
+"If someone who is not attractive is also fat, then he is hungry.",implication
+"As long as someone is not attractive, he is hungry and not drab.",implication
+"If there is nobody who is not hungry, then Udolf is attractive and Joey is not wicked.",implication
+"If there is at least one people who is both scared and not fat, then Christina is not wicked.",implication
+"If there is someone who is either fat or not scared, then Roderick is not wicked.",implication
+Joey is not wicked.,negation
+Udolf is not scared.,negation
+Roderick is not wicked.,negation
+Joey is not fat.,negation
+Barry is not scared.,negation
+Udolf is not fat.,negation
+Barry is not hungry.,negation
+Rolf is not fat.,negation
+Rolf is not attractive.,negation
+Christina is not fat.,negation
+Christina is not attractive.,negation
+Christina is not scared.,negation
+Joey is not drab.,negation
+Miles is not witty.,fact
+Miles is beautiful.,fact
+Keith is witty.,fact
+Ansel is crowded.,fact
+Ansel is not octagonal.,fact
+Ansel is not beautiful.,fact
+Keith is not octagonal.,fact
+Ralph is bad.,fact
+Ansel is witty.,fact
+Ansel is bad.,fact
+Miles is crowded.,fact
+Ralph is not dry.,fact
+It can be concluded that Keith is not bad and Lowell is beautiful once knowing that Abel is witty.,implication
+Someone who is beautiful is always octagonal.,implication
+"If someone is octagonal or not bad, then he is not dry.",implication
+"If someone is bad or not octagonal, then he is not dry.",implication
+"If there is someone who is either witty or octagonal, then Ansel is not bad.",implication
+"If there is someone who is both crowded and not octagonal, then Lowell is not bad.",implication
+It can be concluded that Keith is bad and Miles is crowded once knowing that Keith is octagonal.,implication
+"If there is at least one people who is witty or not beautiful, then Lowell is crowded.",implication
+"If there is at least one people who is either beautiful or dry, then Keith is crowded and Miles is octagonal.",implication
+Lowell is not bad.,negation
+Ansel is not octagonal.,negation
+Ansel is not beautiful.,negation
+Keith is not octagonal.,negation
+Keith is not crowded.,negation
+Miles is not crowded.,negation
+Ralph is not bad.,negation
+Ansel is not crowded.,negation
+Miles is not dry.,negation
+Benedict is granite.,fact
+Godwin is not bad.,fact
+Benedict is not amused.,fact
+Roderick is fair.,fact
+Tristan is granite.,fact
+Godwin is not amused.,fact
+Roderick is wicked.,fact
+Tristan is not wicked.,fact
+Tristan is not fair.,fact
+Tristan is sudden.,fact
+Benedict is sudden.,fact
+Janine is not sudden.,fact
+"If there is someone who is neither amused nor sudden, then Benedict is wicked.",implication
+"if there is at least one people who is bad and not fair, then Benedict is not granite and Benedict is sudden.",implication
+"If Godwin is not granite or Maurice is not bad, then Janine is not amused.",implication
+It can be concluded that Benedict is not wicked once knowing that Godwin is fair or Kody is bad.,implication
+"If there is at least one people who is not amused, then Benedict is wicked.",implication
+Kody being not bad and Godwin being wicked imply that Benedict is granite.,implication
+All not sudden people are fair.,implication
+"If there is at least one people who is fair, then Benedict is not granite and Janine is wicked.",implication
+It can be concluded that Benedict is bad once knowing that Godwin is amused.,implication
+Roderick is not wicked.,negation
+Janine is not sudden.,negation
+Roderick is not sudden.,negation
+Tristan is not fair.,negation
+Godwin is not amused.,negation
+Benedict is not bad.,negation
+Roderick is not amused.,negation
+Tristan is not sudden.,negation
+Roderick is not fair.,negation
+Christopher is fat.,fact
+Bret is not wild.,fact
+Benedict is fat.,fact
+Halbert is average.,fact
+Christopher is loving.,fact
+Iver is loving.,fact
+Iver is not average.,fact
+Bret is poor.,fact
+Bret is loving.,fact
+Kayleigh is average.,fact
+Kayleigh is not poor.,fact
+Kayleigh is not loving.,fact
+It can be concluded that Christopher is average once knowing that Halbert is gleaming and Benedict is not loving.,implication
+Christopher being not poor implies that Bret is not loving.,implication
+"If there is at least one people who is either poor or fat, then Benedict is not average and Iver is gleaming.",implication
+"If Bret is poor and Cyril is wild, then Christopher is not loving.",implication
+"If someone is either loving or not gleaming, then he is fat and average.",implication
+"If there is someone who is fat, then Kayleigh is not loving and Cyril is not poor.",implication
+"If someone who is not gleaming is also poor, then he is not wild.",implication
+All loving people are fat.,implication
+Iver being not average implies that Halbert is loving.,implication
+Cyril is not poor.,negation
+Benedict is not poor.,negation
+Christopher is not fat.,negation
+Kayleigh is not average.,negation
+Christopher is not poor.,negation
+Bret is not average.,negation
+Iver is not average.,negation
+Benedict is not loving.,negation
+Christopher is not loving.,negation
+Kayleigh is not loving.,negation
+Bret is not poor.,negation
+Benedict is not fat.,negation
+Myra is not energetic.,fact
+Lyndon is energetic.,fact
+Myra is not cheap.,fact
+Jack is busy.,fact
+Barrett is not cheap.,fact
+Gregory is not wonderful.,fact
+Adam is not busy.,fact
+Adam is not octagonal.,fact
+Myra is not busy.,fact
+Gregory is not octagonal.,fact
+Adam is energetic.,fact
+Gregory is energetic.,fact
+It can be concluded that Barrett is busy and Jack is not energetic once knowing that Myra is not wonderful.,implication
+"If there is at least one people who is busy, then Adam is not octagonal.",implication
+"As long as someone is energetic and not octagonal, he is busy and not energetic.",implication
+"If Myra is not cheap and Gregory is not energetic, then Adam is not energetic.",implication
+"If there is someone who is either not wonderful or not busy, then Myra is not cheap and Gregory is energetic.",implication
+It can be concluded that Gregory is cheap once knowing that Myra is energetic.,implication
+Someone who is neither energetic nor octagonal is always energetic.,implication
+It can be concluded that Gregory is cheap once knowing that Gregory is busy or Jack is octagonal.,implication
+"If someone is not energetic or not octagonal, then he is wonderful.",implication
+"If there is someone who is not energetic, then Adam is wonderful and Gregory is energetic.",implication
+Cara is not energetic.,negation
+Lyndon is not energetic.,negation
+Adam is not busy.,negation
+Myra is not busy.,negation
+Myra is not wonderful.,negation
+Gregory is not octagonal.,negation
+Myra is not cheap.,negation
+Gregory is not cheap.,negation
+Myra is not energetic.,negation
+Adam is not octagonal.,negation
+Cara is not cheap.,negation
+Molly is expensive.,fact
+Algernon is expensive.,fact
+Abel is not mushy.,fact
+Katelynn is mushy.,fact
+Graciela is dry.,fact
+Abel is fancy.,fact
+Abel is not bad.,fact
+Abel is expensive.,fact
+Benedict is not bad.,fact
+Benedict is not fancy.,fact
+Rolf is not dry.,fact
+Abel is not dry.,fact
+"If there is at least one people who is not dry or not supportive, then Algernon is not bad.",implication
+Katelynn being expensive implies that Abel is bad and Abel is dry.,implication
+"If Katelynn is supportive or Abel is fancy, then Molly is dry.",implication
+"If everyone is not expensive, then Benedict is bad and Algernon is mushy.",implication
+"If there is at least one people who is supportive or fancy, then Rolf is expensive.",implication
+"If someone is fancy, then he is neither dry nor mushy.",implication
+"If someone is fancy or mushy, then he is not expensive.",implication
+Someone who is fancy or not dry is always mushy and supportive.,implication
+"If there is at least one people who is not dry, then Katelynn is expensive.",implication
+Rolf being not bad and Rolf being not expensive imply that Algernon is not mushy.,implication
+Graciela is not mushy.,negation
+Abel is not bad.,negation
+Katelynn is not bad.,negation
+Graciela is not dry.,negation
+Algernon is not mushy.,negation
+Abel is not dry.,negation
+Abel is not fancy.,negation
+Benedict is not mushy.,negation
+Rolf is not expensive.,negation
+Wiley is educational.,fact
+Wiley is careful.,fact
+Juliana is happy.,fact
+Dan is hot.,fact
+Kody is energetic.,fact
+Kody is happy.,fact
+Julie is not hot.,fact
+Bret is hot.,fact
+Juliana is prickly.,fact
+Bret is happy.,fact
+Bret is not careful.,fact
+Juliana is not educational.,fact
+"If someone is not happy, then he is not educational.",implication
+"If someone is both hot and not educational, then he is not energetic.",implication
+"If Dan is careful, then Juliana is prickly and Julie is energetic.",implication
+"If there is someone who is both careful and not prickly, then Kody is not happy and Kody is educational.",implication
+It can be concluded that Julie is careful once knowing that Dan is happy or Juliana is energetic.,implication
+"If Juliana is not educational, then Kody is not energetic.",implication
+Peyton being happy and Julie being not hot imply that Bret is not prickly.,implication
+"As long as someone is not prickly, he is energetic and not educational.",implication
+Kody being not energetic or Bret being happy implies that Kody is hot.,implication
+"If someone is careful or he is not energetic, then he is not prickly.",implication
+"If someone is not happy, then he is both careful and hot.",implication
+Juliana is not happy.,negation
+Wiley is not energetic.,negation
+Kody is not happy.,negation
+Peyton is not educational.,negation
+Wiley is not prickly.,negation
+Peyton is not careful.,negation
+Wiley is not careful.,negation
+Wiley is not educational.,negation
+Kody is not energetic.,negation
+Howard is not new.,fact
+Cara is new.,fact
+Howard is not granite.,fact
+Luka is not granite.,fact
+Christopher is comfortable.,fact
+Blaine is not soft.,fact
+Blaine is not cheap.,fact
+Luka is comfortable.,fact
+Algernon is shiny.,fact
+Howard is soft.,fact
+Cara is shiny.,fact
+Cara is granite.,fact
+Someone who is comfortable or new is always not cheap and not granite.,implication
+"As long as someone is soft, he is comfortable and cheap.",implication
+"If there is someone who is soft, then Howard is new.",implication
+It can be concluded that Howard is not soft and Christopher is new once knowing that Howard is shiny.,implication
+"If Graciela is cheap and Christopher is not soft, then Cara is not new.",implication
+"If there is at least one people who is both soft and not comfortable, then Blaine is granite.",implication
+Graciela is not soft.,negation
+Algernon is not shiny.,negation
+Cara is not granite.,negation
+Graciela is not new.,negation
+Howard is not cheap.,negation
+Blaine is not cheap.,negation
+Cara is not new.,negation
+Ansel is not dry.,fact
+Adler is not asleep.,fact
+Lamont is emotional.,fact
+Lamont is not bored.,fact
+Lamont is not reasonable.,fact
+Janine is not emotional.,fact
+Lamont is loving.,fact
+Janine is loving.,fact
+Janine is dry.,fact
+Wade is asleep.,fact
+Barry is bored.,fact
+Ansel is asleep.,fact
+It can be concluded that Janine is emotional once knowing that Janine is dry and Barry is bored.,implication
+"If there is at least one people who is not emotional, then Adler is not dry.",implication
+Lamont being not dry implies that Ansel is reasonable and Lamont is bored.,implication
+"If someone is dry, then he is both bored and not loving.",implication
+"If Ansel is not reasonable or Lamont is not loving, then Barry is emotional.",implication
+"If everyone is not emotional, then Ansel is bored and Ansel is reasonable.",implication
+"As long as someone is dry and bored, he is loving and not asleep.",implication
+It can be concluded that Barry is bored once knowing that Adler is not asleep and Halsey is loving.,implication
+"If there is at least one people who is loving or not emotional, then Lamont is not reasonable.",implication
+Janine is not loving.,negation
+Janine is not asleep.,negation
+Lamont is not reasonable.,negation
+Lamont is not bored.,negation
+Adler is not dry.,negation
+Lamont is not dry.,negation
+Janine is not dry.,negation
+Lamont is not loving.,negation
+Janine is not bored.,negation
+Halsey is not asleep.,negation
+Wade is not emotional.,negation
+Clarence is not asleep.,fact
+Wade is fat.,fact
+Lowell is alert.,fact
+Udolf is not fat.,fact
+Udolf is not persistent.,fact
+Udolf is not asleep.,fact
+Halbert is alert.,fact
+Halbert is persistent.,fact
+Clarence is not busy.,fact
+Udolf is busy.,fact
+Clarence is not alert.,fact
+Clarence is persistent.,fact
+Lowell being not alert implies that Wade is not persistent.,implication
+It can be concluded that Halbert is fat and Clarence is not frank once knowing that Lowell is busy.,implication
+"If there is at least one people who is not fat or not busy, then Clarence is not asleep.",implication
+Aaron being asleep implies that Lowell is not alert and Lowell is persistent.,implication
+"If there is someone who is either persistent or fat, then Clarence is busy.",implication
+"If someone is not fat or not asleep, then he is not frank.",implication
+"As long as someone is not fat, he is persistent and not alert.",implication
+Clarence being not persistent and Udolf being fat imply that Wade is asleep.,implication
+Udolf is not busy.,negation
+Halbert is not busy.,negation
+Clarence is not busy.,negation
+Udolf is not persistent.,negation
+Brandi is not fat.,negation
+Halbert is not persistent.,negation
+Udolf is not fat.,negation
+Wade is not fat.,negation
+Udolf is not frank.,negation
+Tristin is not substantial.,fact
+Julie is fancy.,fact
+Jasper is happy.,fact
+George is fancy.,fact
+Lyndon is not happy.,fact
+Jasper is fancy.,fact
+George is substantial.,fact
+Lyndon is poor.,fact
+Tristin is not fancy.,fact
+George is happy.,fact
+George is jittery.,fact
+Julie is jittery.,fact
+It can be concluded that Tristin is not poor once knowing that George is substantial.,implication
+"If there is someone who is not new, then Dan is not jittery and Lyndon is fancy.",implication
+Jack being not poor or Dan being not substantial implies that Tristin is not fancy.,implication
+"If someone is fancy, then he is jittery.",implication
+"If there is someone who is not substantial, then Jasper is jittery and Jasper is not new.",implication
+Jack being new or Jasper being fancy implies that Lyndon is not poor.,implication
+"If there is at least one people who is neither happy nor poor, then George is fancy.",implication
+It can be concluded that George is poor once knowing that Lyndon is not fancy and Tristin is not new.,implication
+"If someone is both jittery and happy, then he is not fancy.",implication
+Jack is not happy.,negation
+Jasper is not poor.,negation
+Dan is not happy.,negation
+George is not fancy.,negation
+Lyndon is not poor.,negation
+Tristin is not fancy.,negation
+Jasper is not jittery.,negation
+Dan is not jittery.,negation
+Tristin is not new.,negation
+Lyndon is not fancy.,negation
+Julie is not poor.,negation
+Leroy is jittery.,fact
+Adler is not average.,fact
+Crosby is jittery.,fact
+Adler is aggressive.,fact
+Aaron is zany.,fact
+Max is not aggressive.,fact
+Molly is not sour.,fact
+Aldrich is not hollow.,fact
+Aldrich is not zany.,fact
+Max is not sour.,fact
+Molly is hollow.,fact
+Aaron is not sour.,fact
+"If someone is neither jittery nor zany, then he is aggressive.",implication
+"If someone is not average, then he is jittery.",implication
+It can be concluded that Molly is not average once knowing that Aldrich is zany and Molly is hollow.,implication
+"If there is someone who is either aggressive or jittery, then Molly is not average and Aldrich is not sour.",implication
+Someone who is eithor hollow or aggressive is always not jittery.,implication
+"If there is someone who is either jittery or aggressive, then Max is zany.",implication
+Crosby being not zany implies that Aldrich is hollow and Max is sour.,implication
+"If there is someone who is either jittery or aggressive, then Adler is sour.",implication
+It can be concluded that Adler is zany once knowing that Aldrich is not jittery.,implication
+Crosby is not jittery.,negation
+Aldrich is not sour.,negation
+Molly is not aggressive.,negation
+Crosby is not zany.,negation
+Adler is not sour.,negation
+Molly is not average.,negation
+Max is not sour.,negation
+Max is not zany.,negation
+Aaron is not sour.,negation
+Molly is not jittery.,negation
+Sandra is sour.,fact
+Aldrich is frank.,fact
+Owen is not frank.,fact
+Sandra is different.,fact
+Luther is not talkative.,fact
+Conrad is talkative.,fact
+Conrad is not frank.,fact
+Barrett is sour.,fact
+Luther is frank.,fact
+Whitney is not sour.,fact
+Owen is not talkative.,fact
+Luther is sour.,fact
+Someone who is not talkative is always different.,implication
+Someone who is neither frank nor low is always not teak.,implication
+"If there is someone who is both frank and not talkative, then Luther is sour.",implication
+"If there is at least one people who is both different and sour, then Luther is frank.",implication
+"If all people are sour, then Luther is not frank.",implication
+"If Owen is different or Whitney is frank, then Conrad is not teak.",implication
+"If someone is different, then he is not low.",implication
+Barrett being talkative implies that Luther is low and Barrett is different.,implication
+Someone who is teak is always not sour.,implication
+Conrad is not low.,negation
+Owen is not frank.,negation
+Sandra is not talkative.,negation
+Sandra is not frank.,negation
+Aldrich is not talkative.,negation
+Whitney is not low.,negation
+Luther is not sour.,negation
+Luther is not frank.,negation
+Sandra is not sour.,negation
+Whitney is not teak.,negation
+Lowell is former.,fact
+Lowell is bored.,fact
+Lowell is not immediate.,fact
+Whitney is not bored.,fact
+Ansel is not expensive.,fact
+Dan is expensive.,fact
+Whitney is former.,fact
+Benedict is not bored.,fact
+Whitney is not expensive.,fact
+Sigmund is bored.,fact
+Benedict is expensive.,fact
+Sigmund is not granite.,fact
+All expensive people are not former.,implication
+"If Lowell is not bored and Benedict is not putrid, then Lowell is granite.",implication
+"If Whitney is not former, then Dan is granite.",implication
+"If all people are immediate, then Benedict is not expensive and Dan is granite.",implication
+"If someone is bored or immediate, then he is not granite.",implication
+It can be concluded that Benedict is not putrid once knowing that Dan is granite and Whitney is not expensive.,implication
+"If Whitney is not bored or Dan is not expensive, then Sigmund is granite.",implication
+"If there is someone who is not expensive, then Benedict is granite and Sigmund is not immediate.",implication
+Benedict is not expensive.,negation
+Dan is not granite.,negation
+Whitney is not expensive.,negation
+Ansel is not expensive.,negation
+Sigmund is not granite.,negation
+Whitney is not bored.,negation
+Lowell is not granite.,negation
+Whitney is not former.,negation
+Benedict is not granite.,negation
+Benedict is not putrid.,negation
+Owen is not educational.,fact
+Ansel is not wild.,fact
+Godfrey is not amused.,fact
+Ansel is old.,fact
+Owen is technical.,fact
+Adler is not southern.,fact
+Leroy is not technical.,fact
+Leroy is not educational.,fact
+Halbert is not technical.,fact
+Ansel is not amused.,fact
+Leroy is old.,fact
+Owen is not wild.,fact
+Halbert being amused or Adler being not wild implies that Ansel is not technical.,implication
+"If someone is amused or not technical, then he is educational.",implication
+"If there is at least one people who is educational, then Adler is not southern and Owen is not amused.",implication
+"If there is someone who is both southern and amused, then Halbert is technical.",implication
+Someone who is eithor amused or old is always technical.,implication
+"If someone who is not southern is also technical, then he is educational.",implication
+Ansel being not educational implies that Adler is technical and Leroy is not southern.,implication
+All wild people are southern.,implication
+Ansel is not wild.,negation
+Godfrey is not educational.,negation
+Adler is not old.,negation
+Crosby is not educational.,negation
+Adler is not amused.,negation
+Ansel is not technical.,negation
+Owen is not southern.,negation
+Leroy is not technical.,negation
+Halbert is not educational.,negation
+Halbert is not amused.,negation
+Broderick is zany.,fact
+Nigel is drab.,fact
+Adler is scared.,fact
+Eli is not precious.,fact
+Russell is not sparkling.,fact
+Russell is not scared.,fact
+Broderick is not sparkling.,fact
+Barrett is sparkling.,fact
+Nigel is zany.,fact
+Adler is precious.,fact
+Eli is scared.,fact
+Russell is not asleep.,fact
+"As long as someone is zany, he is asleep and not sparkling.",implication
+"If Barrett is not zany, then Eli is drab and Russell is not precious.",implication
+Someone who is both sparkling and drab is always not zany.,implication
+Russell being not zany implies that Russell is not precious.,implication
+"If Adler is sparkling and Nigel is zany, then Adler is not scared.",implication
+"As long as someone is not precious, he is not sparkling and not scared.",implication
+"If there is someone who is either sparkling or precious, then Broderick is drab.",implication
+"If there is at least one people who is scared, then Barrett is not precious.",implication
+"If there is at least one people who is both scared and not drab, then Nigel is not sparkling.",implication
+Adler being not precious or Broderick being not scared implies that Broderick is asleep.,implication
+Broderick is not asleep.,negation
+Barrett is not sparkling.,negation
+Eli is not asleep.,negation
+Russell is not asleep.,negation
+Nigel is not drab.,negation
+Barrett is not precious.,negation
+Eli is not scared.,negation
+Barrett is not scared.,negation
+Broderick is not drab.,negation
+Nigel is not scared.,negation
+Barrett is not combative.,fact
+Abel is not recent.,fact
+Montague is not combative.,fact
+Montague is old.,fact
+Barrett is different.,fact
+Montague is different.,fact
+Dan is bored.,fact
+Ansel is recent.,fact
+Barrett is not bewildered.,fact
+Godfrey is not bored.,fact
+Abel is not bored.,fact
+Abel is combative.,fact
+"If someone is combative, then he is not bewildered.",implication
+It can be concluded that Ansel is not bewildered once knowing that Ansel is not bored.,implication
+"If someone who is not combative is also old, then he is not different.",implication
+"If there is someone who is bored, then Ansel is old and Barrett is not combative.",implication
+"If Dan is not bored and Godfrey is old, then Barrett is different.",implication
+"If there is at least one people who is either recent or not bored, then Montague is combative and Dan is different.",implication
+"If there is at least one people who is neither combative nor recent, then Ansel is not bored.",implication
+"If there is someone who is not recent, then Godfrey is old.",implication
+"If there is at least one people who is bored or not recent, then Godfrey is not old.",implication
+Abel being old or Dan being not recent implies that Barrett is different.,implication
+Abel is not bored.,negation
+Montague is not combative.,negation
+Barrett is not bored.,negation
+Ansel is not combative.,negation
+Montague is not different.,negation
+Dan is not bored.,negation
+Abel is not recent.,negation
+Dan is not combative.,negation
+Abel is not combative.,negation
+Godfrey is not old.,negation
+Barrett is not combative.,negation
+Godfrey is not bored.,negation
