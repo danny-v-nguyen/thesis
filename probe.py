@@ -6,13 +6,13 @@ import numpy as np
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from torch.utils.data import Dataset, DataLoader
 from sklearn.linear_model import LogisticRegression
+from sklearn.dummy import DummyClassifier
 from sklearn.metrics import f1_score, accuracy_score
 from tqdm import tqdm
 
 # ==========================================
 # 1. CONFIGURATION & LAYERS TO PROBE
 # ==========================================
-# We will probe these layers to see the logical evolution in the model's middle layers
 TARGET_LAYERS = [10, 11, 12, 13, 14]
 
 CACHE_DIR = "./probe_cache_multi"
@@ -20,7 +20,6 @@ os.makedirs(CACHE_DIR, exist_ok=True)
 
 LABEL_MAP = {"fact": 0, "implication": 1, "negation": 2}
 
-# Determine paths dynamically for each targeted layer
 def get_feature_paths(split_name, layer):
     return {
         "X": os.path.join(CACHE_DIR, f"X_{split_name}_layer{layer}.npy"),
@@ -47,11 +46,6 @@ class LogicNLIDataset(Dataset):
 # 3. MULTI-LAYER EXTRACTION ENGINE
 # ==========================================
 def extract_features_multi_layer(csv_path, batch_size=32, split_name="Split"):
-    """
-    Extracts features for all TARGET_LAYERS in parallel. 
-    Resumes from cache if all target layer files already exist.
-    """
-    # Check if all layers are already cached for this split
     all_cached = True
     for layer in TARGET_LAYERS:
         paths = get_feature_paths(split_name, layer)
@@ -76,22 +70,18 @@ def extract_features_multi_layer(csv_path, batch_size=32, split_name="Split"):
         tokenizer.pad_token = tokenizer.eos_token
         tokenizer.padding_side = "right" 
         
-        # Explicitly load model on GPU (fp16)
         model = AutoModelForCausalLM.from_pretrained(model_id, dtype=torch.float16, device_map="auto")
         
         extracted_activations = {}
         
-        # Dynamically create hooks for each target layer
         def make_hook(layer_idx):
             def hook(module, input, output):
-                # Ensure batch dims are preserved dynamically
                 if isinstance(output, (tuple, list)):
                     extracted_activations[f"layer_{layer_idx}"] = output[0]
                 else:
                     extracted_activations[f"layer_{layer_idx}"] = output
             return hook
 
-        # Register forward hooks on all target layers
         for layer in TARGET_LAYERS:
             target_layer_module = model.model.layers[layer]
             target_layer_module.register_forward_hook(make_hook(layer))
@@ -99,7 +89,6 @@ def extract_features_multi_layer(csv_path, batch_size=32, split_name="Split"):
     dataset = LogicNLIDataset(csv_path)
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
     
-    # Storage arrays for each target layer
     X_lists = {layer: [] for layer in TARGET_LAYERS}
     Y_list = []
     
@@ -113,28 +102,22 @@ def extract_features_multi_layer(csv_path, batch_size=32, split_name="Split"):
             
         attention_mask = inputs["attention_mask"]
         
-        # Perform masked mean pooling for every captured layer
         for layer in TARGET_LAYERS:
             layer_hidden_states = extracted_activations[f"layer_{layer}"]
-            
-            # Masked Mean-pooling calculations
             input_mask_expanded = attention_mask.unsqueeze(-1).expand(layer_hidden_states.size()).float()
             sum_embeddings = torch.sum(layer_hidden_states * input_mask_expanded, dim=1)
             sum_mask = input_mask_expanded.sum(dim=1)
             sum_mask = torch.clamp(sum_mask, min=1e-9)
             mean_pooled_batch = (sum_embeddings / sum_mask).detach().cpu().numpy()
-            
             X_lists[layer].append(mean_pooled_batch)
             
         Y_list.extend(batch_labels.numpy())
         
-    # Stack, save, and cache arrays for each layer
     results = {}
     y_final = np.array(Y_list)
     for layer in TARGET_LAYERS:
         X_final = np.vstack(X_lists[layer])
         paths = get_feature_paths(split_name, layer)
-        
         np.save(paths["X"], X_final)
         np.save(paths["y"], y_final)
         results[layer] = (X_final, y_final)
@@ -142,52 +125,50 @@ def extract_features_multi_layer(csv_path, batch_size=32, split_name="Split"):
     return results
 
 # ==========================================
-# 4. RUN PIPELINE & COMPARE
+# 4. RUN PIPELINE & EVALUATE
 # ==========================================
 if __name__ == "__main__":
     BATCH_SIZE = 32 
 
-    # Extract/Resume for all layers
+    # Extract/Resume Dataset Splits
     train_data = extract_features_multi_layer("./data/logicnli_probing_targets-train.csv", batch_size=BATCH_SIZE, split_name="Train")
     dev_data = extract_features_multi_layer("./data/logicnli_probing_targets-dev.csv", batch_size=BATCH_SIZE, split_name="Dev")
     test_data = extract_features_multi_layer("./data/logicnli_probing_targets-test.csv", batch_size=BATCH_SIZE, split_name="Test")
     
-    # Safely free GPU VRAM before running ML classifiers
     if 'model' in globals():
         del model
         torch.cuda.empty_cache()
 
-    # Results tracker
-    layer_metrics = []
+    # We use Layer 12's shapes as standard inputs for the baseline classifiers
+    # (Since baselines ignore feature values, their shapes simply need to match y_test)
+    sample_layer = TARGET_LAYERS[0]
+    X_tr_sample, y_train = train_data[sample_layer]
+    X_te_sample, y_test = test_data[sample_layer]
 
-    print("\n--- Training and Evaluating Probes Across Layers ---")
-    for layer in TARGET_LAYERS:
-        print(f"Processing Layer {layer}...")
+    # Tracker list for final comparison table
+    report_rows = []
+
+    # ------------------------------------------
+    # A. COMPUTE BASELINES (Pure Random Chance)
+    # ------------------------------------------
+    print("\nComputing statistical baselines...")
+    baselines = {
+        "Baseline: Uniform Random": DummyClassifier(strategy="uniform", random_state=42),
+        "Baseline: Majority Class": DummyClassifier(strategy="most_frequent", random_state=42),
+        "Baseline: Stratified Random": DummyClassifier(strategy="stratified", random_state=42)
+    }
+
+    for name, dummy_model in baselines.items():
+        # Fit baseline on training labels, then predict on test labels
+        dummy_model.fit(X_tr_sample, y_train)
+        preds = dummy_model.predict(X_te_sample)
         
-        X_tr, y_tr = train_data[layer]
-        X_de, y_de = dev_data[layer]
-        X_te, y_te = test_data[layer]
+        class_f1s = f1_score(y_test, preds, average=None, zero_division=0)
+        macro_f1 = f1_score(y_test, preds, average='macro', zero_division=0)
+        accuracy = accuracy_score(y_test, preds)
         
-        # Train linear probe for this layer
-        probe = LogisticRegression(C=1.0, l1_ratio=0.0, max_iter=1000)
-        probe.fit(X_tr, y_tr)
-        
-        # Save probe model to disk
-        probe_path = os.path.join(CACHE_DIR, f"probe_layer_{layer}.pkl")
-        with open(probe_path, "wb") as f:
-            pickle.dump(probe, f)
-            
-        # Run evaluations
-        dev_preds = probe.predict(X_de)
-        test_preds = probe.predict(X_te)
-        
-        # Calculate per-class metrics
-        class_f1s = f1_score(y_te, test_preds, average=None)  # [fact_f1, implication_f1, negation_f1]
-        macro_f1 = f1_score(y_te, test_preds, average='macro')
-        accuracy = accuracy_score(y_te, test_preds)
-        
-        layer_metrics.append({
-            "Layer": layer,
+        report_rows.append({
+            "Source": name,
             "Accuracy": accuracy,
             "Macro F1": macro_f1,
             "Fact F1": class_f1s[0],
@@ -195,16 +176,50 @@ if __name__ == "__main__":
             "Negation F1": class_f1s[2]
         })
 
-    # Render results in a clean comparison table
-    df_results = pd.DataFrame(layer_metrics)
-    print("\n" + "="*65)
-    print("                LAYER COMPARISON SUMMARY")
-    print("="*65)
+    # ------------------------------------------
+    # B. EVALUATE LAYER-BY-LAYER PROBES
+    # ------------------------------------------
+    print("\nTraining and evaluating probing classifiers...")
+    for layer in TARGET_LAYERS:
+        X_tr, y_tr = train_data[layer]
+        X_te, y_te = test_data[layer]
+        
+        # Train probe for current layer
+        probe = LogisticRegression(C=1.0, l1_ratio=0.0, max_iter=5000)
+        probe.fit(X_tr, y_tr)
+        
+        # Save probe model to disk
+        probe_path = os.path.join(CACHE_DIR, f"probe_layer_{layer}.pkl")
+        with open(probe_path, "wb") as f:
+            pickle.dump(probe, f)
+            
+        preds = probe.predict(X_te)
+        
+        class_f1s = f1_score(y_te, preds, average=None)
+        macro_f1 = f1_score(y_te, preds, average='macro')
+        accuracy = accuracy_score(y_te, preds)
+        
+        report_rows.append({
+            "Source": f"Llama Layer {layer}",
+            "Accuracy": accuracy,
+            "Macro F1": macro_f1,
+            "Fact F1": class_f1s[0],
+            "Implication F1": class_f1s[1],
+            "Negation F1": class_f1s[2]
+        })
+
+    # ------------------------------------------
+    # C. PRINT UNIFIED REPORT CARD
+    # ------------------------------------------
+    df_results = pd.DataFrame(report_rows)
+    print("\n" + "="*80)
+    print("                    PROBING RESULTS VS. BASELINES REPORT")
+    print("="*80)
     print(df_results.to_string(index=False, formatters={
-        "Accuracy": "{:.4f}".format,
-        "Macro F1": "{:.4f}".format,
-        "Fact F1": "{:.4f}".format,
-        "Implication F1": "{:.4f}".format,
-        "Negation F1": "{:.4f}".format,
+        "Accuracy": "{:.4%}".format,
+        "Macro F1": "{:.4%}".format,
+        "Fact F1": "{:.4%}".format,
+        "Implication F1": "{:.4%}".format,
+        "Negation F1": "{:.4%}".format,
     }))
-    print("="*65)
+    print("="*80)
