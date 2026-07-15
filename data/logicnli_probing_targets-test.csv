@@ -1,0 +1,3092 @@
+Sentence,Label
+Vivian is eager.,fact
+Rhett is not modest.,fact
+Vivian is confused.,fact
+Vivian is not lazy.,fact
+Atwater is eager.,fact
+Philip is not confused.,fact
+Giles is not eager.,fact
+Giles is not real.,fact
+Kilby is not eager.,fact
+Ramon is eager.,fact
+Rhett is not sociable.,fact
+Rhett is lazy.,fact
+"If someone is not lazy, then he is both sociable and modest.",implication
+"If there is someone who is not eager, then Ramon is not lazy.",implication
+Philip being eager or Kilby being real implies that Philip is not lazy.,implication
+"If there is someone who is both not sociable and not modest, then Kilby is not lazy.",implication
+"If someone is modest or not confused, then he is not eager.",implication
+It can be concluded that Atwater is eager once knowing that Philip is modest and Atwater is confused.,implication
+"If there is someone who is not eager, then Vivian is lazy and Ramon is confused.",implication
+"If all people are eager, then Giles is not sociable and Atwater is not modest.",implication
+Vivian is not sociable.,negation
+Ramon is not real.,negation
+Vivian is not eager.,negation
+Giles is not eager.,negation
+Rhett is not confused.,negation
+Vivian is not lazy.,negation
+Ramon is not modest.,negation
+Vivian is not real.,negation
+Giles is not real.,negation
+Atwater is not eager.,negation
+Rhett is not lazy.,negation
+Philip is not confused.,negation
+Sebastian is difficult.,fact
+Sebastian is colorful.,fact
+Quentin is pleasant.,fact
+Carver is known.,fact
+Sebastian is not embarrassed.,fact
+Quentin is not difficult.,fact
+Quentin is not obvious.,fact
+Simon is not obvious.,fact
+Bradley is embarrassed.,fact
+Carver is difficult.,fact
+Simon is not known.,fact
+Simon is not difficult.,fact
+Sebastian being not colorful implies that Clayton is known.,implication
+"If there is someone who is both not pleasant and not known, then Simon is colorful.",implication
+"If Quentin is difficult and Sebastian is colorful, then Clayton is not known.",implication
+"If someone is both not obvious and not embarrassed, then he is pleasant.",implication
+It can be concluded that Sebastian is embarrassed once knowing that Romeo is not obvious or Simon is not difficult.,implication
+"If someone is embarrassed, then he is both colorful and not difficult.",implication
+Quentin being pleasant implies that Simon is not colorful.,implication
+Romeo is not pleasant.,negation
+Quentin is not obvious.,negation
+Simon is not embarrassed.,negation
+Clayton is not known.,negation
+Quentin is not embarrassed.,negation
+Sebastian is not colorful.,negation
+Sebastian is not known.,negation
+Carver is not colorful.,negation
+Simon is not obvious.,negation
+Simon is not pleasant.,negation
+Sebastian is not difficult.,negation
+Abbott is lonely.,fact
+Giles is delicious.,fact
+Gabriela is not important.,fact
+Giles is not crystal.,fact
+Gabriela is not vast.,fact
+Abbott is not important.,fact
+Grover is not vast.,fact
+Giles is important.,fact
+Blair is not delicious.,fact
+Giles is not vast.,fact
+Monroe is not important.,fact
+Monroe is crystal.,fact
+"If all people are crystal, then Grover is not important and Blair is not delicious.",implication
+"If someone is lonely, then he is not important.",implication
+It can be concluded that Baron is crystal and Giles is not important once knowing that Baron is not lonely.,implication
+"If there is someone who is not vast, then Gabriela is not important and Blair is not lonely.",implication
+"As long as someone is important, he is not delicious and not lonely.",implication
+"If there is at least one people who is both spotless and not vast, then Blair is not crystal.",implication
+"If someone who is not vast is also lonely, then he is delicious.",implication
+"If someone is not important or he is spotless, then he is delicious.",implication
+It can be concluded that Giles is not delicious once knowing that Baron is not important or Giles is lonely.,implication
+Grover is not important.,negation
+Gabriela is not vast.,negation
+Abbott is not delicious.,negation
+Blair is not lonely.,negation
+Grover is not delicious.,negation
+Gabriela is not important.,negation
+Grover is not crystal.,negation
+Giles is not delicious.,negation
+Grover is not lonely.,negation
+Giles is not important.,negation
+Gabriela is not crystal.,negation
+Abbott is not crystal.,negation
+Seth is not numerous.,fact
+Jaime is different.,fact
+Seth is different.,fact
+Daisy is muddy.,fact
+Milburn is not impatient.,fact
+Harold is not impatient.,fact
+Ramon is not numerous.,fact
+Jaime is muddy.,fact
+Ramon is passionate.,fact
+Daisy is not impatient.,fact
+Harold is not different.,fact
+Milburn is not shrill.,fact
+"If someone is not muddy or different, then he is shrill.",implication
+It can be concluded that Harold is not shrill once knowing that Daisy is not different or Ramon is not impatient.,implication
+"If there is someone who is either not different or not muddy, then Daisy is not numerous and Seth is not passionate.",implication
+"If there is someone who is not impatient, then Harold is different and Harold is passionate.",implication
+"If Ramon is different and Seth is not numerous, then Harold is impatient and Ramon is shrill.",implication
+Someone who is muddy is always both numerous and impatient.,implication
+"If there is someone who is not numerous, then Daisy is not impatient.",implication
+It can be concluded that Milburn is muddy once knowing that Ramon is not impatient and Harold is passionate.,implication
+"If someone is shrill, then he is both muddy and passionate.",implication
+"If Harold is not different, then Milburn is not shrill.",implication
+Jaime is not muddy.,negation
+Daisy is not impatient.,negation
+Milburn is not muddy.,negation
+Seth is not numerous.,negation
+Jaime is not numerous.,negation
+Seth is not muddy.,negation
+Daisy is not different.,negation
+Jaime is not different.,negation
+Ramon is not passionate.,negation
+Milburn is stupid.,fact
+Roger is not lonely.,fact
+Roger is stupid.,fact
+Kilby is stupid.,fact
+Roger is not brainy.,fact
+Harold is not stupid.,fact
+Roger is not tasty.,fact
+Baron is not huge.,fact
+Harold is not intelligent.,fact
+Riley is not lonely.,fact
+Milburn is not huge.,fact
+Romeo is not brainy.,fact
+"If there is at least one people who is not brainy, then Baron is not huge and Roger is not stupid.",implication
+"As long as someone is not stupid, he is huge and brainy.",implication
+"If Milburn is not stupid and Kilby is not lonely, then Kilby is brainy.",implication
+Someone who is not tasty and not stupid is always not brainy and huge.,implication
+"If Romeo is not brainy, then Romeo is intelligent.",implication
+"If there is at least one people who is both intelligent and not tasty, then Roger is not stupid.",implication
+Harold being not stupid implies that Milburn is not lonely and Harold is huge.,implication
+It can be concluded that Milburn is not huge once knowing that Milburn is stupid or Riley is not lonely.,implication
+"If someone who is not tasty is also not intelligent, then he is not stupid.",implication
+Harold is not tasty.,negation
+Riley is not huge.,negation
+Milburn is not lonely.,negation
+Harold is not brainy.,negation
+Roger is not brainy.,negation
+Riley is not brainy.,negation
+Roger is not lonely.,negation
+Romeo is not huge.,negation
+Roger is not stupid.,negation
+Baron is not huge.,fact
+Jeffrey is eager.,fact
+Archibald is not woolen.,fact
+Archibald is not suspicious.,fact
+Archibald is not huge.,fact
+Conner is not woolen.,fact
+Conner is eager.,fact
+Ramon is suspicious.,fact
+Ramon is eager.,fact
+Atwood is difficult.,fact
+Atwood is not suspicious.,fact
+Jeffrey is not huge.,fact
+"If there is at least one people who is suspicious, then Atwood is not eager.",implication
+"If someone is not difficult, then he is both not woolen and eager.",implication
+It can be concluded that Ramon is woolen once knowing that Baron is huge and Jeffrey is not difficult.,implication
+Someone who is woolen is always not lazy.,implication
+Archibald being not eager or Atwood being difficult implies that Galvin is not huge.,implication
+"If someone who is eager is also woolen, then he is huge.",implication
+"If there is at least one people who is not huge, then Ramon is eager and Galvin is not woolen.",implication
+"If there is at least one people who is suspicious or difficult, then Archibald is not lazy.",implication
+Archibald is not eager.,negation
+Jeffrey is not difficult.,negation
+Archibald is not huge.,negation
+Ramon is not lazy.,negation
+Archibald is not woolen.,negation
+Ramon is not woolen.,negation
+Ramon is not difficult.,negation
+Galvin is not lazy.,negation
+Atwood is not lazy.,negation
+Atwood is not difficult.,negation
+Archibald is not difficult.,negation
+Ramon is not eager.,negation
+Galvin is not woolen.,negation
+Oscar is not cruel.,fact
+Blair is not patient.,fact
+Quentin is not brainy.,fact
+Quentin is distinct.,fact
+Oscar is enthusiastic.,fact
+Oliver is not patient.,fact
+Quentin is cruel.,fact
+Kenneth is not patient.,fact
+Landry is not enthusiastic.,fact
+Kenneth is not distinct.,fact
+Quentin is spotless.,fact
+Landry is distinct.,fact
+"If there is at least one people who is both enthusiastic and not cruel, then Quentin is not distinct.",implication
+"If Landry is not spotless or Kenneth is enthusiastic, then Kenneth is not patient.",implication
+It can be concluded that Blair is not enthusiastic and Kenneth is not distinct once knowing that Landry is brainy.,implication
+"If there is at least one people who is patient or not enthusiastic, then Kenneth is not cruel.",implication
+It can be concluded that Blair is enthusiastic once knowing that Blair is brainy.,implication
+"If someone is spotless, then he is both not brainy and not distinct.",implication
+"If there is at least one people who is distinct or not spotless, then Quentin is not enthusiastic.",implication
+"If there is someone who is both enthusiastic and not spotless, then Oliver is patient.",implication
+Quentin is not patient.,negation
+Quentin is not distinct.,negation
+Oliver is not patient.,negation
+Quentin is not enthusiastic.,negation
+Oliver is not cruel.,negation
+Oscar is not enthusiastic.,negation
+Quentin is not brainy.,negation
+Alan is not patient.,negation
+Alan is not distinct.,negation
+Quentin is not spotless.,negation
+Kenneth is not spotless.,negation
+Axel is rich.,fact
+Alberta is confused.,fact
+Sinclair is not known.,fact
+Alberta is alert.,fact
+Clayton is rich.,fact
+Axel is confused.,fact
+Magnus is alert.,fact
+Clayton is alert.,fact
+Alberta is known.,fact
+Clayton is not weary.,fact
+Magnus is not confused.,fact
+Sinclair is not confused.,fact
+"If someone is not rich or not weary, then he is not alert.",implication
+Someone who is not confused and not rich is always not alert and not relieved.,implication
+Someone who is not alert is always not confused.,implication
+"If there is at least one people who is not rich, then Malcolm is alert and Alberta is confused.",implication
+"If there is at least one people who is not rich, then Alberta is relieved and Clayton is alert.",implication
+"As long as someone is confused, he is rich and not alert.",implication
+"If Magnus is confused or Malcolm is not weary, then Magnus is not known.",implication
+"If there is at least one people who is weary or not confused, then Axel is not rich.",implication
+"If there is at least one people who is not relieved or not rich, then Magnus is weary.",implication
+Magnus being alert and Alberta being not relieved imply that Clayton is not rich and Clayton is not known.,implication
+"If there is someone who is not relieved, then Malcolm is not confused and Archibald is weary.",implication
+Clayton is not alert.,negation
+Magnus is not alert.,negation
+Magnus is not relieved.,negation
+Malcolm is not confused.,negation
+Alberta is not relieved.,negation
+Alberta is not known.,negation
+Axel is not confused.,negation
+Clayton is not confused.,negation
+Axel is not rich.,negation
+Alberta is not weary.,negation
+Clayton is not weary.,negation
+Archibald is not alert.,negation
+Carrick is filthy.,fact
+Carrick is not financial.,fact
+Galvin is grieving.,fact
+Blake is filthy.,fact
+Oscar is not relieved.,fact
+Perry is not filthy.,fact
+Blake is financial.,fact
+Perry is relieved.,fact
+Toby is financial.,fact
+Perry is filthy.,fact
+Oscar is not filthy.,fact
+Toby is not filthy.,fact
+Someone who is filthy is always unlikely.,implication
+It can be concluded that Carrick is not unlikely and Galvin is not filthy once knowing that Carrick is relieved and Perry is filthy.,implication
+"If there is at least one people who is both not relieved and filthy, then Blake is grieving.",implication
+"If Blake is unlikely and Galvin is relieved, then Oscar is filthy.",implication
+Carrick being not grieving or Toby being not filthy implies that Carrick is filthy.,implication
+"If Perry is not filthy or Carrick is not grieving, then Conway is not filthy.",implication
+"If there is at least one people who is not filthy, then Oscar is financial.",implication
+Someone who is filthy is always both not filthy and not financial.,implication
+"If there is someone who is either not filthy or grieving, then Toby is not filthy.",implication
+"If there is someone who is both not grieving and filthy, then Blake is filthy.",implication
+Carrick is not financial.,negation
+Galvin is not grieving.,negation
+Carrick is not filthy.,negation
+Blake is not financial.,negation
+Perry is not filthy.,negation
+Perry is not financial.,negation
+Oscar is not financial.,negation
+Galvin is not filthy.,negation
+Toby is not financial.,negation
+Toby is not filthy.,negation
+Medwin is doubtful.,fact
+Roberto is not bitter.,fact
+Roberto is not grieving.,fact
+Adley is not financial.,fact
+Adley is bitter.,fact
+Roberto is pure.,fact
+Gavin is bitter.,fact
+Axel is grieving.,fact
+Lynda is bitter.,fact
+Axel is not sociable.,fact
+Bernard is grieving.,fact
+Medwin is not financial.,fact
+"If there is someone who is not sociable, then Axel is not pure and Medwin is not bitter.",implication
+"If someone is not bitter, then he is not grieving.",implication
+Medwin being not sociable implies that Medwin is not pure.,implication
+"If there is someone who is either not pure or not doubtful, then Lynda is not grieving.",implication
+Someone who is not doubtful is always not bitter.,implication
+"if there is at least one people who is financial and grieving, then Medwin is doubtful and Bernard is not sociable.",implication
+"If someone is grieving, then he is sociable.",implication
+"If there is at least one people who is doubtful or not bitter, then Adley is financial.",implication
+Axel being bitter and Lynda being financial imply that Bernard is sociable.,implication
+"If someone is both not grieving and not sociable, then he is not bitter.",implication
+"If Lynda is doubtful and Axel is bitter, then Gavin is not pure.",implication
+Roberto is not doubtful.,negation
+Axel is not pure.,negation
+Adley is not financial.,negation
+Medwin is not doubtful.,negation
+Adley is not bitter.,negation
+Bernard is not bitter.,negation
+Axel is not grieving.,negation
+Gavin is not pure.,negation
+Bernard is not pure.,negation
+Axel is not sociable.,negation
+Medwin is eager.,fact
+Landon is super.,fact
+Angela is super.,fact
+Landon is not eager.,fact
+Angela is not impatient.,fact
+Magnus is dramatic.,fact
+Angela is doubtful.,fact
+Quinby is super.,fact
+Clyde is impatient.,fact
+Angela is dramatic.,fact
+Medwin is super.,fact
+Angela is not honest.,fact
+Garret being not dramatic implies that Landon is not doubtful and Landon is super.,implication
+It can be concluded that Magnus is impatient once knowing that Angela is dramatic or Medwin is eager.,implication
+"If there is at least one people who is not doubtful, then Angela is honest.",implication
+"If there is someone who is either eager or not impatient, then Landon is dramatic.",implication
+"If there is someone who is both dramatic and doubtful, then Medwin is not honest.",implication
+"If all people are not dramatic, then Clyde is impatient and Clyde is not eager.",implication
+"If there is someone who is not eager, then Quinby is super.",implication
+"If there is someone who is honest, then Magnus is not super and Garret is not impatient.",implication
+Someone who is dramatic is always both not super and not impatient.,implication
+Clyde is not honest.,negation
+Landon is not eager.,negation
+Magnus is not super.,negation
+Medwin is not honest.,negation
+Garret is not super.,negation
+Angela is not eager.,negation
+Landon is not super.,negation
+Landon is not doubtful.,negation
+Magnus is not dramatic.,negation
+Landon is not impatient.,negation
+Casey is young.,fact
+Samuel is not patient.,fact
+Samuel is young.,fact
+Samuel is envious.,fact
+Blake is not young.,fact
+Benjamin is not enthusiastic.,fact
+Alan is not obvious.,fact
+Benjamin is obvious.,fact
+Casey is filthy.,fact
+Riley is young.,fact
+Samuel is obvious.,fact
+Riley is not patient.,fact
+"If there is someone who is not patient, then Blake is envious and Casey is filthy.",implication
+"If Blake is not obvious and Blake is not young, then Alan is enthusiastic and Riley is not patient.",implication
+"If someone is envious, then he is both young and not obvious.",implication
+"If Alan is enthusiastic or Benjamin is not young, then Samuel is not patient.",implication
+"If there is at least one people who is enthusiastic or obvious, then Riley is not filthy.",implication
+"If someone is both not envious and not enthusiastic, then he is patient.",implication
+"If someone is not patient and not obvious, then he is enthusiastic and not envious.",implication
+"If there is someone who is not filthy, then Samuel is not patient.",implication
+Riley is not young.,negation
+Riley is not patient.,negation
+Casey is not young.,negation
+Samuel is not patient.,negation
+Alan is not filthy.,negation
+Alan is not obvious.,negation
+Blake is not enthusiastic.,negation
+Benjamin is not patient.,negation
+Samuel is not young.,negation
+Blake is not young.,negation
+Samuel is not envious.,negation
+Casey is not filthy.,negation
+Alan is not young.,negation
+Samuel is not obvious.,negation
+Blair is lazy.,fact
+Blair is not muddy.,fact
+Stacy is not square.,fact
+Kenway is patient.,fact
+Quenby is lazy.,fact
+Quenby is not important.,fact
+Kit is square.,fact
+Vivian is not crystal.,fact
+Stacy is patient.,fact
+Stacy is not muddy.,fact
+Quenby is square.,fact
+Kenway is not muddy.,fact
+"If there is someone who is either important or not square, then Stacy is muddy.",implication
+"If Vivian is muddy or Vivian is important, then Quenby is not patient.",implication
+Someone who is not lazy or not important is always not square and muddy.,implication
+It can be concluded that Atwood is patient and Atwood is not important once knowing that Stacy is square and Vivian is not crystal.,implication
+"As long as someone is crystal, he is important and muddy.",implication
+"If Kit is lazy, then Kit is not patient and Kit is crystal.",implication
+"If there is someone who is both not crystal and important, then Kit is patient.",implication
+"If someone is patient or muddy, then he is not lazy.",implication
+"If Quenby is not patient and Atwood is not square, then Kenway is muddy.",implication
+Quenby is not patient.,negation
+Quenby is not lazy.,negation
+Blair is not lazy.,negation
+Blair is not muddy.,negation
+Stacy is not patient.,negation
+Kenway is not important.,negation
+Stacy is not muddy.,negation
+Roberto is alive.,fact
+Byron is noisy.,fact
+Magnus is alert.,fact
+Roberto is not alert.,fact
+Harold is not noisy.,fact
+Byron is patient.,fact
+Blair is alive.,fact
+Blair is noisy.,fact
+Casey is not noisy.,fact
+Gabriela is lonely.,fact
+Byron is alert.,fact
+Magnus is not brainy.,fact
+"If there is nobody who is not alert, then Casey is alive and Casey is not brainy.",implication
+"If there is at least one people who is both not alert and not patient, then Gabriela is brainy.",implication
+Someone who is alert is always lonely.,implication
+It can be concluded that Gabriela is alert once knowing that Harold is not lonely.,implication
+"If someone who is brainy is also not patient, then he is not alert.",implication
+"If Harold is not brainy or Gabriela is lonely, then Roberto is not noisy.",implication
+Roberto is not alert.,negation
+Casey is not lonely.,negation
+Byron is not alert.,negation
+Magnus is not brainy.,negation
+Byron is not patient.,negation
+Roberto is not lonely.,negation
+Blair is not alive.,negation
+Harold is not noisy.,negation
+Roberto is not noisy.,negation
+Nathaniel is colorful.,fact
+Oliver is foreign.,fact
+Kenway is not square.,fact
+Landon is not suspicious.,fact
+Kenway is colorful.,fact
+Nathaniel is cruel.,fact
+Galvin is suspicious.,fact
+Galvin is not square.,fact
+Galvin is muddy.,fact
+Kenway is not muddy.,fact
+Seth is not suspicious.,fact
+Seth is square.,fact
+"If there is at least one people who is both cruel and not colorful, then Galvin is muddy.",implication
+Someone who is foreign is always both suspicious and not square.,implication
+"If there is someone who is both cruel and suspicious, then Oliver is muddy.",implication
+"If someone is foreign or not muddy, then he is square.",implication
+"If there is at least one people who is not muddy, then Oliver is not square and Quinby is colorful.",implication
+"If there is someone who is cruel, then Galvin is foreign and Nathaniel is muddy.",implication
+"As long as someone is not foreign, he is not muddy and not cruel.",implication
+Quinby being not square or Nathaniel being foreign implies that Landon is muddy.,implication
+Galvin is not square.,negation
+Quinby is not cruel.,negation
+Kenway is not muddy.,negation
+Nathaniel is not colorful.,negation
+Seth is not cruel.,negation
+Oliver is not square.,negation
+Galvin is not muddy.,negation
+Landon is not square.,negation
+Kenway is not square.,negation
+Landon is not muddy.,negation
+Jerome is relieved.,fact
+Landon is dim.,fact
+Logan is not dim.,fact
+Quinby is not worrisome.,fact
+Logan is grieving.,fact
+Quinby is not grieving.,fact
+Benjamin is not relieved.,fact
+Logan is not responsible.,fact
+Benjamin is not worrisome.,fact
+Jerome is not dramatic.,fact
+Beatrice is relieved.,fact
+Clayton is dim.,fact
+"If there is someone who is grieving, then Landon is not dim and Beatrice is not responsible.",implication
+"If there is someone who is both not relieved and responsible, then Jerome is worrisome.",implication
+Someone who is both not relieved and worrisome is always not dim.,implication
+"If someone is both grieving and worrisome, then he is dramatic.",implication
+"If there is someone who is both relieved and not dramatic, then Benjamin is not grieving and Jerome is worrisome.",implication
+Someone who is not worrisome and not relieved is always not grieving and dramatic.,implication
+"If there is someone who is grieving, then Beatrice is not worrisome.",implication
+Logan is not dim.,negation
+Benjamin is not worrisome.,negation
+Landon is not grieving.,negation
+Benjamin is not dim.,negation
+Benjamin is not grieving.,negation
+Jerome is not relieved.,negation
+Clayton is not grieving.,negation
+Logan is not responsible.,negation
+Landon is not dim.,negation
+Quinby is not grieving.,negation
+Jerome is not grieving.,negation
+Samuel is proud.,fact
+Kenway is not proud.,fact
+Kenway is dangerous.,fact
+Archibald is not tasty.,fact
+Byron is proud.,fact
+Ramon is proud.,fact
+Kenway is not different.,fact
+Samuel is not different.,fact
+Byron is impatient.,fact
+Ramon is embarrassed.,fact
+Toby is proud.,fact
+Skyla is impatient.,fact
+"If there is at least one people who is embarrassed, then Kenway is dangerous.",implication
+"If there is someone who is either not embarrassed or proud, then Ramon is not dangerous.",implication
+"If there is someone who is embarrassed, then Ramon is not tasty.",implication
+"If Archibald is proud and Skyla is different, then Kenway is not embarrassed.",implication
+"If there is someone who is both different and not dangerous, then Toby is not impatient.",implication
+"If someone is not tasty, then he is not impatient.",implication
+Someone who is not tasty is always impatient.,implication
+All dangerous people are not impatient.,implication
+"If there is someone who is both not dangerous and not proud, then Byron is not embarrassed.",implication
+Ramon is not impatient.,negation
+Kenway is not dangerous.,negation
+Kenway is not different.,negation
+Archibald is not impatient.,negation
+Byron is not embarrassed.,negation
+Byron is not tasty.,negation
+Blake is envious.,fact
+Quentin is not envious.,fact
+Seth is not square.,fact
+Bartholomew is not patient.,fact
+Seth is dead.,fact
+Bartholomew is not square.,fact
+Blake is square.,fact
+Daisy is envious.,fact
+Quentin is clean.,fact
+Quentin is square.,fact
+Blake is not patient.,fact
+Seth is patient.,fact
+"If someone is not clean, then he is not patient.",implication
+"If there is at least one people who is both not dead and clean, then Kilby is square.",implication
+"If Bartholomew is envious or Bartholomew is not dead, then Milburn is not muddy.",implication
+"If someone is not envious and not clean, then he is muddy and not patient.",implication
+Someone who is eithor envious or not patient is always square.,implication
+It can be concluded that Blake is not clean once knowing that Daisy is envious or Milburn is not patient.,implication
+"If Quentin is dead, then Seth is not envious and Seth is square.",implication
+Someone who is both muddy and not dead is always not square.,implication
+"If Quentin is clean or Daisy is not muddy, then Milburn is envious.",implication
+Daisy is not muddy.,negation
+Daisy is not envious.,negation
+Seth is not square.,negation
+Quentin is not muddy.,negation
+Kilby is not clean.,negation
+Daisy is not square.,negation
+Quentin is not clean.,negation
+Quentin is not envious.,negation
+Seth is not patient.,negation
+Craig is nasty.,fact
+Arnold is not calm.,fact
+Arnold is nasty.,fact
+Arnold is not envious.,fact
+Craig is not calm.,fact
+Riley is not brainy.,fact
+Kenway is fancy.,fact
+Arnold is not fancy.,fact
+Craig is fancy.,fact
+Kenway is brainy.,fact
+Harold is nasty.,fact
+Kenway is nasty.,fact
+"If someone is nasty or he is fancy, then he is not brainy.",implication
+"If there is at least one people who is not dead or not calm, then Harold is not nasty.",implication
+"If all people are nasty or fancy, then Alberta is calm.",implication
+"As long as someone is nasty, he is brainy and not fancy.",implication
+"If someone is dead or he is not brainy, then he is not calm.",implication
+"If someone is nasty, then he is both brainy and not envious.",implication
+"If all people are brainy, then Riley is envious and Alberta is not calm.",implication
+"If Medwin is fancy, then Kenway is nasty.",implication
+Craig being not nasty and Medwin being calm imply that Arnold is not envious.,implication
+Riley is not calm.,negation
+Medwin is not nasty.,negation
+Craig is not envious.,negation
+Kenway is not calm.,negation
+Arnold is not brainy.,negation
+Arnold is not envious.,negation
+Craig is not calm.,negation
+Riley is not dead.,negation
+Harold is not dead.,negation
+Landon is eager.,fact
+Medwin is not passionate.,fact
+Axel is not rich.,fact
+Garret is rich.,fact
+Landon is not vast.,fact
+Garret is vast.,fact
+Medwin is not rich.,fact
+Archer is eager.,fact
+Garret is eager.,fact
+Clayton is not eager.,fact
+Medwin is vast.,fact
+Clayton is not passionate.,fact
+Someone who is eager is always passionate.,implication
+"If all people are not eager, then Clayton is not vast.",implication
+"If Archer is rich and Axel is eager, then Medwin is vast and Axel is not passionate.",implication
+"If Clayton is not vast, then Medwin is not passionate.",implication
+It can be concluded that Garret is vast once knowing that Clayton is passionate and Bartholomew is not rich.,implication
+"If there is at least one people who is eager, then Landon is not rich and Garret is colorful.",implication
+Landon being not vast or Archer being not eager implies that Archer is colorful.,implication
+Someone who is eithor enthusiastic or rich is always not colorful.,implication
+"If there is at least one people who is enthusiastic, then Bartholomew is not passionate and Medwin is colorful.",implication
+Bartholomew is not passionate.,negation
+Clayton is not passionate.,negation
+Garret is not colorful.,negation
+Axel is not rich.,negation
+Landon is not passionate.,negation
+Medwin is not vast.,negation
+Archer is not vast.,negation
+Axel is not eager.,negation
+Archer is not eager.,negation
+Garret is not rich.,negation
+Roger is not eager.,fact
+Atwood is not different.,fact
+Conner is financial.,fact
+Victor is cruel.,fact
+Atwood is cruel.,fact
+Bernard is financial.,fact
+Bernard is not clumsy.,fact
+Victor is not pregnant.,fact
+Bernard is not eager.,fact
+Conner is not pregnant.,fact
+Conner is eager.,fact
+Conner is not clumsy.,fact
+Bernard being clumsy implies that Atwood is pregnant.,implication
+"As long as someone is not cruel, he is clumsy and financial.",implication
+It can be concluded that Bernard is not clumsy once knowing that Conner is not eager or Conner is pregnant.,implication
+"If there is at least one people who is both not different and not eager, then Conner is financial.",implication
+Someone who is different is always financial.,implication
+"If there is someone who is both not financial and not pregnant, then Bernard is not clumsy.",implication
+"If someone is not financial or he is pregnant, then he is clumsy.",implication
+Someone who is not cruel is always both not financial and not pregnant.,implication
+Someone who is eithor not financial or eager is always not cruel.,implication
+Conner is not pregnant.,negation
+Bernard is not clumsy.,negation
+Conner is not eager.,negation
+Atwood is not different.,negation
+Conner is not financial.,negation
+Conner is not clumsy.,negation
+Atwood is not cruel.,negation
+Montgomery is not clumsy.,negation
+Montgomery is not eager.,negation
+Nick is not sorry.,fact
+Nick is not obvious.,fact
+Quentin is poor.,fact
+Nick is not calm.,fact
+Jaime is obvious.,fact
+Quenby is poor.,fact
+Kit is weary.,fact
+Vivian is not sorry.,fact
+Nick is not different.,fact
+Adley is calm.,fact
+Kit is not sorry.,fact
+Vivian is weary.,fact
+"If there is at least one people who is not sorry or poor, then Adley is weary.",implication
+Quentin being not weary implies that Nick is not poor.,implication
+"If someone is not obvious or he is not different, then he is not sorry.",implication
+"if there is at least one people who is calm and not weary, then Quentin is not obvious and Vivian is different.",implication
+"If everyone is not calm, then Jaime is weary.",implication
+"If someone is weary, then he is both not poor and sorry.",implication
+"If there is at least one people who is calm, then Nick is weary and Kit is not sorry.",implication
+Someone who is both not different and weary is always poor.,implication
+"If there is at least one people who is different, then Jaime is not calm and Kit is sorry.",implication
+"If Vivian is not sorry, then Kit is different and Quenby is not obvious.",implication
+"If Jaime is obvious and Quentin is not calm, then Nick is not different.",implication
+It can be concluded that Adley is calm once knowing that Vivian is sorry or Adley is poor.,implication
+Adley is not obvious.,negation
+Adley is not weary.,negation
+Adley is not poor.,negation
+Quenby is not poor.,negation
+Kit is not obvious.,negation
+Quenby is not sorry.,negation
+Nick is not sorry.,negation
+Nick is not poor.,negation
+Kenway is not spotless.,fact
+Abbott is spotless.,fact
+Oliver is not stupid.,fact
+Philip is not filthy.,fact
+Kenway is not filthy.,fact
+Philip is not muddy.,fact
+Jerome is not huge.,fact
+Kenway is muddy.,fact
+Kenneth is not stupid.,fact
+Kenneth is not huge.,fact
+Oliver is filthy.,fact
+Jerome is not muddy.,fact
+"If someone is cheerful, then he is both not huge and not muddy.",implication
+It can be concluded that Abbott is huge once knowing that Philip is muddy or Kenway is stupid.,implication
+"If there is someone who is either not muddy or not stupid, then Abbott is not cheerful.",implication
+"If someone is not cheerful or not huge, then he is not filthy.",implication
+"If there is someone who is both not filthy and cheerful, then Kenneth is not spotless and Philip is huge.",implication
+"If someone is both not cheerful and not filthy, then he is stupid.",implication
+"If Archer is spotless, then Archer is not cheerful and Archer is not stupid.",implication
+Someone who is eithor not muddy or huge is always filthy.,implication
+"If there is at least one people who is spotless, then Philip is cheerful.",implication
+Kenneth is not filthy.,negation
+Kenneth is not huge.,negation
+Archer is not stupid.,negation
+Archer is not spotless.,negation
+Kenway is not filthy.,negation
+Jerome is not spotless.,negation
+Kenway is not spotless.,negation
+Abbott is not cheerful.,negation
+Abbott is not spotless.,negation
+Archer is not huge.,negation
+Malcolm is not crystal.,fact
+Stephanie is not fancy.,fact
+Hal is crystal.,fact
+Alden is embarrassed.,fact
+Blair is not weary.,fact
+Hanley is not embarrassed.,fact
+Malcolm is embarrassed.,fact
+Toby is not fancy.,fact
+Malcolm is not envious.,fact
+Blair is not crystal.,fact
+Hanley is not unlikely.,fact
+Alden is not fancy.,fact
+"If someone is not fancy, then he is both crystal and not unlikely.",implication
+Someone who is both unlikely and embarrassed is always weary.,implication
+"If someone is both unlikely and not crystal, then he is envious.",implication
+"If Toby is weary, then Alden is not embarrassed and Hal is not envious.",implication
+"If Hal is fancy and Toby is weary, then Stephanie is not crystal.",implication
+"If there is someone who is both not envious and unlikely, then Malcolm is embarrassed.",implication
+It can be concluded that Blair is fancy once knowing that Hanley is not envious.,implication
+"If there is someone who is crystal, then Toby is fancy.",implication
+"If Toby is unlikely or Alden is not embarrassed, then Toby is crystal.",implication
+Toby is not fancy.,negation
+Blair is not weary.,negation
+Stephanie is not fancy.,negation
+Stephanie is not crystal.,negation
+Malcolm is not weary.,negation
+Malcolm is not embarrassed.,negation
+Malcolm is not unlikely.,negation
+Hal is not fancy.,negation
+Toby is not envious.,negation
+Stephanie is not weary.,negation
+Monroe is not bossy.,fact
+Monroe is fierce.,fact
+Toby is not bossy.,fact
+Toby is not intelligent.,fact
+Sebastian is intelligent.,fact
+Gavin is not fierce.,fact
+Galvin is not modest.,fact
+Gavin is not intelligent.,fact
+Carrick is not kind.,fact
+Sebastian is kind.,fact
+Daisy is bossy.,fact
+Gavin is kind.,fact
+"If there is at least one people who is not modest, then Toby is intelligent and Carrick is fierce.",implication
+"If someone is not intelligent, then he is not fierce.",implication
+Someone who is not bossy is always both not fierce and not kind.,implication
+"If Toby is crystal or Gavin is not intelligent, then Monroe is bossy.",implication
+"If Monroe is not crystal, then Toby is kind and Monroe is not bossy.",implication
+"If there is someone who is both not crystal and modest, then Toby is fierce and Galvin is intelligent.",implication
+"If someone is crystal, then he is both kind and not bossy.",implication
+"If there is at least one people who is both not modest and intelligent, then Sebastian is bossy.",implication
+Daisy is not fierce.,negation
+Galvin is not bossy.,negation
+Monroe is not intelligent.,negation
+Gavin is not kind.,negation
+Toby is not intelligent.,negation
+Daisy is not intelligent.,negation
+Gavin is not fierce.,negation
+Galvin is not modest.,negation
+Monroe is not bossy.,negation
+Daisy is not bossy.,negation
+Monroe is not fierce.,negation
+Toby is not kind.,negation
+Toby is not crystal.,negation
+Toby is not bossy.,negation
+Gavin is not crystal.,negation
+Sebastian is not bossy.,negation
+Magnus is not passionate.,fact
+Conner is not shy.,fact
+Conner is passionate.,fact
+Skyla is shy.,fact
+Sinclair is not passionate.,fact
+Sinclair is proud.,fact
+Conner is distinct.,fact
+Conner is suspicious.,fact
+Skyla is not suspicious.,fact
+Conner is scared.,fact
+Logan is distinct.,fact
+Abbott is not suspicious.,fact
+"If there is someone who is either scared or distinct, then Arnold is not proud.",implication
+"If there is at least one people who is not scared, then Logan is distinct.",implication
+Skyla being scared and Skyla being not proud imply that Abbott is shy.,implication
+"If there is someone who is not shy, then Sinclair is suspicious.",implication
+Magnus being not suspicious implies that Sinclair is distinct and Magnus is passionate.,implication
+It can be concluded that Skyla is suspicious and Skyla is scared once knowing that Magnus is not shy.,implication
+Someone who is both not passionate and distinct is always shy.,implication
+"If someone is both not passionate and scared, then he is shy.",implication
+"If someone is shy, then he is both not suspicious and distinct.",implication
+Magnus is not proud.,negation
+Conner is not shy.,negation
+Sinclair is not suspicious.,negation
+Sinclair is not passionate.,negation
+Conner is not distinct.,negation
+Conner is not passionate.,negation
+Skyla is not suspicious.,negation
+Magnus is not passionate.,negation
+Logan is not shy.,negation
+Magnus is not shy.,negation
+Skyla is not distinct.,negation
+Conner is actual.,fact
+Byron is not actual.,fact
+Lucas is actual.,fact
+Conner is not lazy.,fact
+Beatrice is capable.,fact
+Conner is obvious.,fact
+Medwin is lazy.,fact
+Medwin is not obvious.,fact
+Lucas is not nasty.,fact
+Keaton is not lazy.,fact
+Victor is nasty.,fact
+Medwin is not actual.,fact
+Beatrice being not actual implies that Lucas is obvious.,implication
+"If someone is both not actual and lazy, then he is not capable.",implication
+"If there is someone who is both obvious and not lazy, then Victor is unusual.",implication
+It can be concluded that Medwin is not obvious once knowing that Beatrice is capable and Keaton is not actual.,implication
+"If there is someone who is both not lazy and not nasty, then Beatrice is unusual and Conner is actual.",implication
+Keaton is not nasty.,negation
+Byron is not unusual.,negation
+Medwin is not lazy.,negation
+Byron is not actual.,negation
+Medwin is not capable.,negation
+Byron is not obvious.,negation
+Conner is not actual.,negation
+Lucas is not actual.,negation
+Medwin is not actual.,negation
+Medwin is not unusual.,negation
+Medwin is not nasty.,negation
+Beatrice is not unusual.,negation
+Atwater is not bad-tempered.,fact
+Clayton is not gorgeous.,fact
+Blake is not gorgeous.,fact
+Conner is not gorgeous.,fact
+Carver is bad-tempered.,fact
+Conner is not real.,fact
+Oscar is actual.,fact
+Atwater is gorgeous.,fact
+Carver is actual.,fact
+Carver is not real.,fact
+Troy is not fancy.,fact
+Troy is not bad-tempered.,fact
+"As long as someone is fancy, he is gorgeous and not financial.",implication
+"If there is someone who is either not real or not bad-tempered, then Carver is not gorgeous.",implication
+Someone who is bad-tempered or not financial is always not real and fancy.,implication
+Someone who is real is always bad-tempered.,implication
+"If Conner is not gorgeous and Atwater is not real, then Troy is fancy.",implication
+"If there is at least one people who is actual or gorgeous, then Troy is fancy.",implication
+"If there is at least one people who is bad-tempered or not actual, then Blake is gorgeous.",implication
+It can be concluded that Oscar is fancy once knowing that Clayton is financial.,implication
+Conner is not actual.,negation
+Blake is not actual.,negation
+Conner is not bad-tempered.,negation
+Carver is not gorgeous.,negation
+Troy is not gorgeous.,negation
+Blake is not gorgeous.,negation
+Troy is not financial.,negation
+Carver is not financial.,negation
+Carver is not fancy.,negation
+Conner is not real.,negation
+Clayton is not real.,negation
+Atwater is not financial.,negation
+Daisy is not blue.,fact
+Rhett is blue.,fact
+Daisy is clean.,fact
+Daisy is not cheerful.,fact
+Christian is known.,fact
+Rhett is weary.,fact
+Blake is clean.,fact
+Rhett is not clean.,fact
+Garret is blue.,fact
+Blake is not weary.,fact
+Rhett is wide-eyed.,fact
+Blake is known.,fact
+Rhett being clean and Alison being weary imply that Rhett is not blue.,implication
+"As long as someone is cheerful, he is weary and not known.",implication
+Someone who is not wide-eyed is always both weary and blue.,implication
+"If there is at least one people who is not clean, then Blake is not wide-eyed.",implication
+"If there is someone who is blue, then Daisy is not clean and Blake is not cheerful.",implication
+"If there is at least one people who is both wide-eyed and clean, then Garret is not known.",implication
+"If there is someone who is either not wide-eyed or not known, then Garret is cheerful.",implication
+"As long as someone is blue, he is not weary and known.",implication
+"If there is someone who is clean, then Alison is not blue and Blake is known.",implication
+It can be concluded that Alison is known once knowing that Garret is not weary.,implication
+Garret is not blue.,negation
+Rhett is not known.,negation
+Christian is not blue.,negation
+Alison is not known.,negation
+Garret is not weary.,negation
+Alison is not cheerful.,negation
+Blake is not wide-eyed.,negation
+Garret is not cheerful.,negation
+Blake is not cheerful.,negation
+Christian is not cheerful.,negation
+Bradley is not sorry.,fact
+Bradley is pregnant.,fact
+Conway is not dramatic.,fact
+Conway is not embarrassed.,fact
+Landry is not sorry.,fact
+Landry is not scared.,fact
+Landry is grieving.,fact
+Malcolm is not pregnant.,fact
+Bradley is grieving.,fact
+Alberta is not scared.,fact
+Landry is embarrassed.,fact
+Bradley is embarrassed.,fact
+"If there is at least one people who is either grieving or sorry, then Landry is not dramatic and Landry is pregnant.",implication
+Someone who is not scared is always both not pregnant and embarrassed.,implication
+"If there is at least one people who is scared, then Conway is not sorry.",implication
+Nicole being not dramatic and Nicole being not sorry imply that Alberta is not grieving.,implication
+"If Landry is dramatic, then Nicole is embarrassed.",implication
+"If someone is both not sorry and pregnant, then he is not grieving.",implication
+"If there is someone who is both not pregnant and sorry, then Landry is dramatic and Malcolm is not grieving.",implication
+Someone who is both embarrassed and not pregnant is always not grieving.,implication
+Alberta is not pregnant.,negation
+Malcolm is not pregnant.,negation
+Bradley is not sorry.,negation
+Alberta is not embarrassed.,negation
+Landry is not pregnant.,negation
+Daisy is not grieving.,negation
+Landry is not grieving.,negation
+Conway is not dramatic.,negation
+Bradley is not grieving.,negation
+Malcolm is not dramatic.,negation
+Alberta is delicious.,fact
+Monroe is worrisome.,fact
+Nick is not dramatic.,fact
+Arnold is not enthusiastic.,fact
+Arnold is woolen.,fact
+Arnold is delicious.,fact
+Arnold is not nervous.,fact
+Nick is not worrisome.,fact
+Samuel is woolen.,fact
+Arnold is dramatic.,fact
+Nick is nervous.,fact
+Monroe is delicious.,fact
+"If someone is enthusiastic, then he is not woolen.",implication
+"If there is someone who is either not worrisome or woolen, then Samuel is enthusiastic and Arnold is not dramatic.",implication
+"If there is at least one people who is both not woolen and dramatic, then Monroe is worrisome.",implication
+"If there is someone who is both woolen and not delicious, then Arnold is enthusiastic.",implication
+"As long as someone is enthusiastic, he is not dramatic and worrisome.",implication
+"If Monroe is not nervous, then Samuel is enthusiastic and Rhett is not delicious.",implication
+"If someone is not delicious or he is not enthusiastic, then he is woolen.",implication
+All not delicious people are nervous.,implication
+Alberta being delicious implies that Nick is nervous and Alberta is not worrisome.,implication
+Someone who is not dramatic is always both not enthusiastic and worrisome.,implication
+Arnold is not delicious.,negation
+Monroe is not dramatic.,negation
+Alberta is not enthusiastic.,negation
+Nick is not woolen.,negation
+Nick is not nervous.,negation
+Arnold is not nervous.,negation
+Rhett is not nervous.,negation
+Rhett is not worrisome.,negation
+Alberta is not worrisome.,negation
+Nick is not enthusiastic.,negation
+Arnold is not worrisome.,negation
+Arnold is not woolen.,negation
+Archibald is distinct.,fact
+Harold is worrisome.,fact
+Simon is not colorful.,fact
+Simon is worrisome.,fact
+Daisy is alive.,fact
+Alan is not grieving.,fact
+Daisy is not distinct.,fact
+Harold is distinct.,fact
+Daisy is not drab.,fact
+Archibald is worrisome.,fact
+Simon is not distinct.,fact
+Craig is drab.,fact
+"If someone is alive, then he is both not grieving and not worrisome.",implication
+Alberta being not worrisome and Simon being not drab imply that Alberta is alive.,implication
+It can be concluded that Alan is distinct and Alberta is grieving once knowing that Daisy is not worrisome.,implication
+"If someone is both alive and grieving, then he is colorful.",implication
+"If Craig is worrisome, then Alan is colorful.",implication
+"If someone is distinct, then he is both not worrisome and not alive.",implication
+"If there is at least one people who is not alive, then Alan is grieving.",implication
+"If there is someone who is either drab or not distinct, then Simon is not grieving.",implication
+Alan is not alive.,negation
+Harold is not colorful.,negation
+Simon is not worrisome.,negation
+Harold is not grieving.,negation
+Harold is not distinct.,negation
+Harold is not worrisome.,negation
+Alan is not grieving.,negation
+Archibald is not grieving.,negation
+Alan is not drab.,negation
+Nicole is not alive.,fact
+Atwood is not bitter.,fact
+Atwood is not sorry.,fact
+Abbott is bossy.,fact
+Byron is bitter.,fact
+Angela is alive.,fact
+Atwood is not capable.,fact
+Angela is not capable.,fact
+Daisy is capable.,fact
+Abbott is alive.,fact
+Byron is pure.,fact
+Daisy is alive.,fact
+Daisy being not alive or Byron being not pure implies that Nicole is capable.,implication
+"If someone is not alive, then he is both sorry and not pure.",implication
+"If there is someone who is sorry, then Abbott is alive.",implication
+It can be concluded that Abbott is bossy once knowing that Abbott is alive.,implication
+"If there is someone who is either capable or not bitter, then Byron is not pure.",implication
+Someone who is capable is always not pure.,implication
+Daisy being not alive implies that Daisy is bossy.,implication
+It can be concluded that Byron is not capable and Atwood is not sorry once knowing that Nicole is pure.,implication
+Nicole is not alive.,negation
+Daisy is not pure.,negation
+Abbott is not capable.,negation
+Atwood is not sorry.,negation
+Nicole is not sorry.,negation
+Byron is not sorry.,negation
+Abbott is not bitter.,negation
+Nicole is not pure.,negation
+Quentin is not capable.,fact
+Jerome is known.,fact
+Lucas is shy.,fact
+Quentin is shy.,fact
+Hanley is known.,fact
+Lucas is known.,fact
+Simon is not mysterious.,fact
+Kevin is capable.,fact
+Kevin is known.,fact
+Jerome is pessimistic.,fact
+Kevin is not shy.,fact
+Hanley is shy.,fact
+"If there is someone who is both mysterious and shy, then Quentin is pessimistic.",implication
+It can be concluded that Lucas is not distinct once knowing that Simon is pessimistic and Lucas is not known.,implication
+"if there is at least one people who is not shy and capable, then Loretta is not pessimistic and Hanley is not mysterious.",implication
+"If someone is known or not shy, then he is pessimistic.",implication
+"If there is someone who is not pessimistic, then Loretta is not known and Lucas is not mysterious.",implication
+Simon being capable implies that Hanley is not known and Quentin is not pessimistic.,implication
+Someone who is eithor not known or distinct is always not mysterious.,implication
+Loretta is not shy.,negation
+Lucas is not distinct.,negation
+Jerome is not shy.,negation
+Loretta is not known.,negation
+Hanley is not pessimistic.,negation
+Lucas is not mysterious.,negation
+Loretta is not pessimistic.,negation
+Quentin is not shy.,negation
+Quentin is not pessimistic.,negation
+Simon is not shy.,negation
+Milburn is tasty.,fact
+Hugh is not nervous.,fact
+Hugh is not tasty.,fact
+Julian is not nervous.,fact
+Alberta is not tasty.,fact
+Alberta is not scared.,fact
+Julian is not kind.,fact
+Julian is grieving.,fact
+Hale is not scared.,fact
+Milburn is super.,fact
+Hugh is scared.,fact
+Hugh is kind.,fact
+"If there is at least one people who is not tasty or not super, then Logan is not grieving.",implication
+Hale being nervous implies that Logan is super and Monroe is grieving.,implication
+"If someone is both tasty and super, then he is nervous.",implication
+"If someone is grieving, then he is kind.",implication
+"If someone is not super, then he is both kind and tasty.",implication
+"If Hale is not tasty or Hale is nervous, then Monroe is not super.",implication
+"If someone who is tasty is also scared, then he is grieving.",implication
+"If everyone is super or tasty, then Monroe is not nervous.",implication
+"If someone is not tasty and super, then he is not scared and kind.",implication
+Hale is not grieving.,negation
+Logan is not grieving.,negation
+Milburn is not kind.,negation
+Alberta is not scared.,negation
+Milburn is not super.,negation
+Milburn is not tasty.,negation
+Julian is not kind.,negation
+Hugh is not kind.,negation
+Julian is not grieving.,negation
+Perry is delicious.,fact
+Victor is not delicious.,fact
+Perry is embarrassed.,fact
+Carrick is cheerful.,fact
+Alden is not intelligent.,fact
+Perry is doubtful.,fact
+Kilby is intelligent.,fact
+Victor is intelligent.,fact
+Victor is doubtful.,fact
+Kilby is not doubtful.,fact
+Kilby is delicious.,fact
+Alden is dramatic.,fact
+Someone who is dramatic or intelligent is always not cheerful and not doubtful.,implication
+"If there is someone who is both intelligent and dramatic, then Alden is cheerful.",implication
+"If there is at least one people who is doubtful, then Carrick is embarrassed and Oliver is intelligent.",implication
+"If Alden is delicious, then Adley is embarrassed and Perry is intelligent.",implication
+"If someone who is not intelligent is also not dramatic, then he is doubtful.",implication
+Alden being intelligent implies that Carrick is not doubtful and Oliver is not cheerful.,implication
+"If Perry is not delicious, then Kilby is not dramatic.",implication
+"If Carrick is not cheerful and Alden is not embarrassed, then Adley is not intelligent.",implication
+"As long as someone is not intelligent and doubtful, he is delicious and not dramatic.",implication
+Oliver is not embarrassed.,negation
+Perry is not intelligent.,negation
+Victor is not embarrassed.,negation
+Kilby is not dramatic.,negation
+Victor is not delicious.,negation
+Alden is not dramatic.,negation
+Victor is not doubtful.,negation
+Perry is not doubtful.,negation
+Kilby is not intelligent.,negation
+Perry is not cheerful.,negation
+Carver is distinct.,fact
+Carver is not dangerous.,fact
+Adley is not dangerous.,fact
+Malcolm is proud.,fact
+Bradley is not relieved.,fact
+Simon is not distinct.,fact
+Bradley is distinct.,fact
+Simon is not dangerous.,fact
+Bradley is not real.,fact
+Clyde is not dangerous.,fact
+Adley is distinct.,fact
+Bradley is not proud.,fact
+"If there is someone who is not relieved, then Bradley is dangerous and Carver is not eager.",implication
+"If there is someone who is not distinct, then Carver is dangerous.",implication
+"If there is someone who is both dangerous and proud, then Clyde is real.",implication
+Malcolm being not proud implies that Clyde is distinct.,implication
+"If all people are eager, then Simon is not proud and Adley is distinct.",implication
+"If there is at least one people who is not dangerous, then Malcolm is not proud and Malcolm is not distinct.",implication
+Someone who is eithor real or not proud is always not distinct.,implication
+Someone who is eithor not distinct or not eager is always relieved.,implication
+"If Adley is dangerous or Adley is distinct, then Malcolm is not eager.",implication
+It can be concluded that Clyde is eager and Carver is real once knowing that Simon is not distinct.,implication
+Simon is not proud.,negation
+Carver is not real.,negation
+Carver is not dangerous.,negation
+Malcolm is not proud.,negation
+Simon is not eager.,negation
+Simon is not distinct.,negation
+Clyde is not relieved.,negation
+Kit is not distinct.,negation
+Clyde is not real.,negation
+Clyde is not distinct.,negation
+Carver is not eager.,negation
+Clyde is not eager.,negation
+Clyde is not dangerous.,negation
+Lucas is sorry.,fact
+Hanley is not worrisome.,fact
+Ramon is worrisome.,fact
+Angela is worrisome.,fact
+Alan is drab.,fact
+Vivian is not sorry.,fact
+Hanley is drab.,fact
+Ramon is not sorry.,fact
+Hanley is not dim.,fact
+Vivian is not inexpensive.,fact
+Alan is not gorgeous.,fact
+Angela is not dim.,fact
+It can be concluded that Vivian is inexpensive once knowing that Alan is not dim and Nicole is sorry.,implication
+"If there is at least one people who is not dim or worrisome, then Angela is not gorgeous.",implication
+"If someone who is not inexpensive is also not gorgeous, then he is not drab.",implication
+"If someone is not worrisome, then he is drab.",implication
+It can be concluded that Hanley is not gorgeous once knowing that Ramon is worrisome.,implication
+Someone who is gorgeous and drab is always inexpensive and not dim.,implication
+"If there is someone who is both gorgeous and dim, then Alan is not sorry.",implication
+Alan being inexpensive implies that Hanley is drab and Vivian is worrisome.,implication
+Hanley is not gorgeous.,negation
+Lucas is not drab.,negation
+Vivian is not sorry.,negation
+Alan is not dim.,negation
+Lucas is not worrisome.,negation
+Hanley is not drab.,negation
+Ramon is not worrisome.,negation
+Alan is not worrisome.,negation
+Vivian is not worrisome.,negation
+Alan is not sorry.,negation
+Lucas is not gorgeous.,negation
+Skyla is not modest.,fact
+Beatrice is not rich.,fact
+Seth is not responsible.,fact
+Seth is filthy.,fact
+Quenby is not filthy.,fact
+Quenby is not inexpensive.,fact
+Kenway is rich.,fact
+Hale is filthy.,fact
+Alden is inexpensive.,fact
+Seth is rich.,fact
+Kenway is not modest.,fact
+Quenby is modest.,fact
+It can be concluded that Skyla is rich once knowing that Beatrice is not modest or Kenway is responsible.,implication
+"If there is someone who is both filthy and responsible, then Quenby is not modest.",implication
+Someone who is not modest is always both not responsible and not inexpensive.,implication
+Someone who is both not filthy and not inexpensive is always modest.,implication
+"If there is someone who is pure, then Hale is modest and Alden is inexpensive.",implication
+"If there is at least one people who is not modest or responsible, then Skyla is pure.",implication
+Alden being not responsible or Alden being filthy implies that Quenby is modest.,implication
+Quenby is not filthy.,negation
+Kenway is not modest.,negation
+Quenby is not rich.,negation
+Skyla is not pure.,negation
+Quenby is not pure.,negation
+Quenby is not responsible.,negation
+Seth is not pure.,negation
+Quenby is not inexpensive.,negation
+Alden is not filthy.,negation
+Victor is not tasty.,fact
+Lucas is not shy.,fact
+Troy is not distinct.,fact
+Troy is not nasty.,fact
+Troy is not delicious.,fact
+Janessa is not distinct.,fact
+Lucas is delicious.,fact
+Victor is not shy.,fact
+Lucas is tasty.,fact
+Jaime is not tasty.,fact
+Medwin is shy.,fact
+Medwin is distinct.,fact
+"If someone is distinct or nasty, then he is delicious.",implication
+"If there is someone who is both not shy and distinct, then Janessa is not tasty.",implication
+Jaime being not nasty or Janessa being nervous implies that Troy is delicious.,implication
+Jaime being tasty implies that Jaime is distinct.,implication
+"If there is someone who is shy, then Janessa is nervous and Jaime is distinct.",implication
+"If there is someone who is either not distinct or not delicious, then Troy is nasty.",implication
+"If someone is not tasty, then he is shy.",implication
+All distinct people are nasty.,implication
+"If there is nobody who is not shy, then Riley is not delicious and Victor is distinct.",implication
+Troy is not nasty.,negation
+Janessa is not nervous.,negation
+Jaime is not distinct.,negation
+Jaime is not nasty.,negation
+Medwin is not delicious.,negation
+Jaime is not delicious.,negation
+Janessa is not nasty.,negation
+Lucas is not delicious.,negation
+Oswald is weary.,fact
+Vivian is difficult.,fact
+Carver is not weary.,fact
+Landon is bitter.,fact
+Vivian is not responsible.,fact
+Jaime is not clumsy.,fact
+Oswald is clumsy.,fact
+Alberta is responsible.,fact
+Carver is not bitter.,fact
+Carrick is not responsible.,fact
+Oswald is not bitter.,fact
+Jaime is not weary.,fact
+Someone who is responsible is always not suspicious.,implication
+All responsible people are weary.,implication
+"If there is someone who is difficult, then Carrick is not weary and Jaime is responsible.",implication
+"If someone is not weary, then he is both not responsible and not suspicious.",implication
+"If someone is not weary or he is difficult, then he is not suspicious.",implication
+Carver being suspicious implies that Oswald is not difficult and Carrick is not clumsy.,implication
+Someone who is clumsy is always both not suspicious and weary.,implication
+Someone who is suspicious is always both not weary and responsible.,implication
+Someone who is responsible is always both difficult and weary.,implication
+Landon is not clumsy.,negation
+Jaime is not weary.,negation
+Carver is not bitter.,negation
+Vivian is not suspicious.,negation
+Carver is not clumsy.,negation
+Landon is not bitter.,negation
+Oswald is not bitter.,negation
+Carver is not responsible.,negation
+Garret is efficient.,fact
+Alberta is bossy.,fact
+Oliver is not capable.,fact
+Blake is pregnant.,fact
+Oliver is not pleasant.,fact
+Byron is efficient.,fact
+Garret is pregnant.,fact
+Logan is not shy.,fact
+Logan is pleasant.,fact
+Alberta is efficient.,fact
+Oliver is bossy.,fact
+Blake is not shy.,fact
+Someone who is not efficient is always both not bossy and not capable.,implication
+"If Oliver is not efficient and Alberta is not capable, then Oliver is not shy.",implication
+"If there is at least one people who is not pleasant, then Logan is not pregnant and Oliver is not shy.",implication
+Oliver being capable and Alberta being not pleasant imply that Byron is efficient.,implication
+"If there is someone who is both not pregnant and pleasant, then Garret is shy.",implication
+"If there is at least one people who is not capable, then Oliver is bossy.",implication
+"If there is at least one people who is not capable or efficient, then Oliver is pregnant.",implication
+Byron is not efficient.,negation
+Oliver is not pregnant.,negation
+Logan is not bossy.,negation
+Alberta is not pregnant.,negation
+Oliver is not bossy.,negation
+Alberta is not bossy.,negation
+Byron is not shy.,negation
+Sebastian is not kind.,fact
+Alden is not sorry.,fact
+Alden is dim.,fact
+Julian is not kind.,fact
+Roger is not black.,fact
+Carney is black.,fact
+Roger is clumsy.,fact
+Roger is not sorry.,fact
+Julian is tasty.,fact
+Sebastian is clumsy.,fact
+Conway is dim.,fact
+Conway is not kind.,fact
+"If there is at least one people who is not clumsy, then Samuel is not kind and Julian is black.",implication
+Someone who is dim and not sorry is always black and tasty.,implication
+"If someone who is sorry is also not black, then he is tasty.",implication
+"If there is at least one people who is sorry or not black, then Roger is dim.",implication
+"If someone is not kind, then he is both dim and clumsy.",implication
+Sebastian being not kind implies that Sebastian is dim and Sebastian is black.,implication
+"If someone is both sorry and not black, then he is not dim.",implication
+Conway is not dim.,negation
+Sebastian is not dim.,negation
+Julian is not tasty.,negation
+Samuel is not tasty.,negation
+Roger is not tasty.,negation
+Roger is not clumsy.,negation
+Julian is not kind.,negation
+Roger is not black.,negation
+Conway is not sorry.,negation
+Carney is not black.,negation
+Alan is not foreign.,fact
+Hugh is lazy.,fact
+Alan is not cruel.,fact
+Sinclair is not tiny.,fact
+Hal is cruel.,fact
+Hugh is not foreign.,fact
+Hal is not filthy.,fact
+Carver is not tiny.,fact
+Alan is not tiny.,fact
+Hugh is not cruel.,fact
+Hal is not foreign.,fact
+Sinclair is not foreign.,fact
+"If someone is muddy or he is not foreign, then he is not filthy.",implication
+"If there is at least one people who is not cruel, then Hal is not tiny.",implication
+"If there is someone who is either not tiny or filthy, then Carver is not lazy.",implication
+"If there is at least one people who is not filthy or muddy, then Nick is cruel.",implication
+"If someone is not tiny, then he is both not lazy and cruel.",implication
+"If someone is cruel or he is foreign, then he is filthy.",implication
+"If someone is not foreign, then he is muddy.",implication
+"If there is at least one people who is both tiny and lazy, then Hugh is not cruel.",implication
+"If there is someone who is either filthy or cruel, then Carver is foreign.",implication
+"If someone is not muddy and not foreign, then he is cruel and tiny.",implication
+Kenway is not foreign.,negation
+Kenway is not muddy.,negation
+Sinclair is not cruel.,negation
+Alan is not cruel.,negation
+Sinclair is not filthy.,negation
+Carver is not foreign.,negation
+Alan is not tiny.,negation
+Kenway is not filthy.,negation
+Hal is not foreign.,negation
+Janessa is not foreign.,fact
+Arnold is not foreign.,fact
+Quentin is foreign.,fact
+Arnold is not poor.,fact
+Perry is passionate.,fact
+Laverne is not eager.,fact
+Arnold is passionate.,fact
+Carrick is eager.,fact
+Janessa is eager.,fact
+Janessa is not drab.,fact
+Laverne is poor.,fact
+Jerome is passionate.,fact
+"If someone is poor, then he is eager.",implication
+"If Quentin is not passionate or Carrick is foreign, then Jerome is not drab.",implication
+"If someone is eager, then he is both not poor and drab.",implication
+"As long as someone is passionate, he is eager and drab.",implication
+It can be concluded that Carrick is drab once knowing that Perry is huge or Carrick is passionate.,implication
+Someone who is eager is always both not poor and passionate.,implication
+Jerome being not poor or Quentin being huge implies that Janessa is not drab.,implication
+Janessa being not huge and Jerome being drab imply that Perry is passionate.,implication
+It can be concluded that Janessa is foreign and Quentin is not poor once knowing that Perry is huge and Perry is drab.,implication
+It can be concluded that Quentin is not huge once knowing that Quentin is drab.,implication
+Laverne is not eager.,negation
+Arnold is not poor.,negation
+Jerome is not passionate.,negation
+Arnold is not passionate.,negation
+Janessa is not drab.,negation
+Jerome is not foreign.,negation
+Quentin is not foreign.,negation
+Toby is not lonely.,fact
+Lucas is lonely.,fact
+Grover is delicious.,fact
+Oswald is delicious.,fact
+Robin is gorgeous.,fact
+Oswald is not nasty.,fact
+Conner is delicious.,fact
+Seth is not difficult.,fact
+Oswald is lonely.,fact
+Seth is not lonely.,fact
+Grover is blue.,fact
+Robin is not delicious.,fact
+"If there is at least one people who is both gorgeous and delicious, then Oswald is not difficult.",implication
+It can be concluded that Lucas is not nasty once knowing that Seth is difficult and Robin is gorgeous.,implication
+"If Conner is not gorgeous, then Seth is not blue and Grover is not lonely.",implication
+"If there is at least one people who is not delicious or nasty, then Toby is blue.",implication
+"If someone is not gorgeous or he is not lonely, then he is nasty.",implication
+Someone who is not nasty is always both gorgeous and delicious.,implication
+"If there is someone who is not difficult, then Conner is not lonely.",implication
+"If someone is nasty or he is lonely, then he is not delicious.",implication
+"If there is at least one people who is gorgeous, then Toby is difficult and Lucas is not nasty.",implication
+"As long as someone is delicious and lonely, he is gorgeous and not blue.",implication
+Oswald is not lonely.,negation
+Robin is not delicious.,negation
+Oswald is not delicious.,negation
+Oswald is not nasty.,negation
+Toby is not delicious.,negation
+Oswald is not gorgeous.,negation
+Seth is not lonely.,negation
+Grover is not difficult.,negation
+Lucas is not blue.,negation
+Toby is not gorgeous.,negation
+Benjamin is not distinct.,fact
+Hugh is eager.,fact
+Arnold is dangerous.,fact
+Hugh is not distinct.,fact
+Arnold is not eager.,fact
+Hale is brainy.,fact
+Landon is dangerous.,fact
+Landon is brainy.,fact
+Landon is not capable.,fact
+Arnold is not tiny.,fact
+Hale is not capable.,fact
+Hale is tiny.,fact
+"If there is someone who is either not capable or not eager, then Kenneth is not distinct.",implication
+"As long as someone is not tiny, he is not distinct and brainy.",implication
+Hale being not dangerous and Arnold being distinct imply that Arnold is not brainy.,implication
+"If there is someone who is eager, then Landon is not distinct.",implication
+"As long as someone is capable and brainy, he is distinct and not eager.",implication
+"If there is someone who is both brainy and not distinct, then Landon is tiny.",implication
+"If Hale is not distinct, then Hale is eager.",implication
+"If someone is distinct, then he is both not capable and brainy.",implication
+Hale is not capable.,negation
+Lynda is not distinct.,negation
+Landon is not brainy.,negation
+Hugh is not distinct.,negation
+Arnold is not dangerous.,negation
+Benjamin is not brainy.,negation
+Landon is not eager.,negation
+Bernard is not alive.,fact
+Stephanie is not alive.,fact
+Logan is not distinct.,fact
+Craig is distinct.,fact
+Nathaniel is clumsy.,fact
+Bernard is shrill.,fact
+Blake is distinct.,fact
+Logan is not clumsy.,fact
+Bernard is not distinct.,fact
+Blake is not shrill.,fact
+Stephanie is not clumsy.,fact
+Baron is not shrill.,fact
+"If there is at least one people who is both clumsy and responsible, then Logan is distinct.",implication
+"If there is someone who is pessimistic, then Bernard is not shrill and Blake is responsible.",implication
+"if there is at least one people who is clumsy and shrill, then Stephanie is not alive and Stephanie is not responsible.",implication
+"If someone is responsible or he is shrill, then he is alive.",implication
+"If someone who is clumsy is also not shrill, then he is distinct.",implication
+Someone who is not clumsy is always both not pessimistic and distinct.,implication
+Someone who is pessimistic is always not distinct.,implication
+"If there is at least one people who is both distinct and shrill, then Nathaniel is alive.",implication
+Blake is not distinct.,negation
+Stephanie is not alive.,negation
+Craig is not distinct.,negation
+Logan is not responsible.,negation
+Craig is not shrill.,negation
+Bernard is not alive.,negation
+Blake is not pessimistic.,negation
+Logan is not pessimistic.,negation
+Bernard is not pessimistic.,negation
+Stephanie is not pessimistic.,negation
+Logan is not alive.,negation
+Nathaniel is not alive.,negation
+Quentin is distinct.,fact
+Oscar is not distinct.,fact
+Archibald is not fancy.,fact
+Monroe is responsible.,fact
+Ivan is distinct.,fact
+Axel is distinct.,fact
+Archibald is dramatic.,fact
+Monroe is dramatic.,fact
+Garret is fancy.,fact
+Oscar is shy.,fact
+Archibald is not eager.,fact
+Monroe is not eager.,fact
+"If there is someone who is either eager or dramatic, then Garret is not distinct.",implication
+"If there is someone who is both dramatic and not eager, then Garret is not responsible.",implication
+"If there is at least one people who is shy, then Monroe is not eager and Archibald is dramatic.",implication
+"If someone is fancy, then he is both eager and not distinct.",implication
+"If someone is not eager, then he is both dramatic and not distinct.",implication
+"If someone is fancy or he is distinct, then he is dramatic.",implication
+"If there is at least one people who is either not distinct or responsible, then Axel is not shy and Garret is dramatic.",implication
+It can be concluded that Oscar is responsible and Axel is shy once knowing that Monroe is not distinct.,implication
+Axel is not shy.,negation
+Quentin is not dramatic.,negation
+Monroe is not distinct.,negation
+Archibald is not shy.,negation
+Garret is not responsible.,negation
+Archibald is not eager.,negation
+Garret is not dramatic.,negation
+Monroe is not dramatic.,negation
+Garret is not fancy.,negation
+Quentin is not responsible.,negation
+Monroe is not eager.,negation
+Nicole is pessimistic.,fact
+Gabriela is not pessimistic.,fact
+Oswald is alert.,fact
+Byron is not inexpensive.,fact
+Byron is not honest.,fact
+Oswald is alive.,fact
+Gabriela is not dangerous.,fact
+Atwater is inexpensive.,fact
+Nicole is not alert.,fact
+Alan is pessimistic.,fact
+Oswald is not inexpensive.,fact
+Alan is honest.,fact
+"If there is someone who is both not alive and dangerous, then Oswald is pessimistic.",implication
+"If someone is alive or he is not pessimistic, then he is not dangerous.",implication
+"If someone is not alive or he is pessimistic, then he is inexpensive.",implication
+"If someone who is not honest is also not dangerous, then he is not alert.",implication
+"If there is someone who is both alert and alive, then Alan is not honest.",implication
+"If someone is not honest or he is not dangerous, then he is not inexpensive.",implication
+Someone who is eithor dangerous or alive is always not alert.,implication
+"If Axel is not inexpensive or Nicole is not honest, then Byron is dangerous.",implication
+It can be concluded that Axel is pessimistic once knowing that Atwater is not inexpensive or Alan is alert.,implication
+"If there is at least one people who is alive, then Atwater is not dangerous and Atwater is honest.",implication
+Gabriela is not dangerous.,negation
+Oswald is not pessimistic.,negation
+Axel is not inexpensive.,negation
+Axel is not dangerous.,negation
+Alan is not honest.,negation
+Nicole is not alert.,negation
+Alan is not inexpensive.,negation
+Nicole is not inexpensive.,negation
+Byron is not honest.,negation
+Atwater is not alert.,negation
+Alan is not alert.,negation
+Archer is bad-tempered.,fact
+Archer is not capable.,fact
+Atwood is drab.,fact
+Atwood is not dangerous.,fact
+Bernard is drab.,fact
+Atwood is capable.,fact
+Bernard is square.,fact
+Gabriela is square.,fact
+Kit is not capable.,fact
+Riley is not dangerous.,fact
+Riley is not efficient.,fact
+Gabriela is not dangerous.,fact
+"As long as someone is not capable, he is bad-tempered and not square.",implication
+Riley being not efficient implies that Kit is not bad-tempered and Riley is not square.,implication
+Someone who is not square and dangerous is always not efficient and not drab.,implication
+"If everyone is not drab or not capable, then Kit is bad-tempered.",implication
+"If there is nobody who is not not drab, then Riley is not dangerous.",implication
+"if there is at least one people who is not efficient and not square, then Gabriela is not bad-tempered and Bernard is dangerous.",implication
+"If there is someone who is bad-tempered, then Nathaniel is capable and Archer is drab.",implication
+Someone who is both capable and drab is always square.,implication
+"If someone is both drab and not square, then he is bad-tempered.",implication
+Someone who is not efficient is always both drab and capable.,implication
+Bernard is not dangerous.,negation
+Archer is not square.,negation
+Riley is not capable.,negation
+Riley is not square.,negation
+Archer is not bad-tempered.,negation
+Kit is not efficient.,negation
+Atwood is not bad-tempered.,negation
+Atwood is not capable.,negation
+Kit is not bad-tempered.,negation
+Kit is not square.,negation
+Atwood is not square.,negation
+Atwood is not efficient.,negation
+Gavin is doubtful.,fact
+Atwood is fragile.,fact
+Roger is mysterious.,fact
+Hanley is not mysterious.,fact
+Daisy is mysterious.,fact
+Roger is different.,fact
+Roger is fragile.,fact
+Daisy is not fragile.,fact
+Abbott is not clean.,fact
+Hanley is doubtful.,fact
+Daisy is different.,fact
+Carrick is not bitter.,fact
+"If there is someone who is either not doubtful or fragile, then Carrick is not mysterious.",implication
+It can be concluded that Carrick is clean and Daisy is different once knowing that Abbott is not bitter.,implication
+"If there is someone who is different, then Abbott is bitter.",implication
+Daisy being doubtful implies that Daisy is not fragile and Roger is clean.,implication
+It can be concluded that Atwood is mysterious once knowing that Atwood is not doubtful and Roger is not bitter.,implication
+It can be concluded that Abbott is bitter once knowing that Daisy is not mysterious.,implication
+"If everyone is different or not bitter, then Abbott is not clean.",implication
+"If someone is both not fragile and not doubtful, then he is not bitter.",implication
+It can be concluded that Roger is clean and Carrick is not fragile once knowing that Carrick is mysterious.,implication
+Gavin is not clean.,negation
+Carrick is not bitter.,negation
+Roger is not different.,negation
+Abbott is not mysterious.,negation
+Carrick is not mysterious.,negation
+Roger is not clean.,negation
+Daisy is not different.,negation
+Hanley is not different.,negation
+Roger is not doubtful.,negation
+Hanley is not clean.,negation
+Montgomery is sorry.,fact
+Alison is obvious.,fact
+Archibald is sorry.,fact
+Byron is obvious.,fact
+Montgomery is obvious.,fact
+Byron is alive.,fact
+Byron is lonely.,fact
+Arnold is sorry.,fact
+Archibald is dim.,fact
+Kit is not alive.,fact
+Alison is dim.,fact
+Montgomery is lonely.,fact
+"If someone is obvious, then he is both sorry and tiny.",implication
+"If there is someone who is either dim or not sorry, then Alison is not tiny.",implication
+Someone who is alive is always both sorry and not tiny.,implication
+Archibald being not tiny implies that Archibald is alive.,implication
+Alison being not dim and Alison being not obvious imply that Byron is tiny.,implication
+"If Bradley is not obvious and Byron is not lonely, then Kit is not sorry.",implication
+"If all people are not dim, then Byron is not tiny and Montgomery is alive.",implication
+Alison is not tiny.,negation
+Bradley is not obvious.,negation
+Bradley is not tiny.,negation
+Arnold is not lonely.,negation
+Arnold is not sorry.,negation
+Byron is not tiny.,negation
+Montgomery is not lonely.,negation
+Archibald is not sorry.,negation
+Alison is not sorry.,negation
+Byron is not sorry.,negation
+Hanley is handsome.,fact
+Beatrice is bad-tempered.,fact
+Bernard is handsome.,fact
+Angela is not handsome.,fact
+Adley is not handsome.,fact
+Adley is tasty.,fact
+Hanley is bad-tempered.,fact
+Hanley is unusual.,fact
+Alden is unusual.,fact
+Beatrice is unusual.,fact
+Hugh is impatient.,fact
+Bernard is tasty.,fact
+"if there is at least one people who is handsome and impatient, then Beatrice is tasty and Angela is not unusual.",implication
+"If there is someone who is bad-tempered, then Hugh is not pleasant.",implication
+"If there is someone who is either handsome or pleasant, then Angela is not unusual.",implication
+Someone who is not impatient or pleasant is always bad-tempered and not handsome.,implication
+Someone who is eithor unusual or handsome is always bad-tempered.,implication
+It can be concluded that Hanley is not pleasant once knowing that Hanley is not tasty or Angela is impatient.,implication
+All handsome people are not bad-tempered.,implication
+Bernard being pleasant implies that Bernard is tasty and Angela is impatient.,implication
+"If there is at least one people who is both unusual and tasty, then Angela is not bad-tempered.",implication
+Beatrice being not handsome and Hugh being pleasant imply that Hanley is tasty.,implication
+Bernard is not bad-tempered.,negation
+Beatrice is not unusual.,negation
+Beatrice is not bad-tempered.,negation
+Adley is not unusual.,negation
+Angela is not handsome.,negation
+Bernard is not tasty.,negation
+Hanley is not impatient.,negation
+Adley is not handsome.,negation
+Kit is not brainy.,fact
+Quenby is tiny.,fact
+Lynda is not tiny.,fact
+Kit is not muddy.,fact
+Lynda is not real.,fact
+Arnold is tiny.,fact
+Nick is not nervous.,fact
+Arnold is nervous.,fact
+Kit is not real.,fact
+Quenby is grieving.,fact
+Roberto is not nervous.,fact
+Alan is tiny.,fact
+"If someone is not muddy or he is brainy, then he is nervous.",implication
+"If there is someone who is grieving, then Quenby is not real.",implication
+Arnold being not grieving and Roberto being brainy imply that Lynda is muddy.,implication
+"If there is at least one people who is not grieving, then Nick is not brainy and Nick is not tiny.",implication
+"If there is someone who is grieving, then Arnold is tiny and Alan is real.",implication
+Kit being not grieving and Arnold being nervous imply that Quenby is not tiny.,implication
+It can be concluded that Quenby is not grieving once knowing that Roberto is not nervous or Alan is not brainy.,implication
+"If there is at least one people who is not tiny or grieving, then Nick is nervous.",implication
+Someone who is not grieving is always not brainy.,implication
+"If there is someone who is both not brainy and tiny, then Roberto is nervous.",implication
+Alan is not brainy.,negation
+Kit is not tiny.,negation
+Roberto is not brainy.,negation
+Quenby is not grieving.,negation
+Kit is not real.,negation
+Lynda is not nervous.,negation
+Roberto is not nervous.,negation
+Nick is not nervous.,negation
+Garret is colorful.,fact
+Garret is not woolen.,fact
+Landry is woolen.,fact
+Kilby is not clean.,fact
+Craig is not sorry.,fact
+Garret is not clean.,fact
+Stacy is not suspicious.,fact
+Quentin is woolen.,fact
+Craig is not clean.,fact
+Stacy is sorry.,fact
+Garret is not scared.,fact
+Craig is not suspicious.,fact
+It can be concluded that Craig is sorry and Oliver is suspicious once knowing that Craig is not clean.,implication
+"If someone is both not sorry and clean, then he is scared.",implication
+"As long as someone is scared, he is suspicious and woolen.",implication
+Someone who is not scared and suspicious is always not sorry and woolen.,implication
+"If there is nobody who is not not scared, then Stacy is not woolen.",implication
+Stacy being not colorful implies that Stacy is not scared.,implication
+"If someone is not woolen or he is not sorry, then he is not clean.",implication
+"If there is someone who is not woolen, then Kilby is sorry and Stacy is not clean.",implication
+"If there is someone who is colorful, then Landry is clean.",implication
+Garret is not sorry.,negation
+Landry is not clean.,negation
+Stacy is not scared.,negation
+Kilby is not colorful.,negation
+Stacy is not suspicious.,negation
+Landry is not sorry.,negation
+Oliver is not colorful.,negation
+Stacy is not colorful.,negation
+Landry is not scared.,negation
+Adley is relieved.,fact
+Blake is not shrill.,fact
+Hal is not scared.,fact
+Hal is not shrill.,fact
+Christian is confused.,fact
+Christian is shrill.,fact
+Riley is relieved.,fact
+Christian is scared.,fact
+Christian is relieved.,fact
+Riley is alert.,fact
+Adley is not shrill.,fact
+Christian is not alert.,fact
+"If Christian is not calm and Hal is alert, then Christian is not shrill.",implication
+Someone who is both calm and alert is always not scared.,implication
+"If someone is calm, then he is both relieved and shrill.",implication
+"If there is at least one people who is not relieved or not confused, then Hal is alert.",implication
+"If there is someone who is not alert, then Archer is not scared and Blake is not relieved.",implication
+"If there is at least one people who is confused, then Christian is alert.",implication
+"If someone who is confused is also shrill, then he is not scared.",implication
+"If someone is not confused, then he is not scared.",implication
+Someone who is alert is always both confused and shrill.,implication
+All scared people are shrill.,implication
+Hal is not confused.,negation
+Riley is not relieved.,negation
+Hal is not shrill.,negation
+Blake is not relieved.,negation
+Adley is not shrill.,negation
+Christian is not scared.,negation
+Riley is not shrill.,negation
+Hal is not scared.,negation
+Quenby is sensitive.,fact
+Gabriela is not sensitive.,fact
+Quenby is not blue.,fact
+Clayton is not suspicious.,fact
+Conway is filthy.,fact
+Conway is lazy.,fact
+Archer is not filthy.,fact
+Clayton is not filthy.,fact
+Clayton is blue.,fact
+Archer is lazy.,fact
+Clayton is not sensitive.,fact
+Samuel is filthy.,fact
+Someone who is sensitive is always both suspicious and not lazy.,implication
+"If someone is sensitive or lazy, then he is blue.",implication
+"If there is at least one people who is both blue and not filthy, then Quenby is not suspicious.",implication
+"If Clayton is blue, then Clayton is sensitive and Conway is not real.",implication
+"If there is someone who is either real or blue, then Quenby is not filthy.",implication
+"If there is someone who is both sensitive and not blue, then Gabriela is suspicious.",implication
+It can be concluded that Conway is suspicious once knowing that Conway is not real or Quenby is filthy.,implication
+Archer is not blue.,negation
+Samuel is not real.,negation
+Samuel is not lazy.,negation
+Conway is not filthy.,negation
+Clayton is not lazy.,negation
+Conway is not suspicious.,negation
+Quenby is not blue.,negation
+Gabriela is not lazy.,negation
+Samuel is not suspicious.,negation
+Medwin is not handsome.,fact
+Romeo is not honest.,fact
+Nicole is different.,fact
+Nicole is honest.,fact
+Kilby is handsome.,fact
+Nicole is handsome.,fact
+Hugh is not different.,fact
+Harold is not different.,fact
+Axel is tasty.,fact
+Harold is not honest.,fact
+Hugh is vast.,fact
+Romeo is vast.,fact
+"If Kilby is not obvious, then Medwin is not tasty.",implication
+It can be concluded that Kilby is different once knowing that Hugh is handsome and Romeo is not honest.,implication
+"If everyone is obvious, then Medwin is not handsome and Hugh is tasty.",implication
+"If there is someone who is either not handsome or different, then Romeo is not tasty.",implication
+Someone who is both handsome and tasty is always not obvious.,implication
+"If there is someone who is either handsome or not honest, then Romeo is not different.",implication
+"If there is someone who is obvious, then Kilby is vast and Romeo is not tasty.",implication
+"If someone is honest or handsome, then he is not vast.",implication
+"As long as someone is not obvious, he is honest and not tasty.",implication
+Romeo is not honest.,negation
+Romeo is not vast.,negation
+Harold is not different.,negation
+Hugh is not different.,negation
+Hugh is not vast.,negation
+Medwin is not vast.,negation
+Romeo is not tasty.,negation
+Kilby is not vast.,negation
+Medwin is not handsome.,negation
+Alden is not passionate.,fact
+Ivan is not sorry.,fact
+Kenway is not sorry.,fact
+Ivan is dangerous.,fact
+Byron is not glamorous.,fact
+Ivan is young.,fact
+Clayton is not sorry.,fact
+Clayton is not young.,fact
+Kenway is not passionate.,fact
+Byron is not passionate.,fact
+Alden is dangerous.,fact
+Conner is young.,fact
+It can be concluded that Kenway is sorry once knowing that Quinby is not glamorous.,implication
+Someone who is not glamorous is always sorry.,implication
+It can be concluded that Alden is super once knowing that Ivan is dangerous.,implication
+It can be concluded that Quinby is not passionate once knowing that Alden is young or Alden is dangerous.,implication
+"If there is at least one people who is not young, then Byron is sorry and Alden is super.",implication
+"If there is at least one people who is both not glamorous and not dangerous, then Clayton is passionate.",implication
+"As long as someone is not dangerous and not glamorous, he is young and sorry.",implication
+Ivan is not young.,negation
+Byron is not glamorous.,negation
+Kenway is not young.,negation
+Quinby is not young.,negation
+Byron is not sorry.,negation
+Ivan is not dangerous.,negation
+Archer is tasty.,fact
+Loretta is not actual.,fact
+Sinclair is not distinct.,fact
+Loretta is tasty.,fact
+Grover is tasty.,fact
+Benjamin is not embarrassed.,fact
+Sinclair is embarrassed.,fact
+Benjamin is distinct.,fact
+Giles is not numerous.,fact
+Archer is not embarrassed.,fact
+Sinclair is not tasty.,fact
+Sinclair is not alive.,fact
+Loretta being not alive or Sinclair being embarrassed implies that Benjamin is distinct.,implication
+Someone who is eithor actual or not alive is always tasty.,implication
+Benjamin being not alive implies that Sinclair is tasty.,implication
+It can be concluded that Angela is embarrassed once knowing that Benjamin is alive.,implication
+"If someone is both not actual and tasty, then he is not distinct.",implication
+Someone who is not actual and alive is always not tasty and numerous.,implication
+"If someone is actual, then he is not alive.",implication
+"As long as someone is either not embarrassed or not numerous, he is not alive and actual.",implication
+"If there is someone who is distinct, then Angela is not embarrassed and Giles is numerous.",implication
+"If there is someone who is both actual and not alive, then Loretta is not numerous.",implication
+Loretta is not numerous.,negation
+Giles is not actual.,negation
+Grover is not alive.,negation
+Grover is not embarrassed.,negation
+Archer is not numerous.,negation
+Sinclair is not tasty.,negation
+Sinclair is not distinct.,negation
+Loretta is not actual.,negation
+Giles is not numerous.,negation
+Grover is not numerous.,negation
+Giles is not tasty.,negation
+Angela is not embarrassed.,negation
+Quentin is not fancy.,fact
+Quentin is calm.,fact
+Hal is not fancy.,fact
+Archibald is not black.,fact
+Kit is fragile.,fact
+Archibald is not calm.,fact
+Kit is handsome.,fact
+Quentin is not handsome.,fact
+Archibald is fragile.,fact
+Vivian is handsome.,fact
+Quenby is black.,fact
+Vivian is responsible.,fact
+"If there is someone who is either responsible or handsome, then Quenby is calm.",implication
+"If there is at least one people who is fragile, then Landry is responsible and Vivian is not handsome.",implication
+"If Quenby is not handsome, then Kit is not black and Quentin is not calm.",implication
+Vivian being not handsome implies that Hal is calm and Kit is not fragile.,implication
+"If someone is responsible or fragile, then he is fancy.",implication
+"If there is at least one people who is fragile, then Vivian is not handsome and Quentin is black.",implication
+"If all people are not fancy, then Quenby is calm.",implication
+Kit is not black.,negation
+Hal is not fragile.,negation
+Hal is not fancy.,negation
+Vivian is not handsome.,negation
+Landry is not fancy.,negation
+Quentin is not black.,negation
+Archibald is not black.,negation
+Archibald is not calm.,negation
+Quenby is not black.,negation
+Archibald is not fancy.,negation
+Kit is not handsome.,negation
+Landry is not black.,negation
+Laverne is not tasty.,fact
+Romeo is dull.,fact
+Nathaniel is not tasty.,fact
+Toby is unusual.,fact
+Romeo is tasty.,fact
+Rhett is not cheerful.,fact
+Toby is not calm.,fact
+Nathaniel is not unusual.,fact
+Jaime is tasty.,fact
+Toby is cheerful.,fact
+Nathaniel is cheerful.,fact
+Gabriela is sorry.,fact
+"If someone is not sorry or he is not calm, then he is not unusual.",implication
+"If there is at least one people who is either cheerful or tasty, then Rhett is not calm and Rhett is sorry.",implication
+"If there is at least one people who is tasty or sorry, then Rhett is not dull.",implication
+Someone who is both sorry and not dull is always cheerful.,implication
+"If there is nobody who is not not tasty, then Rhett is not cheerful and Gabriela is not sorry.",implication
+"If Rhett is not dull, then Rhett is unusual.",implication
+Gabriela being not cheerful implies that Rhett is unusual.,implication
+Toby is not calm.,negation
+Jaime is not tasty.,negation
+Nathaniel is not tasty.,negation
+Rhett is not dull.,negation
+Gabriela is not calm.,negation
+Rhett is not sorry.,negation
+Rhett is not cheerful.,negation
+Toby is not unusual.,negation
+Gabriela is not sorry.,negation
+Gavin is not dramatic.,fact
+Toby is not dim.,fact
+Harold is not envious.,fact
+Riley is not envious.,fact
+Gavin is bossy.,fact
+Riley is dramatic.,fact
+Harold is not dramatic.,fact
+Oswald is not dramatic.,fact
+Harold is kind.,fact
+Laverne is kind.,fact
+Gavin is not kind.,fact
+Riley is pure.,fact
+"If Toby is not envious or Atwood is kind, then Riley is not bossy.",implication
+Someone who is envious is always both kind and bossy.,implication
+"If Harold is not pure or Laverne is not envious, then Riley is not dramatic.",implication
+"If there is someone who is both dramatic and not bossy, then Toby is pure.",implication
+"If Gavin is not envious and Laverne is dramatic, then Riley is bossy.",implication
+All not envious people are not pure.,implication
+"As long as someone is dim, he is not envious and not dramatic.",implication
+"If Atwood is not dim and Riley is not pure, then Atwood is bossy.",implication
+"If there is someone who is both not dim and not dramatic, then Gavin is envious.",implication
+"If there is at least one people who is bossy, then Riley is not kind and Atwood is dim.",implication
+"If there is nobody who is not not pure, then Laverne is not kind and Riley is dramatic.",implication
+Riley is not bossy.,negation
+Atwood is not dim.,negation
+Riley is not kind.,negation
+Atwood is not bossy.,negation
+Atwood is not pure.,negation
+Laverne is not kind.,negation
+Riley is not pure.,negation
+Laverne is not dramatic.,negation
+Gavin is not pure.,negation
+Toby is not kind.,negation
+Gavin is not kind.,negation
+Harold is not envious.,negation
+Riley is not envious.,negation
+Clayton is mysterious.,fact
+Quinby is mysterious.,fact
+Alan is bossy.,fact
+Alberta is not patient.,fact
+Gavin is brainy.,fact
+Alan is not mysterious.,fact
+Clayton is brainy.,fact
+Alan is shy.,fact
+Alberta is not brainy.,fact
+Oliver is not bossy.,fact
+Quinby is patient.,fact
+Oliver is not brainy.,fact
+All poor people are not bossy.,implication
+"As long as someone is shy, he is brainy and not bossy.",implication
+"If there is someone who is either mysterious or poor, then Keaton is brainy and Alan is patient.",implication
+"If there is at least one people who is both not mysterious and not bossy, then Keaton is brainy.",implication
+"If someone who is shy is also poor, then he is not mysterious.",implication
+"If someone is not shy, then he is both not poor and brainy.",implication
+"If there is at least one people who is not bossy, then Oliver is mysterious and Oliver is poor.",implication
+"If Keaton is not bossy, then Alan is patient and Quinby is brainy.",implication
+"If someone who is bossy is also not shy, then he is not poor.",implication
+Oliver being bossy implies that Alan is not poor and Alberta is not brainy.,implication
+Oliver is not mysterious.,negation
+Quinby is not bossy.,negation
+Quinby is not mysterious.,negation
+Oliver is not bossy.,negation
+Clayton is not brainy.,negation
+Alan is not bossy.,negation
+Clayton is not mysterious.,negation
+Gavin is not shy.,negation
+Gavin is not brainy.,negation
+Craig is fancy.,fact
+Craig is not filthy.,fact
+Magnus is not young.,fact
+Riley is not spotless.,fact
+Kenneth is fancy.,fact
+Magnus is not spotless.,fact
+Daisy is not young.,fact
+Daisy is not doubtful.,fact
+Garret is not filthy.,fact
+Kenneth is not doubtful.,fact
+Garret is not poor.,fact
+Riley is fancy.,fact
+Magnus being not poor implies that Craig is not fancy and Magnus is not young.,implication
+Craig being spotless implies that Riley is not doubtful and Malcolm is young.,implication
+"As long as someone is not spotless and not young, he is not fancy and not poor.",implication
+"If there is someone who is both fancy and not doubtful, then Craig is not poor.",implication
+"If there is at least one people who is filthy, then Kenneth is poor and Kenneth is not spotless.",implication
+"If there is someone who is not fancy, then Malcolm is not spotless.",implication
+"If everyone is not spotless, then Magnus is poor and Daisy is filthy.",implication
+It can be concluded that Craig is filthy and Craig is not doubtful once knowing that Kenneth is not spotless and Garret is poor.,implication
+"If there is at least one people who is both not doubtful and not fancy, then Malcolm is filthy.",implication
+Riley is not filthy.,negation
+Garret is not young.,negation
+Magnus is not fancy.,negation
+Magnus is not young.,negation
+Daisy is not filthy.,negation
+Kenneth is not poor.,negation
+Garret is not fancy.,negation
+Riley is not doubtful.,negation
+Craig is not poor.,negation
+Kenneth is not spotless.,negation
+Malcolm is not fancy.,negation
+Daisy is not spotless.,negation
+Kenneth is not doubtful.,negation
+Riley is not spotless.,negation
+Magnus is not spotless.,negation
+Conner is different.,fact
+Archer is not different.,fact
+Carver is drab.,fact
+Robin is not drab.,fact
+Conner is drab.,fact
+Magnus is not modest.,fact
+Robin is not modest.,fact
+Oliver is not arrogant.,fact
+Archer is not drab.,fact
+Janessa is woolen.,fact
+Magnus is not woolen.,fact
+Conner is arrogant.,fact
+"If there is at least one people who is woolen or modest, then Robin is suspicious.",implication
+"If someone is both woolen and not different, then he is arrogant.",implication
+It can be concluded that Magnus is drab once knowing that Carver is not modest and Magnus is arrogant.,implication
+Janessa being not drab and Robin being not woolen imply that Carver is not arrogant.,implication
+"If there is someone who is woolen, then Archer is not modest.",implication
+Someone who is not drab is always not woolen.,implication
+"If someone who is woolen is also different, then he is not modest.",implication
+Archer being woolen and Janessa being not drab imply that Conner is not different and Carver is not modest.,implication
+"If someone is not suspicious or he is not woolen, then he is arrogant.",implication
+"if there is at least one people who is drab and arrogant, then Robin is modest and Archer is different.",implication
+Someone who is not drab is always both not woolen and suspicious.,implication
+Archer is not woolen.,negation
+Robin is not drab.,negation
+Archer is not different.,negation
+Robin is not suspicious.,negation
+Carver is not woolen.,negation
+Conner is not suspicious.,negation
+Archer is not modest.,negation
+Archer is not drab.,negation
+Robin is not woolen.,negation
+Conner is not drab.,negation
+Archer is not arrogant.,negation
+Janessa is not woolen.,negation
+Carver is not different.,negation
+Robin is not arrogant.,negation
+Jaime is fragile.,fact
+Philip is not sociable.,fact
+Jaime is brainy.,fact
+Monroe is not fierce.,fact
+Landry is not fierce.,fact
+Monroe is brainy.,fact
+Landon is not brainy.,fact
+Landon is fragile.,fact
+Landon is bossy.,fact
+Jaime is bossy.,fact
+Jaime is not fierce.,fact
+Monroe is sociable.,fact
+All not fierce people are not brainy.,implication
+"If there is at least one people who is not intelligent, then Keaton is fragile and Jaime is fierce.",implication
+"If there is at least one people who is both not fierce and brainy, then Philip is sociable.",implication
+"If someone is fierce or he is not fragile, then he is brainy.",implication
+All not fierce people are brainy.,implication
+"If there is someone who is not sociable, then Landry is intelligent and Landry is fragile.",implication
+Keaton being not fierce implies that Landry is not sociable and Keaton is not intelligent.,implication
+"If everyone is fierce, then Landon is bossy.",implication
+Monroe is not brainy.,negation
+Kilby is not intelligent.,negation
+Monroe is not fierce.,negation
+Keaton is not sociable.,negation
+Landry is not intelligent.,negation
+Philip is not sociable.,negation
+Philip is not intelligent.,negation
+Jaime is not fierce.,negation
+Jaime is not brainy.,negation
+Jaime is not fragile.,negation
+Kilby is not fierce.,negation
+Philip is not brainy.,negation
+Monroe is not fragile.,negation
+Landon is not intelligent.,negation
+Skyla is kind.,fact
+Perry is not kind.,fact
+Skyla is not young.,fact
+Gabriela is relieved.,fact
+Gabriela is not young.,fact
+Skyla is different.,fact
+Perry is different.,fact
+Sinclair is real.,fact
+Perry is real.,fact
+Grover is kind.,fact
+Gabriela is gorgeous.,fact
+Grover is relieved.,fact
+"If there is someone who is both not young and not gorgeous, then Perry is relieved.",implication
+"As long as someone is different, he is gorgeous and not real.",implication
+"If there is someone who is either not relieved or different, then Grover is not young.",implication
+"If there is at least one people who is not real or not kind, then Perry is not relieved.",implication
+"As long as someone is not gorgeous, he is not young and relieved.",implication
+Someone who is not different is always young.,implication
+"If Perry is kind and Gabriela is relieved, then Grover is gorgeous.",implication
+"If there is at least one people who is relieved, then Sinclair is not gorgeous and Conway is real.",implication
+"If Grover is not kind, then Perry is not gorgeous and Sinclair is not relieved.",implication
+Gabriela is not real.,negation
+Samuel is not real.,negation
+Perry is not real.,negation
+Gabriela is not gorgeous.,negation
+Samuel is not relieved.,negation
+Skyla is not real.,negation
+Sinclair is not relieved.,negation
+Perry is not different.,negation
+Gabriela is not young.,negation
+Skyla is not kind.,negation
+Skyla is not young.,negation
+Perry is not kind.,negation
+Skyla is not different.,negation
+Conway is not clumsy.,fact
+Conway is not difficult.,fact
+Oliver is worrisome.,fact
+Casey is worrisome.,fact
+Ramon is nervous.,fact
+Lynda is not clumsy.,fact
+Axel is worrisome.,fact
+Conway is not sensitive.,fact
+Oliver is not clumsy.,fact
+Axel is not difficult.,fact
+Ramon is not clumsy.,fact
+Axel is nervous.,fact
+It can be concluded that Julian is not sensitive and Julian is not clumsy once knowing that Axel is not nervous.,implication
+"If there is someone who is not impatient, then Lynda is not clumsy.",implication
+"If someone who is worrisome is also nervous, then he is difficult.",implication
+"If everyone is clumsy or not impatient, then Axel is not difficult.",implication
+"If someone is not worrisome or not clumsy, then he is sensitive.",implication
+Axel being not sensitive or Julian being impatient implies that Conway is not worrisome.,implication
+It can be concluded that Conway is sensitive once knowing that Oliver is clumsy.,implication
+It can be concluded that Conway is not worrisome once knowing that Ramon is not sensitive or Conway is not clumsy.,implication
+"If someone is either not difficult or not clumsy, then he is not sensitive and not nervous.",implication
+Conway is not worrisome.,negation
+Axel is not impatient.,negation
+Axel is not nervous.,negation
+Julian is not sensitive.,negation
+Lynda is not clumsy.,negation
+Lynda is not nervous.,negation
+Oliver is not sensitive.,negation
+Ramon is not sensitive.,negation
+Ramon is not impatient.,negation
+Oliver is not worrisome.,negation
+Julian is not difficult.,negation
+Oliver is not clumsy.,negation
+Vivian is not rich.,fact
+Benjamin is not weary.,fact
+Axel is rich.,fact
+Vivian is not poor.,fact
+Kenneth is not rich.,fact
+Sebastian is alert.,fact
+Kilby is poor.,fact
+Benjamin is not modest.,fact
+Kenneth is modest.,fact
+Kenneth is not alert.,fact
+Kilby is alert.,fact
+Kilby is noisy.,fact
+"If Sebastian is not poor and Sebastian is weary, then Kilby is not rich.",implication
+"If someone is not weary or he is not alert, then he is not modest.",implication
+Kilby being not modest implies that Axel is alert.,implication
+It can be concluded that Kilby is rich once knowing that Vivian is not alert or Axel is not noisy.,implication
+"If Vivian is noisy and Vivian is poor, then Sebastian is alert and Vivian is weary.",implication
+Someone who is eithor not poor or noisy is always not alert.,implication
+"If there is nobody who is not rich, then Axel is weary.",implication
+Vivian is not alert.,negation
+Vivian is not weary.,negation
+Axel is not modest.,negation
+Kilby is not alert.,negation
+Vivian is not modest.,negation
+Benjamin is not noisy.,negation
+Toby is not alert.,negation
+Kenneth is not noisy.,negation
+Benjamin is not modest.,negation
+Axel is not alert.,negation
+Sebastian is not alert.,negation
+Byron is delicious.,fact
+Hugh is not pregnant.,fact
+Byron is not obvious.,fact
+Samuel is not arrogant.,fact
+Samuel is not pregnant.,fact
+Byron is suspicious.,fact
+Stephanie is obvious.,fact
+Byron is clean.,fact
+Hugh is not suspicious.,fact
+Hugh is not delicious.,fact
+Hugh is arrogant.,fact
+Kit is not obvious.,fact
+"If Samuel is not delicious and Stephanie is clean, then Kit is obvious.",implication
+It can be concluded that Stephanie is not suspicious once knowing that Byron is not delicious.,implication
+"If there is someone who is either not clean or arrogant, then Byron is pregnant.",implication
+"If everyone is obvious or clean, then Grover is delicious.",implication
+"If there is at least one people who is both not delicious and suspicious, then Byron is not pregnant.",implication
+Someone who is both not clean and obvious is always pregnant.,implication
+"If someone is pregnant or obvious, then he is not suspicious.",implication
+"If there is someone who is both not obvious and not clean, then Byron is arrogant.",implication
+Byron is not arrogant.,negation
+Daisy is not arrogant.,negation
+Hugh is not clean.,negation
+Samuel is not pregnant.,negation
+Byron is not delicious.,negation
+Byron is not pregnant.,negation
+Samuel is not arrogant.,negation
+Grover is not suspicious.,negation
+Samuel is not suspicious.,negation
+Clyde is spotless.,fact
+Alison is grieving.,fact
+Seth is pessimistic.,fact
+Alden is distinct.,fact
+Conway is not vast.,fact
+Clyde is pessimistic.,fact
+Nathaniel is vast.,fact
+Alison is vast.,fact
+Conway is not relieved.,fact
+Clyde is distinct.,fact
+Conway is not pessimistic.,fact
+Alden is relieved.,fact
+"If there is at least one people who is either vast or pessimistic, then Conway is not spotless and Alden is distinct.",implication
+"If there is at least one people who is relieved or not distinct, then Seth is vast.",implication
+"If there is at least one people who is not vast, then Alison is pessimistic and Lucas is spotless.",implication
+"If someone is not spotless, then he is both not relieved and not grieving.",implication
+"If someone is not spotless, then he is not relieved.",implication
+"If someone is not spotless or he is grieving, then he is not vast.",implication
+"If there is at least one people who is not relieved, then Alison is not pessimistic.",implication
+Someone who is not vast is always both not spotless and grieving.,implication
+"If there is at least one people who is spotless, then Nathaniel is pessimistic.",implication
+"If someone is distinct, then he is spotless.",implication
+Alden is not grieving.,negation
+Clyde is not pessimistic.,negation
+Conway is not grieving.,negation
+Clyde is not spotless.,negation
+Alden is not spotless.,negation
+Alison is not vast.,negation
+Seth is not distinct.,negation
+Conway is not pessimistic.,negation
+Nathaniel is not vast.,negation
+Clyde is not grieving.,negation
+Alison is not pessimistic.,negation
+Blair is not impatient.,fact
+Blair is suspicious.,fact
+Harold is impatient.,fact
+Oscar is not filthy.,fact
+Skyla is filthy.,fact
+Carney is not filthy.,fact
+Perry is suspicious.,fact
+Perry is impatient.,fact
+Skyla is impatient.,fact
+Oscar is not suspicious.,fact
+Harold is filthy.,fact
+Harold is not actual.,fact
+"If someone is both not dramatic and not suspicious, then he is shrill.",implication
+"If there is at least one people who is not suspicious, then Adley is actual and Harold is not shrill.",implication
+"If there is at least one people who is both not impatient and not actual, then Blair is not filthy.",implication
+Someone who is eithor suspicious or shrill is always not filthy.,implication
+"If there is someone who is both filthy and shrill, then Skyla is actual.",implication
+"If Perry is actual or Harold is not shrill, then Skyla is not impatient.",implication
+It can be concluded that Harold is not actual and Blair is shrill once knowing that Blair is dramatic.,implication
+"If someone who is not shrill is also not dramatic, then he is not filthy.",implication
+Someone who is not shrill is always both not dramatic and suspicious.,implication
+Someone who is dramatic is always both not filthy and not impatient.,implication
+Blair is not filthy.,negation
+Skyla is not impatient.,negation
+Harold is not impatient.,negation
+Harold is not actual.,negation
+Harold is not suspicious.,negation
+Skyla is not filthy.,negation
+Harold is not dramatic.,negation
+Skyla is not shrill.,negation
+Oscar is not shrill.,negation
+Adley is not filthy.,negation
+Blair is not impatient.,negation
+Nicole is not cruel.,fact
+Medwin is not drab.,fact
+Lynda is not real.,fact
+Lynda is cruel.,fact
+Garret is real.,fact
+Quinby is not clumsy.,fact
+Abbott is clumsy.,fact
+Quinby is not real.,fact
+Carney is not clumsy.,fact
+Garret is not bitter.,fact
+Lynda is not clumsy.,fact
+Abbott is not cruel.,fact
+"If Carney is real or Medwin is wide-eyed, then Garret is not clumsy.",implication
+Quinby being real implies that Quinby is not cruel and Abbott is wide-eyed.,implication
+"If everyone is drab, then Abbott is not real.",implication
+"If there is at least one people who is either wide-eyed or clumsy, then Lynda is not drab and Carney is not bitter.",implication
+Someone who is bitter is always both not drab and not clumsy.,implication
+"If Carney is wide-eyed, then Lynda is real and Lynda is not drab.",implication
+"If someone is not bitter, then he is both not drab and wide-eyed.",implication
+"If there is someone who is both not cruel and real, then Nicole is not clumsy.",implication
+"If there is at least one people who is cruel, then Lynda is not clumsy and Garret is not real.",implication
+Abbott is not clumsy.,negation
+Medwin is not clumsy.,negation
+Carney is not bitter.,negation
+Lynda is not real.,negation
+Lynda is not drab.,negation
+Garret is not clumsy.,negation
+Garret is not real.,negation
+Garret is not bitter.,negation
+Lynda is not bitter.,negation
+Nicole is not clumsy.,negation
+Roger is not crystal.,fact
+Roger is clean.,fact
+Adley is not glamorous.,fact
+Adley is clean.,fact
+Monroe is not sorry.,fact
+Byron is clean.,fact
+Janessa is not clean.,fact
+Roger is not sorry.,fact
+Alan is crystal.,fact
+Janessa is glamorous.,fact
+Alan is not sorry.,fact
+Janessa is sorry.,fact
+It can be concluded that Janessa is bossy once knowing that Alan is glamorous and Monroe is not crystal.,implication
+All not crystal people are not bossy.,implication
+"As long as someone is not crystal, he is not glamorous and not sorry.",implication
+"If there is at least one people who is both not bossy and not brainy, then Monroe is clean.",implication
+"If there is someone who is not crystal, then Roger is not clean and Adley is not glamorous.",implication
+"If Adley is brainy, then Janessa is bossy and Byron is crystal.",implication
+All brainy people are clean.,implication
+Someone who is not glamorous is always both bossy and brainy.,implication
+"If someone is not crystal, then he is not glamorous.",implication
+"If everyone is clean, then Roger is bossy.",implication
+Alan is not crystal.,negation
+Roger is not clean.,negation
+Adley is not clean.,negation
+Monroe is not sorry.,negation
+Janessa is not crystal.,negation
+Roger is not bossy.,negation
+Adley is not glamorous.,negation
+Roger is not sorry.,negation
+Janessa is not bossy.,negation
+Byron is shy.,fact
+Oswald is not shy.,fact
+Romeo is not black.,fact
+Hanley is distinct.,fact
+Oswald is weary.,fact
+Monroe is not confused.,fact
+Hanley is not shy.,fact
+Monroe is real.,fact
+Monroe is not black.,fact
+Byron is not black.,fact
+Romeo is not real.,fact
+Hal is not shy.,fact
+Hanley being not shy implies that Oswald is not distinct and Quentin is not real.,implication
+"If there is someone who is both not distinct and not confused, then Quentin is not real and Hal is black.",implication
+"If there is at least one people who is both not black and not distinct, then Byron is shy.",implication
+Someone who is both distinct and weary is always confused.,implication
+"If there is at least one people who is either real or not shy, then Hal is distinct and Oswald is not weary.",implication
+"If there is at least one people who is black or not confused, then Quentin is not weary.",implication
+Hanley being weary and Hanley being real imply that Monroe is shy.,implication
+Monroe being shy or Byron being not confused implies that Hal is not black.,implication
+Monroe is not shy.,negation
+Hanley is not shy.,negation
+Byron is not weary.,negation
+Quentin is not weary.,negation
+Oswald is not distinct.,negation
+Monroe is not confused.,negation
+Romeo is not weary.,negation
+Hal is not confused.,negation
+Byron is not shy.,negation
+Romeo is not real.,negation
+Byron is not real.,negation
+Romeo is not black.,negation
+Oswald is not weary.,negation
+Clyde is important.,fact
+Garret is young.,fact
+Rhett is difficult.,fact
+Garret is difficult.,fact
+Garret is not suspicious.,fact
+Casey is suspicious.,fact
+Bartholomew is not dangerous.,fact
+Lucas is honest.,fact
+Lucas is important.,fact
+Rhett is suspicious.,fact
+Casey is not important.,fact
+Garret is not important.,fact
+"If there is at least one people who is suspicious, then Rhett is honest.",implication
+"If there is at least one people who is not difficult, then Hale is not young and Bartholomew is not suspicious.",implication
+Someone who is both not young and dangerous is always important.,implication
+Someone who is honest is always both difficult and important.,implication
+"If there is at least one people who is difficult, then Lucas is dangerous.",implication
+"If there is at least one people who is either not suspicious or young, then Clyde is important and Rhett is honest.",implication
+It can be concluded that Rhett is not difficult and Rhett is important once knowing that Hale is honest.,implication
+Someone who is eithor honest or not difficult is always not dangerous.,implication
+Garret being not important or Casey being honest implies that Rhett is suspicious.,implication
+Casey is not important.,negation
+Lucas is not dangerous.,negation
+Hale is not important.,negation
+Rhett is not honest.,negation
+Garret is not honest.,negation
+Rhett is not suspicious.,negation
+Bartholomew is not young.,negation
+Lucas is not young.,negation
+Garret is not important.,negation
+Hale is pure.,fact
+Kenneth is not modest.,fact
+Logan is not responsible.,fact
+Kenneth is pure.,fact
+Carver is not modest.,fact
+Logan is foreign.,fact
+Logan is financial.,fact
+Kenneth is responsible.,fact
+Logan is modest.,fact
+Carver is responsible.,fact
+Carver is grieving.,fact
+Keaton is financial.,fact
+Someone who is eithor pure or financial is always not responsible.,implication
+It can be concluded that Kenneth is not modest and Medwin is not pure once knowing that Hale is foreign.,implication
+"If Kenneth is pure, then Carver is not grieving.",implication
+"If everyone is not responsible or not foreign, then Logan is grieving.",implication
+"If there is at least one people who is not modest, then Archer is foreign.",implication
+It can be concluded that Medwin is not financial and Hale is pure once knowing that Keaton is not responsible.,implication
+"If there is at least one people who is both responsible and financial, then Keaton is not foreign.",implication
+It can be concluded that Carver is grieving once knowing that Logan is not modest.,implication
+Logan is not modest.,negation
+Hale is not foreign.,negation
+Logan is not responsible.,negation
+Kenneth is not responsible.,negation
+Keaton is not grieving.,negation
+Logan is not grieving.,negation
+Hale is not pure.,negation
+Medwin is not responsible.,negation
+Keaton is not financial.,negation
+Logan is not financial.,negation
+Quentin is drab.,fact
+Quentin is not glamorous.,fact
+Archibald is not lazy.,fact
+Simon is drab.,fact
+Quentin is lazy.,fact
+Riley is not spotless.,fact
+Toby is obvious.,fact
+Riley is drab.,fact
+Clayton is not spotless.,fact
+Toby is not drab.,fact
+Clayton is not obvious.,fact
+Archibald is eager.,fact
+It can be concluded that Sebastian is not lazy and Toby is glamorous once knowing that Simon is obvious.,implication
+It can be concluded that Quentin is not obvious once knowing that Archibald is eager and Sebastian is not glamorous.,implication
+Toby being not lazy implies that Toby is not drab and Riley is obvious.,implication
+"If there is someone who is both not glamorous and not obvious, then Archibald is lazy.",implication
+"If there is at least one people who is not glamorous, then Clayton is not eager and Riley is not lazy.",implication
+"If someone is both not obvious and not glamorous, then he is eager.",implication
+"If someone who is not spotless is also not drab, then he is glamorous.",implication
+"If there is someone who is either not lazy or drab, then Toby is eager.",implication
+"As long as someone is eager, he is not spotless and not obvious.",implication
+It can be concluded that Quentin is not drab once knowing that Riley is not glamorous or Clayton is obvious.,implication
+Simon is not eager.,negation
+Clayton is not drab.,negation
+Quentin is not eager.,negation
+Toby is not glamorous.,negation
+Quentin is not drab.,negation
+Quentin is not glamorous.,negation
+Sebastian is not obvious.,negation
+Archibald is not obvious.,negation
+Toby is not obvious.,negation
+Toby is not drab.,negation
+Riley is not lazy.,negation
+Clayton is not lazy.,negation
+Nick is kind.,fact
+Rhett is not stupid.,fact
+Landon is not super.,fact
+Landon is not rich.,fact
+Axel is not stupid.,fact
+Conway is not super.,fact
+Nick is stupid.,fact
+Landon is not shy.,fact
+Axel is kind.,fact
+Conway is rich.,fact
+Conway is shy.,fact
+Conway is not stupid.,fact
+"If someone is both not capable and not super, then he is rich.",implication
+"If someone is stupid, then he is both capable and super.",implication
+"As long as someone is either not capable or kind, he is rich and shy.",implication
+"If someone is not stupid or not capable, then he is shy.",implication
+"If someone is capable or he is rich, then he is not kind.",implication
+Axel being not rich and Nick being kind imply that Landon is shy.,implication
+"If there is someone who is not shy, then Rhett is stupid.",implication
+"If Landon is rich, then Nick is not shy and Galvin is super.",implication
+It can be concluded that Lynda is not stupid once knowing that Galvin is super or Axel is shy.,implication
+Landon being not kind implies that Rhett is not stupid.,implication
+Conway is not kind.,negation
+Conway is not stupid.,negation
+Nick is not kind.,negation
+Lynda is not shy.,negation
+Lynda is not super.,negation
+Lynda is not stupid.,negation
+Galvin is not stupid.,negation
+Nick is not shy.,negation
+Simon is pessimistic.,fact
+Simon is sensitive.,fact
+Riley is clumsy.,fact
+Simon is not calm.,fact
+Oliver is different.,fact
+Baron is calm.,fact
+Baron is not sensitive.,fact
+Simon is different.,fact
+Oliver is sensitive.,fact
+Jeffrey is calm.,fact
+Oliver is not clumsy.,fact
+Oliver is calm.,fact
+"If there is at least one people who is not sensitive or not weary, then Gavin is not calm.",implication
+"If there is at least one people who is weary, then Baron is calm.",implication
+"If there is at least one people who is both sensitive and not weary, then Simon is clumsy.",implication
+"If there is someone who is either not weary or not calm, then Gavin is different.",implication
+Jeffrey being weary or Gavin being pessimistic implies that Simon is calm.,implication
+"If someone is not weary, then he is pessimistic.",implication
+Alison being not different or Alison being sensitive implies that Baron is not clumsy.,implication
+Someone who is pessimistic is always not different.,implication
+"If Jeffrey is clumsy and Simon is not sensitive, then Gavin is calm.",implication
+Alison is not clumsy.,negation
+Oliver is not sensitive.,negation
+Riley is not clumsy.,negation
+Simon is not sensitive.,negation
+Baron is not weary.,negation
+Jeffrey is not weary.,negation
+Baron is not pessimistic.,negation
+Jeffrey is not calm.,negation
+Riley is not calm.,negation
+Simon is not weary.,negation
+Simon is not pessimistic.,negation
+Baron is not calm.,negation
+Oliver is not clumsy.,negation
+Milburn is clean.,fact
+Christian is not young.,fact
+Axel is not cruel.,fact
+Christian is clean.,fact
+Vivian is not clean.,fact
+Vivian is not mysterious.,fact
+Hugh is not cruel.,fact
+Milburn is cruel.,fact
+Logan is noisy.,fact
+Sebastian is not cruel.,fact
+Sebastian is young.,fact
+Christian is not cruel.,fact
+"If there is someone who is young, then Vivian is inexpensive and Axel is not mysterious.",implication
+"If Hugh is not noisy, then Milburn is cruel.",implication
+Hugh being not noisy implies that Vivian is not young and Christian is inexpensive.,implication
+"If Hugh is noisy, then Milburn is not young and Vivian is cruel.",implication
+"If Axel is not noisy or Logan is clean, then Axel is not young.",implication
+"If there is at least one people who is not young, then Hugh is not cruel and Christian is clean.",implication
+"If there is at least one people who is both not mysterious and not clean, then Milburn is not cruel.",implication
+"If someone is not mysterious, then he is both clean and not noisy.",implication
+Logan is not noisy.,negation
+Vivian is not clean.,negation
+Vivian is not young.,negation
+Axel is not clean.,negation
+Vivian is not cruel.,negation
+Hugh is not noisy.,negation
+Milburn is not cruel.,negation
+Christian is not noisy.,negation
+Sebastian is not young.,negation
+Axel is not mysterious.,negation
+Nick is dangerous.,fact
+Janessa is arrogant.,fact
+Atwater is stupid.,fact
+Malcolm is not actual.,fact
+Giles is not huge.,fact
+Nathaniel is bad-tempered.,fact
+Julian is not bad-tempered.,fact
+Giles is not bad-tempered.,fact
+Julian is huge.,fact
+Giles is actual.,fact
+Atwater is arrogant.,fact
+Nick is bad-tempered.,fact
+"If someone is not dangerous or huge, then he is not stupid.",implication
+"If there is someone who is either not stupid or bad-tempered, then Julian is not dangerous.",implication
+"If there is someone who is not arrogant, then Janessa is huge and Atwater is not actual.",implication
+Atwater being not huge implies that Julian is not bad-tempered.,implication
+Someone who is both not arrogant and stupid is always huge.,implication
+All not actual people are stupid.,implication
+It can be concluded that Atwater is not bad-tempered once knowing that Janessa is not stupid and Giles is not actual.,implication
+"As long as someone is not arrogant, he is not actual and not dangerous.",implication
+All stupid people are not actual.,implication
+Giles is not huge.,negation
+Nick is not dangerous.,negation
+Malcolm is not stupid.,negation
+Janessa is not arrogant.,negation
+Giles is not bad-tempered.,negation
+Julian is not stupid.,negation
+Nick is not stupid.,negation
+Julian is not actual.,negation
+Julian is not bad-tempered.,negation
+Atwater is not stupid.,negation
+Nick is not bad-tempered.,negation
+Janessa is not huge.,negation
+Landry is financial.,fact
+Nathaniel is not black.,fact
+Robin is bitter.,fact
+Nathaniel is not financial.,fact
+Hale is not financial.,fact
+Hale is not black.,fact
+Jerome is drab.,fact
+Jerome is not kind.,fact
+Bartholomew is huge.,fact
+Jerome is not bitter.,fact
+Hale is kind.,fact
+Landry is bitter.,fact
+"If Robin is kind and Hale is drab, then Robin is not bitter.",implication
+"If there is at least one people who is not drab, then Jerome is bitter and Jerome is not kind.",implication
+"As long as someone is not huge, he is not financial and bitter.",implication
+"If someone is not bitter, then he is not huge.",implication
+"If Bartholomew is drab, then Nathaniel is black and Hale is huge.",implication
+"If there is at least one people who is not kind, then Jerome is huge.",implication
+It can be concluded that Robin is not drab and Magnus is not black once knowing that Bartholomew is bitter and Hale is financial.,implication
+"If there is someone who is financial, then Nathaniel is bitter.",implication
+Someone who is huge is always both not drab and financial.,implication
+Landry is not financial.,negation
+Landry is not bitter.,negation
+Nathaniel is not financial.,negation
+Jerome is not drab.,negation
+Hale is not kind.,negation
+Jerome is not financial.,negation
+Jerome is not huge.,negation
+Quentin is cheerful.,fact
+Nick is not lazy.,fact
+Sinclair is not cheerful.,fact
+Quentin is intelligent.,fact
+Nick is sorry.,fact
+Nick is not intelligent.,fact
+Carrick is not noisy.,fact
+Samuel is not lazy.,fact
+Arnold is lazy.,fact
+Sinclair is sorry.,fact
+Clyde is not lazy.,fact
+Carrick is not intelligent.,fact
+Someone who is both huge and not lazy is always intelligent.,implication
+All not huge people are not noisy.,implication
+Clyde being intelligent or Arnold being not lazy implies that Arnold is cheerful.,implication
+"If someone is not huge, then he is lazy.",implication
+"If Carrick is not noisy, then Arnold is not huge and Nick is intelligent.",implication
+"If someone who is intelligent is also cheerful, then he is not sorry.",implication
+"If someone is not noisy or intelligent, then he is sorry.",implication
+Sinclair being lazy implies that Sinclair is not noisy.,implication
+"If there is someone who is not sorry, then Arnold is intelligent.",implication
+Someone who is not lazy is always both not huge and not noisy.,implication
+Arnold is not lazy.,negation
+Carrick is not sorry.,negation
+Nick is not noisy.,negation
+Quentin is not intelligent.,negation
+Carrick is not intelligent.,negation
+Samuel is not intelligent.,negation
+Samuel is not sorry.,negation
+Quentin is not huge.,negation
+Nick is not sorry.,negation
+Carrick is not lazy.,negation
+Clayton is not bad-tempered.,fact
+Archibald is worrisome.,fact
+Hal is not fancy.,fact
+Archibald is not proud.,fact
+Grover is scared.,fact
+Hal is not unlikely.,fact
+Atwater is not proud.,fact
+Clayton is not scared.,fact
+Archibald is not unlikely.,fact
+Grover is fancy.,fact
+Hal is not scared.,fact
+Clayton is not fancy.,fact
+Archibald being not fancy and Clayton being not proud imply that Atwater is not scared.,implication
+Someone who is not scared is always fancy.,implication
+"If someone who is fancy is also unlikely, then he is not worrisome.",implication
+"If Atwater is scared and Archibald is not worrisome, then Atwater is not fancy.",implication
+"If there is someone who is not unlikely, then Archibald is not worrisome and Grover is not scared.",implication
+"If someone who is worrisome is also not fancy, then he is unlikely.",implication
+"If there is someone who is either not worrisome or not fancy, then Grover is not unlikely.",implication
+"If someone who is unlikely is also proud, then he is not bad-tempered.",implication
+Someone who is both proud and fancy is always unlikely.,implication
+Atwater is not proud.,negation
+Grover is not fancy.,negation
+Hal is not proud.,negation
+Hal is not unlikely.,negation
+Grover is not worrisome.,negation
+Archibald is not scared.,negation
+Grover is not proud.,negation
+Archibald is not unlikely.,negation
+Archibald is not worrisome.,negation
+Clayton is not unlikely.,negation
+Grover is not scared.,negation
+Hal is not bad-tempered.,negation
+Seth is not capable.,fact
+Perry is not alert.,fact
+Alison is not young.,fact
+Carver is known.,fact
+Atwood is not alert.,fact
+Seth is super.,fact
+Perry is not young.,fact
+Carver is not capable.,fact
+Seth is not young.,fact
+Carver is not young.,fact
+Nick is alert.,fact
+Kenneth is not young.,fact
+All super people are young.,implication
+"If someone is capable or known, then he is not super.",implication
+Someone who is not young is always both not dangerous and known.,implication
+All not alert people are young.,implication
+"If there is at least one people who is not capable, then Atwood is super and Nick is not alert.",implication
+It can be concluded that Carver is known once knowing that Nick is alert and Nick is not capable.,implication
+Carver is not dangerous.,negation
+Perry is not known.,negation
+Nick is not dangerous.,negation
+Perry is not alert.,negation
+Atwood is not young.,negation
+Seth is not alert.,negation
+Kenneth is not alert.,negation
+Alison is not alert.,negation
+Kenneth is not known.,negation
+Perry is not young.,negation
+Atwater is not responsible.,fact
+Keaton is colorful.,fact
+Roberto is not dramatic.,fact
+Atwater is dramatic.,fact
+Milburn is colorful.,fact
+Clyde is not arrogant.,fact
+Roberto is arrogant.,fact
+Quinby is not responsible.,fact
+Milburn is not alert.,fact
+Atwater is not arrogant.,fact
+Milburn is responsible.,fact
+Quinby is not colorful.,fact
+"If there is someone who is not alert, then Atwater is not responsible and Quinby is dramatic.",implication
+"If someone is not responsible, then he is dramatic.",implication
+It can be concluded that Roberto is not alert and Clyde is arrogant once knowing that Quinby is young.,implication
+"If there is at least one people who is arrogant or not responsible, then Keaton is not colorful.",implication
+"If there is someone who is young, then Keaton is alert and Magnus is responsible.",implication
+"if there is at least one people who is not colorful and responsible, then Atwater is not dramatic and Keaton is arrogant.",implication
+"If someone is not young and not colorful, then he is dramatic and responsible.",implication
+"If there is someone who is not dramatic, then Roberto is not responsible and Atwater is arrogant.",implication
+"If Milburn is young, then Roberto is arrogant.",implication
+"If someone who is young is also colorful, then he is alert.",implication
+Keaton is not dramatic.,negation
+Atwater is not arrogant.,negation
+Roberto is not responsible.,negation
+Clyde is not young.,negation
+Atwater is not dramatic.,negation
+Milburn is not responsible.,negation
+Milburn is not colorful.,negation
+Clyde is not arrogant.,negation
+Magnus is not colorful.,negation
+Magnus is not alert.,negation
+Sinclair is not dim.,fact
+Sinclair is black.,fact
+Christian is not sociable.,fact
+Roberto is not weary.,fact
+Christian is not woolen.,fact
+Blake is not weary.,fact
+Perry is weary.,fact
+Blair is not colorful.,fact
+Sinclair is woolen.,fact
+Roberto is not black.,fact
+Blake is sociable.,fact
+Blair is dim.,fact
+It can be concluded that Roberto is not black once knowing that Troy is weary and Sinclair is woolen.,implication
+"As long as someone is woolen, he is dim and not colorful.",implication
+"If there is at least one people who is not black or weary, then Troy is sociable.",implication
+"If there is at least one people who is not sociable, then Troy is not dim.",implication
+"If there is at least one people who is not woolen, then Christian is not sociable.",implication
+"If there is someone who is either colorful or black, then Perry is not woolen and Blair is dim.",implication
+"If someone is dim or he is sociable, then he is woolen.",implication
+Troy being woolen and Troy being black imply that Roberto is colorful and Sinclair is weary.,implication
+Christian is not colorful.,negation
+Roberto is not colorful.,negation
+Blake is not sociable.,negation
+Blair is not sociable.,negation
+Christian is not black.,negation
+Troy is not dim.,negation
+Roberto is not weary.,negation
+Roberto is not dim.,negation
+Christian is not sociable.,negation
+Christian is not woolen.,negation
+Sinclair is not sociable.,negation
+Galvin is not relieved.,fact
+Clayton is not relieved.,fact
+Galvin is not wide-eyed.,fact
+Craig is not wide-eyed.,fact
+Roberto is not grieving.,fact
+Clayton is not grieving.,fact
+Clayton is wide-eyed.,fact
+Hale is grieving.,fact
+Roberto is spotless.,fact
+Clayton is lazy.,fact
+Harold is not spotless.,fact
+Harold is not lazy.,fact
+"If Lucas is not spotless and Craig is relieved, then Galvin is not lazy.",implication
+"If there is someone who is not cheerful, then Harold is wide-eyed and Roberto is not grieving.",implication
+"If there is someone who is both not relieved and not wide-eyed, then Harold is lazy.",implication
+"If there is someone who is either not spotless or not cheerful, then Galvin is not relieved.",implication
+"If there is at least one people who is not cheerful or not relieved, then Roberto is wide-eyed.",implication
+"If someone who is not wide-eyed is also spotless, then he is relieved.",implication
+"If someone is spotless or he is not grieving, then he is not lazy.",implication
+"If there is someone who is both not wide-eyed and lazy, then Harold is not relieved.",implication
+Harold is not lazy.,negation
+Craig is not cheerful.,negation
+Harold is not grieving.,negation
+Clayton is not relieved.,negation
+Galvin is not lazy.,negation
+Clayton is not wide-eyed.,negation
+Harold is not wide-eyed.,negation
+Clayton is not lazy.,negation
+Galvin is not wide-eyed.,negation
+Clayton is not grieving.,negation
+Craig is not lazy.,negation
+Hale is not spotless.,negation
+Arnold is eager.,fact
+Sebastian is brainy.,fact
+Arnold is not confused.,fact
+Laverne is sociable.,fact
+Nicole is not eager.,fact
+Laverne is dull.,fact
+Arnold is brainy.,fact
+Sebastian is not dull.,fact
+Grover is not brainy.,fact
+Laverne is not brainy.,fact
+Quenby is confused.,fact
+Laverne is vast.,fact
+"If Laverne is dull or Quenby is sociable, then Arnold is vast.",implication
+"If Blake is eager, then Sebastian is brainy and Sebastian is not dull.",implication
+Someone who is dull is always not vast.,implication
+It can be concluded that Nicole is not brainy once knowing that Blake is eager or Nicole is not sociable.,implication
+Someone who is not dull is always both not confused and not brainy.,implication
+"As long as someone is dull, he is not vast and confused.",implication
+Sebastian is not dull.,negation
+Laverne is not sociable.,negation
+Arnold is not vast.,negation
+Sebastian is not confused.,negation
+Laverne is not confused.,negation
+Sebastian is not vast.,negation
+Nicole is not vast.,negation
+Quenby is not vast.,negation
+Magnus is pregnant.,fact
+Hale is not arrogant.,fact
+Quentin is not scared.,fact
+Stephanie is shy.,fact
+Romeo is pleasant.,fact
+Oscar is not pleasant.,fact
+Oscar is not pregnant.,fact
+Quentin is shy.,fact
+Carrick is scared.,fact
+Carrick is not shy.,fact
+Romeo is not passionate.,fact
+Carrick is not arrogant.,fact
+"As long as someone is not pregnant, he is not shy and not arrogant.",implication
+"If there is at least one people who is not arrogant, then Carrick is not scared.",implication
+It can be concluded that Quentin is passionate and Stephanie is shy once knowing that Carrick is not pregnant.,implication
+"If someone who is passionate is also pleasant, then he is not pregnant.",implication
+"if there is at least one people who is not shy and passionate, then Hale is pregnant and Magnus is not arrogant.",implication
+"If Magnus is not pleasant and Oscar is shy, then Quentin is not passionate.",implication
+"If there is someone who is either passionate or not pleasant, then Romeo is shy.",implication
+"If someone is arrogant, then he is both pleasant and not scared.",implication
+"If someone is either not arrogant or shy, then he is not passionate and scared.",implication
+Someone who is scared is always not passionate.,implication
+Stephanie is not shy.,negation
+Quentin is not scared.,negation
+Quentin is not pregnant.,negation
+Carrick is not pregnant.,negation
+Quentin is not passionate.,negation
+Carrick is not scared.,negation
+Stephanie is not pleasant.,negation
+Oscar is not pleasant.,negation
+Oscar is not passionate.,negation
+Hale is not scared.,negation
+Daisy is not lonely.,fact
+Nick is not known.,fact
+Axel is not dull.,fact
+Rhett is not lonely.,fact
+Troy is not fancy.,fact
+Nick is dull.,fact
+Axel is nasty.,fact
+Lucas is cheerful.,fact
+Rhett is fancy.,fact
+Troy is not nasty.,fact
+Lucas is nasty.,fact
+Rhett is not cheerful.,fact
+Someone who is both not dull and not lonely is always not fancy.,implication
+It can be concluded that Samuel is not fancy once knowing that Daisy is cheerful or Rhett is not known.,implication
+"If there is someone who is either not nasty or cheerful, then Nick is dull and Troy is not lonely.",implication
+"if there is at least one people who is not known and not lonely, then Axel is fancy and Nick is not nasty.",implication
+"If Daisy is not dull or Axel is not fancy, then Lucas is not known.",implication
+"If Daisy is lonely, then Troy is known and Axel is fancy.",implication
+"If someone is not fancy or lonely, then he is dull.",implication
+"If there is someone who is not known, then Nick is nasty and Axel is not fancy.",implication
+Rhett is not nasty.,negation
+Troy is not nasty.,negation
+Axel is not cheerful.,negation
+Nick is not nasty.,negation
+Daisy is not cheerful.,negation
+Axel is not dull.,negation
+Axel is not known.,negation
+Rhett is not dull.,negation
+Rhett is not cheerful.,negation
+Samuel is not cheerful.,negation
+Daisy is not fancy.,negation
+Roberto is cheerful.,fact
+Carver is not inexpensive.,fact
+Gabriela is colorful.,fact
+Troy is cheerful.,fact
+Carver is not colorful.,fact
+Gabriela is fierce.,fact
+Carver is envious.,fact
+Grover is not inexpensive.,fact
+Troy is fierce.,fact
+Roberto is inexpensive.,fact
+Roberto is delicious.,fact
+Gabriela is not cheerful.,fact
+Grover being fierce implies that Grover is colorful and Roberto is delicious.,implication
+Someone who is fierce is always envious.,implication
+Someone who is cheerful is always both not fierce and inexpensive.,implication
+"If all people are envious or delicious, then Carver is cheerful.",implication
+"If there is at least one people who is not inexpensive or not cheerful, then Alan is envious.",implication
+Grover being colorful implies that Alan is not fierce and Grover is delicious.,implication
+"If someone is both not envious and not cheerful, then he is colorful.",implication
+"As long as someone is envious, he is not colorful and not inexpensive.",implication
+"If there is at least one people who is delicious, then Victor is not cheerful.",implication
+Gabriela is not delicious.,negation
+Troy is not inexpensive.,negation
+Alan is not inexpensive.,negation
+Grover is not envious.,negation
+Grover is not inexpensive.,negation
+Alan is not cheerful.,negation
+Troy is not fierce.,negation
+Kenway is lazy.,fact
+Byron is not woolen.,fact
+Ivan is actual.,fact
+Bartholomew is lazy.,fact
+Toby is not actual.,fact
+Harold is not actual.,fact
+Kenway is not woolen.,fact
+Atwater is not alert.,fact
+Toby is not alert.,fact
+Atwater is not shy.,fact
+Kenway is shy.,fact
+Bartholomew is actual.,fact
+Someone who is not shy is always actual.,implication
+Someone who is not alert is always both actual and lazy.,implication
+"If there is someone who is both not lazy and tiny, then Harold is shy.",implication
+Someone who is eithor shy or alert is always not tiny.,implication
+It can be concluded that Kenway is not tiny once knowing that Toby is woolen or Byron is not actual.,implication
+"If Harold is tiny, then Toby is not alert.",implication
+Someone who is lazy is always both not woolen and shy.,implication
+"If there is at least one people who is not woolen, then Toby is shy and Ivan is alert.",implication
+It can be concluded that Kenway is not actual once knowing that Bartholomew is not lazy and Bartholomew is not alert.,implication
+Harold is not actual.,negation
+Bartholomew is not actual.,negation
+Atwater is not actual.,negation
+Kenway is not lazy.,negation
+Kenway is not actual.,negation
+Toby is not alert.,negation
+Toby is not tiny.,negation
+Harold is not lazy.,negation
+Byron is not actual.,negation
+Ivan is not lazy.,negation
+Kenway is not alert.,negation
+Byron is not woolen.,negation
+Lucas is enthusiastic.,fact
+Gavin is not shy.,fact
+Lucas is lazy.,fact
+Christian is bitter.,fact
+Christian is enthusiastic.,fact
+Archibald is not bitter.,fact
+Bartholomew is shy.,fact
+Romeo is distinct.,fact
+Romeo is not shy.,fact
+Gavin is not enthusiastic.,fact
+Archibald is clumsy.,fact
+Lucas is shy.,fact
+"If someone is not bitter, then he is both shy and distinct.",implication
+Lucas being not enthusiastic implies that Lucas is not distinct and Bartholomew is lazy.,implication
+"If someone is both not enthusiastic and not shy, then he is lazy.",implication
+"If all people are lazy or bitter, then Lucas is not clumsy.",implication
+"If Bartholomew is bitter or Malcolm is clumsy, then Archibald is not shy.",implication
+Romeo being lazy and Bartholomew being enthusiastic imply that Malcolm is not shy.,implication
+"If someone who is lazy is also shy, then he is bitter.",implication
+Someone who is eithor not clumsy or not distinct is always enthusiastic.,implication
+"If there is nobody who is not shy, then Bartholomew is clumsy and Archibald is enthusiastic.",implication
+Bartholomew is not enthusiastic.,negation
+Lucas is not shy.,negation
+Romeo is not distinct.,negation
+Archibald is not enthusiastic.,negation
+Christian is not shy.,negation
+Malcolm is not bitter.,negation
+Archibald is not distinct.,negation
+Lucas is not enthusiastic.,negation
+Christian is not clumsy.,negation
+Archibald is not bitter.,negation
+Malcolm is not clumsy.,negation
+Bradley is not unlikely.,fact
+Byron is wide-eyed.,fact
+Hale is not inexpensive.,fact
+Hale is not unlikely.,fact
+Bradley is shy.,fact
+Byron is shy.,fact
+Gabriela is huge.,fact
+Bradley is huge.,fact
+Galvin is not calm.,fact
+Troy is not calm.,fact
+Troy is inexpensive.,fact
+Casey is not unlikely.,fact
+"If there is someone who is either shy or inexpensive, then Gabriela is not unlikely and Casey is not huge.",implication
+"If everyone is not unlikely, then Casey is inexpensive and Gabriela is wide-eyed.",implication
+"If someone who is shy is also not huge, then he is inexpensive.",implication
+Someone who is not unlikely is always both shy and calm.,implication
+"If someone is both inexpensive and wide-eyed, then he is huge.",implication
+"If there is someone who is either not inexpensive or huge, then Bradley is wide-eyed.",implication
+Gabriela is not wide-eyed.,negation
+Hale is not calm.,negation
+Gabriela is not inexpensive.,negation
+Galvin is not inexpensive.,negation
+Gabriela is not unlikely.,negation
+Byron is not calm.,negation
+Gabriela is not huge.,negation
+Gabriela is not shy.,negation
+Byron is not unlikely.,negation
+Hale is not unlikely.,negation
+Casey is not calm.,negation
+Bradley is not unlikely.,negation
+Victor is fragile.,fact
+Sebastian is dull.,fact
+Alison is bitter.,fact
+Magnus is not arrogant.,fact
+Ramon is fragile.,fact
+Ramon is dull.,fact
+Alison is arrogant.,fact
+Magnus is bitter.,fact
+Ramon is not nasty.,fact
+Victor is arrogant.,fact
+Sebastian is not square.,fact
+Alison is not fragile.,fact
+"If there is someone who is either not bitter or not fragile, then Sebastian is not nasty.",implication
+"If Magnus is nasty and Ramon is dull, then Magnus is fragile.",implication
+"If someone who is not arrogant is also square, then he is fragile.",implication
+"If someone is both dull and square, then he is fragile.",implication
+Magnus being arrogant implies that Sebastian is not nasty.,implication
+Victor being bitter implies that Janessa is not nasty and Sebastian is square.,implication
+Someone who is not fragile is always nasty.,implication
+"As long as someone is not square, he is fragile and not dull.",implication
+Magnus is not fragile.,negation
+Alison is not nasty.,negation
+Janessa is not dull.,negation
+Sebastian is not square.,negation
+Alison is not bitter.,negation
+Victor is not nasty.,negation
+Sebastian is not arrogant.,negation
+Janessa is not arrogant.,negation
+Victor is not fragile.,negation
+Sebastian is not dull.,negation
+Alison is shy.,fact
+Clyde is kind.,fact
+Conner is muddy.,fact
+Kenneth is not kind.,fact
+Romeo is not shy.,fact
+Kevin is eager.,fact
+Romeo is muddy.,fact
+Conner is kind.,fact
+Conner is not super.,fact
+Conner is shy.,fact
+Conner is not eager.,fact
+Romeo is not eager.,fact
+"If someone is not eager, then he is kind.",implication
+"If Kenneth is shy or Kenneth is not super, then Conner is not intelligent.",implication
+"If there is at least one people who is muddy, then Clyde is kind.",implication
+It can be concluded that Conner is not shy once knowing that Kevin is kind and Conner is not eager.,implication
+Clyde being muddy implies that Clyde is not super and Alison is kind.,implication
+Kenneth is not kind.,negation
+Conner is not muddy.,negation
+Clyde is not shy.,negation
+Conner is not super.,negation
+Alison is not intelligent.,negation
+Alison is not super.,negation
+Romeo is not shy.,negation
+Romeo is not kind.,negation
