@@ -84,7 +84,7 @@ yang2023couplinglargelanguagemodels}.
 
 This practicum proposes a shift in methodology: bypassing text-generation in 
 favor of parameter-level probing. Rather than forcing models to generate 
-structured output, we embrace the model's existing internal representations. 
+structured output, the project embraces the model's existing internal representations. 
 The central objective is to explore the model's internal geometry to reveal 
 whether logical relationships such as: implication, negation, and 
 conjunction; are explicitly encoded within the hidden state vector embeddings 
@@ -94,26 +94,205 @@ patterns, this practicum aims to determine if verifiable predicate logic can
 be extracted deterministically from the latent space of a compact transformer, 
 offering a robust, low-compute alternative to stochastic generative parsing.
 
+% 2. THE FOUNDATION: Transformer Geometry & Latent Representations
+\subsection{Transformer Architecture}
+The large language model (LLM) under test is Meta's LLaMa 3.2-3B, a 3-billion 
+parameter transformer model with 28 transformer head layers, each consisting of 
+a grouped-query attention mechanism and Swish feed-forward network
+\cite{grattafiori2024llama3herdmodels}. The model is trained on a mixture of 
+publicly available and licensed datasets combined with the outputs of the LLaMa 
+3.1-8B and 70B models \cite{Meta_2024}.
+
+\subsubsection{Tokenization and Positional Encoding}
+
+The translation of continuous natural language into a structured mathematical 
+form begins with tokenization. Tokenization defines a deterministic mapping 
+from an input string of characters into a discrete sequence of integer tokens, 
+$\mathbf{t} = (t_1, t_2, \dots, t_L)$, drawn from a fixed vocabulary 
+$\mathcal{V}$. In modern transformer architectures, tokens do not maintain a 
+strict one-to-one correspondence with individual words; rather, subword 
+tokenization algorithms (such as Byte-Pair Encoding) decompose rare words into 
+sub-word units while mapping common words to single token indices. The 
+vocabulary size, $|\mathcal{V}|$ (128K for Llama 3.2-3B), establishes the 
+fundamental dimensionality of the discrete input space.
+
+Each discrete token index $t_i \in \mathcal{V}$ is subsequently mapped to a 
+continuous vector via an embedding lookup matrix 
+$\mathbf{W}_E \in \mathbb{R}^{|\mathcal{V}| \times d_{\text{model}}}$, yielding 
+an initial sequence of dense token representations:
+
+\begin{equation}
+    \mathbf{x}_{e, i} = \mathbf{W}_E[t_i] \in \mathbb{R}^{d_{\text{model}}}
+\end{equation}
+
+where $d_{\text{model}} = 3072$ for Llama 3.2-3B
+\cite{grattafiori2024llama3herdmodels,Meta_2024}.
+
+Because standard self-attention operations are inherently 
+permutation-invariant—treating inputs as an unordered bag of vectors—the 
+sequential order of tokens must be explicitly injected into the model 
+representations. Llama 3.2-3B incorporates sequence geometry using Rotary 
+Position Embedding (RoPE) \cite{grattafiori2024llama3herdmodels,Meta_2024,
+su2023roformerenhancedtransformerrotary}. Unlike additive static positional 
+embeddings, RoPE encodes absolute positional information by multiplying key and 
+query vectors with a complex-valued rotation matrix in two-dimensional 
+sub-chunks:
+
+\begin{equation}
+    \mathbf{R}_{\Theta, m}^{d} = \text{diag}
+    \left( 
+        \mathbf{R}_{\theta_1, m}, 
+        \mathbf{R}_{\theta_2, m}, 
+        \dots, 
+        \mathbf{R}_{\theta_{d/2}, m}
+    \right)
+\end{equation}
+
+where $\mathbf{R}_{\theta_i, m}$ is a 2D rotation matrix operating on feature 
+pairs with angle $m\theta_i$ at token position $m$. This formulation guarantees 
+that the inner product between query and key vectors naturally incorporates 
+relative distance ($m - n$), preserving syntactic and spatial structure as 
+sequence vectors propagate into the primary residual stream.
+
+\subsubsection{Transformer Attention Heads and Feed-Forward Networks}
+
+Within each layer of the decoder stack, the residual state vector 
+$\mathbf{h}_l \in \mathbb{R}^{d_{\text{model}}}$ is sequentially processed by 
+two core functional components: the Multi-Head Attention block and the 
+non-linear Feed-Forward Network (FFN).
+
+\paragraph{Grouped-Query Attention (GQA)}
+Standard Multi-Head Attention (MHA) projects hidden states into $N_q$ 
+independent Query, Key, and Value heads. During autoregressive decoding, key 
+and value tensors across preceding sequence positions are retained in a 
+KV-cache to avoid recomputation. While Multi-Query Attention (MQA) reduces 
+memory overhead by sharing a single Key and Value head across all Query heads, 
+Grouped-Query Attention (GQA) generalizes both approaches by partitioning $N_q$ 
+query heads into $N_g$ groups, where each group shares a single Key and Value 
+head ($N_{kv} = N_g$) \cite{ainslie2023gqatraininggeneralizedmultiquery}.
+
+Formally, for a group of $G = N_q / N_g$ query vectors 
+$\{\mathbf{q}_{g,1}, \dots, \mathbf{q}_{g,G}\}$ assigned to a shared key-value 
+pair $(\mathbf{k}_g, \mathbf{v}_g)$, the attention output for head $i$ in group 
+$g$ is defined as:
+
+\begin{equation}
+    \mathbf{O}_{g,i} = \text{Softmax}
+    \left(
+        \frac{\mathbf{q}_{g,i} \mathbf{k}_g^T}{\sqrt{d_{\text{head}}}}
+    \right)
+    \mathbf{v}_g
+\end{equation}
+
+Llama 3.2-3B incorporates GQA with $N_q = 24$ query heads mapped across 
+$N_{kv} = 8$ key-value heads ($G = 3$), reducing the memory size of the 
+KV-cache compared to standard MHA 
+\cite{grattafiori2024llama3herdmodels,Meta_2024}.
+
+\paragraph{SwiGLU Feed-Forward Network}
+Following attention aggregation, the residual state vector is processed by a 
+position-wise Feed-Forward Network (FFN). Rather than using standard 
+single-activation MLPs (such as ReLU or GeLU), Llama 3.2-3B implements the 
+SwiGLU variant of the Gated Linear Unit (GLU) 
+\cite{shazeer2020gluvariantsimprovetransformer,grattafiori2024llama3herdmodels,
+Meta_2024}.
+
+SwiGLU applies a gated dual-path linear transformation utilizing the SiLU 
+(Swish with $\beta=1$) activation function, where 
+$\text{SiLU}(x) = x \cdot \sigma(x)$. Formally, for an input vector 
+$\mathbf{x} \in \mathbb{R}^{d_{\text{model}}}$, the transformation is computed 
+as:
+
+\begin{equation}
+    \text{SwiGLU}(\mathbf{x}) = 
+    \left( 
+        \text{SiLU}
+        \left( 
+            \mathbf{x} \mathbf{W}_G 
+        \right) \otimes 
+        \left( 
+            \mathbf{x} \mathbf{W}_U 
+        \right) 
+    \right) \mathbf{W}_D
+\end{equation}
+
+where 
+$\mathbf{W}_G, \mathbf{W}_U \in \mathbb{R}^{d_{\text{model}} \times d_{\text{ffn}}}$ 
+denote the gate and up-projection weight matrices, 
+$\mathbf{W}_D \in \mathbb{R}^{d_{\text{ffn}} \times d_{\text{model}}}$ 
+denotes the down-projection matrix, and $\otimes$ represents the Hadamard 
+(element-wise) product. In Llama 3.2-3B, the intermediate hidden dimension is 
+set to $d_{\text{ffn}} = \frac{8}{3} d_{\text{model}} = 8192$.
+
+\subsubsection{Unembedding, Logit Generation, and Representation Probing Target}
+
+After propagating through the final $L$-th decoder layer, the output vector 
+represents the contextualized hidden activation state, 
+$\mathbf{h}_L \in \mathbb{R}^{d_{\text{model}}}$, for each token position in 
+the sequence.
+
+\paragraph{The Unembedding Transformation and Logits}
+To map continuous residual states back into discrete token probabilities for 
+autoregressive generation, $\mathbf{h}_L$ is normalized via Root Mean Square 
+Normalization (RMSNorm) and projected onto the vocabulary space via the 
+unembedding weight matrix 
+$\mathbf{W}_{\text{unembed}} \in \mathbb{R}^{|\mathcal{V}| \times d_{\text{model}}}$:
+
+\begin{equation}
+    \mathbf{z} = \mathbf{W}_{\text{unembed}} 
+    \left( 
+        \text{RMSNorm}(\mathbf{h}_L) 
+    \right) \in \mathbb{R}^{|\mathcal{V}|}
+\end{equation}
+
+The resulting vector $\mathbf{z}$ contains unnormalized log-probabilities, or 
+\textit{logits}, corresponding to each token index in the vocabulary 
+$\mathcal{V}$. The probability distribution $P(t_i)$ over the vocabulary for 
+generating the subsequent token is computed via the Softmax operation:
+
+\begin{equation}
+    P(t_i \mid t_{<i}) = \frac{\exp(z_i)}{\sum_{j=1}^{|\mathcal{V}|} \exp(z_j)}
+\end{equation}
+
+In standard text generation pipelines, sampling or greedy decoding is performed 
+directly on this output probability distribution $P(t_i)$.
+
+% 3. THE PROPOSED SOLUTION: Representation Probing
+\subsection{Logical Representation Probing of Intermediate Residual States}
+In contrast to standard generative operations that evaluate $\mathbf{z}$ at the 
+terminal layer $L$, representation probing targets the intermediate hidden 
+activation vectors $\mathbf{h}_l \in \mathbb{R}^{d_{\text{model}}}$ across 
+intermediate layers ($l < L$), prior to the unembedding projection. 
+
+Because transformer layers apply additive residual updates 
+($\mathbf{h}_l = \mathbf{h}_{l-1} + \text{Attention}(\mathbf{h}_{l-1}) + \text{FFN}(\mathbf{h}_{l-1})$), 
+the intermediate residual stream acts as a continuous representation space 
+where semantic and structural properties accumulate. Rather than evaluating 
+token probabilities from $\mathbf{z}$, linear probes act as diagnostic 
+classifiers directly on the intermediate vectors $\mathbf{h}_l$. By training a 
+decision boundary parameter vector $\mathbf{w}_p \in \mathbb{R}^{d_{\text{model}}}$ 
+on these activations, probing quantifies whether target logical properties 
+(such as negation or implication) are linearly encoded within the intermediate 
+latent space before the final generation phase.
+
+% 4. METHODOLOGY IN ACTION: Node and Edge Quantifiers
+
+% 5. THE ULTIMATE HORIZON: Automated Logic Graph Extraction
+\subsection{Logic Graph Construction}
+By validating and assembling these individual classification probes, we establish the core diagnostic machinery required for automated logic graph construction (Figure 1 and Figure 2)... [Explain how atomic probes construct nodes while relational probes draw directed edges, forming a deterministic bridge from natural language to symbolic reasoning].
+
 An example of the training and subsequent inference behavior of a negation
 detection probe follows:
 
 \begin{itemize}
-    \item \textbf{Input:}
-    \begin{itemize}
-        \item Natural Language Text Statement: ``Eli is not soft.''
-        \item Atomic Elements: [``Eli'', ``soft'']
-    \end{itemize} 
+    \item \textbf{Input:} Natural Language Text Statement: ``Eli is not soft.''
     \item \textbf{Output:} Log-Odds Score of Negation Presence between the Atomic Elements
 \end{itemize}
 
 likewise for an implication detection probe:
 
 \begin{itemize}
-    \item \textbf{Input:}
-    \begin{itemize}
-        \item Natural Language Text Statement: ``If someone is soft, he is poised and not scared.''
-        \item Atomic Elements: [``soft'', ``poised'', ``not scared'']
-    \end{itemize} 
+    \item \textbf{Input:} Natural Language Text Statement: ``If someone is soft, he is poised and not scared.''
     \item \textbf{Output:} Log-Odds Score of Implication Presence between the Atomic Elements
 \end{itemize}
 
@@ -137,7 +316,6 @@ visualization of the resulting graph in Figure~\ref{fig:intro-example-graph}.
     \caption{Visualization of the logical graph extracted from the natural language example.}
     \label{fig:intro-example-graph}
 \end{figure}
-
 
 \newpage
 \section{Objectives}
