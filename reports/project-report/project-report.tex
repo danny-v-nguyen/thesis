@@ -94,7 +94,6 @@ patterns, this practicum aims to determine if verifiable predicate logic can
 be extracted deterministically from the latent space of a compact transformer, 
 offering a robust, low-compute alternative to stochastic generative parsing.
 
-% 2. THE FOUNDATION: Transformer Geometry & Latent Representations
 \subsection{Transformer Architecture}
 The large language model (LLM) under test is Meta's LLaMa 3.2-3B, a 3-billion 
 parameter transformer model with 28 transformer head layers, each consisting of 
@@ -257,7 +256,6 @@ generating the subsequent token is computed via the Softmax operation:
 In standard text generation pipelines, sampling or greedy decoding is performed 
 directly on this output probability distribution $P(t_i)$.
 
-% 3. THE PROPOSED SOLUTION: Representation Probing
 \subsection{Logical Representation Probing of Intermediate Residual States}
 In contrast to standard generative operations that evaluate $\mathbf{z}$ at the 
 terminal layer $L$, representation probing targets the intermediate hidden 
@@ -275,11 +273,16 @@ on these activations, probing quantifies whether target logical properties
 (such as negation or implication) are linearly encoded within the intermediate 
 latent space before the final generation phase.
 
-% 4. METHODOLOGY IN ACTION: Node and Edge Quantifiers
+A depiction of the proposed probing architecture is shown in Figure~\ref{fig:intro-probe-model}.
 
-% 5. THE ULTIMATE HORIZON: Automated Logic Graph Extraction
-\subsection{Logic Graph Construction}
-By validating and assembling these individual classification probes, we establish the core diagnostic machinery required for automated logic graph construction (Figure 1 and Figure 2)... [Explain how atomic probes construct nodes while relational probes draw directed edges, forming a deterministic bridge from natural language to symbolic reasoning].
+\begin{figure}[h!t]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/intro-probe-model.pdf}
+    \caption{Schematic of the representation probing architecture, illustrating 
+    how intermediate residual states are extracted and classified to detect 
+    logical relations.}
+    \label{fig:intro-probe-model}
+\end{figure}
 
 An example of the training and subsequent inference behavior of a negation
 detection probe follows:
@@ -305,15 +308,16 @@ visualization of the resulting graph in Figure~\ref{fig:intro-example-graph}.
 
 \begin{figure}[h!t]
     \centering
-    \includegraphics[width=0.9\textwidth]{figures/intro-example-text.pdf}
-    \caption{Pipeline from natural language to logical graph representation.}
+    \includegraphics[width=0.7\textwidth]{figures/intro-example-text.pdf}
+    \caption{Nominal pipeline from natural language to logical graph representation.}
     \label{fig:intro-example-text}
 \end{figure}
 
 \begin{figure}[h!t]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/intro-example-graph.pdf}
-    \caption{Visualization of the logical graph extracted from the natural language example.}
+    \caption{Visualization of a nominal logical graph extracted from the natural 
+    language example.}
     \label{fig:intro-example-graph}
 \end{figure}
 
@@ -559,7 +563,7 @@ hidden state activation vector.
 The classification process is optimized via Logistic Regression with $L_2$ 
 regularization to prevent over-fitting to the training samples. Given a dataset 
 of hidden state activation vectors $X \in \Reals^{d}$ extracted from a specific 
-intermediate transformer layer $l$ (where $d = 2048$ for Llama 3.2-3B), the 
+intermediate transformer layer $l$ (where $d = 3072$ for Llama 3.2-3B), the 
 probe learns a weight matrix $W$ and bias vector $b$ to map the input hidden 
 state $X$ to the discrete logical class $Y$:
 
@@ -675,16 +679,206 @@ spaces with verifiable symbolic graph structures.
 
 \newpage
 \section{Results}
-% This section is optional for this progress report.  It corresponds to the 
-% Evaluation phase of the data science method.
-TBD. I hope I have enough time try single-layer and multi-layer probes, and a 
-couple different open models to see how results change by model size.
+
+To evaluate whether logical structures are linearly separable within the 
+intermediate residual stream of Llama 3.2-3B, regularized linear classification 
+probes were trained on mean-pooled activation vectors across transformer layers 
+10 through 14. Performance was evaluated using overall classification Accuracy 
+as well as class-specific $F_1$ scores for Implication, Fact, 
+and Negation classifications, benchmarked against a uniform random guessing 
+baseline.
+
+\subsection{Probe Performance Across Intermediate Layers}
+
+Table~\ref{tbl:results-summary} summarizes the empirical performance of the 
+linear probes evaluated at each intermediate layer relative to the random 
+baseline.
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{lcccc}
+\hline
+\textbf{Source} & \textbf{Accuracy} & \textbf{Implication $F_1$} & \textbf{Fact $F_1$} & \textbf{Negation $F_1$} \\ \hline
+Uniform Random & $34.29\%$ & $30.17\%$ & $38.34\%$ & $33.63\%$ \\
+Layer 10       & $\mathbf{80.27\%}$ & $\mathbf{100.00\%}$ & $67.59\%$ & $\mathbf{76.23\%}$ \\
+Layer 11       & $78.07\%$ & $\mathbf{100.00\%}$ & $67.37\%$ & $71.39\%$ \\
+Layer 12       & $77.81\%$ & $\mathbf{100.00\%}$ & $\mathbf{68.06\%}$ & $70.17\%$ \\
+Layer 13       & $77.61\%$ & $\mathbf{100.00\%}$ & $67.51\%$ & $70.15\%$ \\
+Layer 14       & $77.90\%$ & $\mathbf{100.00\%}$ & $68.22\%$ & $70.29\%$ \\ \hline
+\end{tabular}
+\caption{Classification accuracy and $F_1$ scores for linear probes across intermediate layers (10--14) compared against a uniform random guessing baseline.}
+\label{tbl:results-summary}
+\end{table}
+
+Across all evaluated layers, representation probing demonstrates a substantial 
+performance improvement over the random baseline, with overall accuracy 
+exceeding $77\%$ across layers 10 through 14. Peak overall accuracy ($80.27\%$) 
+and peak Negation $F_1$ score ($76.23\%$) occur at Layer 10, after which 
+performance stabilizes into a tight range ($77.61\%$--$78.07\%$). Fact 
+identification remains consistent across intermediate depth, maintaining $F_1$ 
+scores between $67.37\%$ and $68.22\%$. Notably, the Implication $F_1$ score 
+achieves $100.00\%$ across all tested layers.
+
+\subsection{Error Analysis and Syntactic Shortcut Exploitation}
+
+While an $F_1$ score of $100.00\%$ for Implication appears to indicate flawless 
+linear separability, qualitative error analysis reveals that the probes rely 
+partially on surface-level syntactic heuristics rather than true semantic 
+entailment. 
+
+To test decision boundary robustness, an adversarial validation set comprising 
+non-conditional sentences containing conditional or hypothetical discourse 
+markers (e.g., \textit{``if"}) was evaluated on the Layer 10 probe. 
+Table~\ref{tbl:results-adversary} details representative adversarial failure 
+cases.
+
+\begin{table}[ht!]
+\centering
+\begin{tabular}{lccc}
+\hline
+\textbf{Test Sentence} & \textbf{Expected} & \textbf{Predicted} & \textbf{Confidence} \\ \hline
+John wondered if the library was still open & Fact & Implication & $84.7\%$ \\
+I asked her if she wanted some tea.         & Fact & Implication & $84.7\%$ \\
+If only I had remembered my keys!           & Fact & Implication & $79.9\%$ \\ \hline
+\end{tabular}
+\caption{Adversarial test samples demonstrating false-positive implication classifications driven by surface-level conditional markers.}
+\label{tbl:results-adversary}
+\end{table}
+
+As shown in Table~\ref{tbl:results-adversary}, sentences utilizing the token 
+\textit{``if"} in indirect questions (\textit{``wondered if..."}, 
+\textit{``asked her if..."}) or optative expressions (\textit{``If only..."}) were 
+misclassified as Implication with high log-odds confidence ($79.9\%$--$84.7\%$), 
+despite representing single factual or modal statements. This misclassification 
+indicates that the probe's linear decision boundary correlates heavily with 
+localized keyword features (such as token positions containing sub-word 
+embeddings for \textit{``if"}) rather than verifying the presence of a formal 
+$P \implies Q$ antecedent-consequent logical structure. Future probing 
+iterations require counterfactual and syntactically controlled training 
+datasets to decouple surface lexical triggers from structural logical encodings.
 
 \newpage
 \section{Deliverables}
-% This section is optional for this progress report.  It corresponds to the 
-% Deployment phase of the data science method.
-TBD
+
+The primary artifact developed during this project is an end-to-end probing 
+framework designed to extract, store, and analyze intermediate activation 
+vectors from Llama 3.2-3B. Grounded in the experimental findings detailed in 
+the previous section, the current implementation functions as a modular 
+proof-of-concept (PoC) intended to support ongoing research into high-dimensional 
+latent logical representations.
+
+\subsection{Artifact Overview}
+
+The deliverables produced in this phase encompass three core components:
+
+\begin{enumerate}
+    \item \textbf{Activation Extraction Pipeline:} A modular Python-based 
+    interface using Hugging Face \texttt{transformers} and PyTorch hooks to 
+    capture intermediate residual stream vectors ($\mathbf{h}_l \in \mathbb{R}^{3072}$) 
+    across arbitrary decoder layers without altering model weights or forward-pass 
+    inference mechanics.
+    \item \textbf{Linear Diagnostic Probing Engine:} A regularized classification 
+    framework (\texttt{scikit-learn}) that fits linear hyperplanes to activation 
+    vectors, returning classification metrics (Accuracy, $F_1$ scores) and 
+    probabilistic prediction confidence scores across multi-class logical 
+    taxonomies (Fact, Implication, Negation).
+    \item \textbf{Adversarial Benchmarking Suite:} A curated test dataset 
+    containing syntactically ambiguous discourse markers designed specifically 
+    to audit probe decision boundaries for lexical shortcut exploitation 
+    (e.g., verifying true antecedent-consequent $P \implies Q$ structures versus 
+    localized keyword matches).
+\end{enumerate}
+
+\subsection{Current Limitations and Future Deployment Roadmap}
+
+While the codebase is structured for modularity and reusability, the 
+implementation is currently a research-grade prototype and is not yet 
+production-ready for real-time model auditing or automated safety guardrails. 
+Specifically, operational deployment is bounded by two primary constraints:
+
+\begin{itemize}
+    \item \textbf{Memory Overhead of Activation Storage:} Capturing and 
+    persisting dense intermediate vectors ($\mathbf{h}_l \in \mathbb{R}^{3072}$) 
+    across long context sequences requires significant I/O bandwidth and memory 
+    overhead. Production deployment will require online activation streaming or 
+    dimensionality reduction prior to classification.
+    \item \textbf{Syntactic Heuristic Reliance:} As evidenced by the high 
+    false-positive rate on adversarial indirect questions (\textit{``wondered if..."}), 
+    the current linear classifier likely relies on surface-level token 
+    embeddings rather than fully invariant logical geometry.
+\end{itemize}
+
+Future extensions will focus on refining the probing engine by incorporating 
+structural contrastive fine-tuning on the probing dataset, expanding layer 
+coverage to early decoder blocks ($l < 10$), and packaging the extraction engine 
+as an extensible CLI tool for broader interpretability research on transformer 
+residual streams.
+
+\section{Self-Assessment}
+
+This practicum was conducted as a research project completed for 1 credit hours. 
+The research was supervised by Dr. Charles Nicholson and Dr. Matt Beattie.
+
+\subsection{Individual Learning Objectives and Accomplishments}
+
+The primary objective for this project was to bridge theoretical knowledge of 
+modern natural language processing with practical representation probing 
+techniques in large language models. Specific learning objectives and their 
+outcomes include:
+
+\begin{enumerate}
+    \item \textbf{Understanding High-Dimensional Transformer Dynamics:} Master 
+    the inner mechanics of autoregressive architectures, specifically how input 
+    text maps to residual activation vectors and how attention mechanisms (GQA) 
+    and feed-forward blocks (SwiGLU) modify these latent states across layer depth.
+    \item \textbf{Developing Activation Extraction Pipelines:} Implement 
+    non-destructive PyTorch hooks to capture, serialize, and analyze 
+    intermediate model states from Llama 3.2-3B without interrupting standard 
+    forward-pass execution.
+    \item \textbf{Evaluating Linear Separability and Probing Limits:} Train 
+    diagnostic classifiers to measure the degree to which formal logical 
+    structures (Fact, Implication, Negation) are linearly encoded, while 
+    critically auditing probe decision boundaries against adversarial syntactic 
+    shortcuts.
+\end{enumerate}
+
+Primary learning objectives were successfully accomplished, yielding an 
+end-to-end extraction and probing pipeline along with an adversarial dataset 
+that highlights current diagnostic limitations.
+
+\subsection{Application of DSA Skills and Independent Learning}
+
+\paragraph{Core DSA Skills Applied}
+The execution of this project drew heavily on core DSA competencies, particularly:
+
+\begin{itemize}
+    \item \textbf{Supervised Machine Learning and Classification:} Applying 
+    regularized linear classifiers (\texttt{scikit-learn}), cross-validation 
+    techniques, and multi-class performance evaluation metrics (Accuracy, 
+    class-specific $F_1$ scores).
+    \item \textbf{Dimensionality and Matrix Linear Algebra:} Navigating 
+    high-dimensional vector spaces, tensor transformations, and projection 
+    operations.
+    \item \textbf{Error Analysis and Experimental Design:} Designing controlled 
+    adversarial benchmarks to diagnose false positives and isolate surface-level 
+    lexical heuristics from underlying semantic encodings.
+\end{itemize}
+
+\paragraph{Independently Acquired Skills}
+To complete the project scope, several specialized technical skills were 
+acquired through independent study:
+
+\begin{itemize}
+    \item \textbf{PyTorch Internal Hooking Mechanisms:} Learning to register 
+    forward pre-hooks and module hooks to intercept internal activations within 
+    deep Hugging Face model blocks without modifying core source code.
+    \item \textbf{LLM Mechanistic Interpretability Methods:} Reviewing 
+    contemporary literature on linear probing methodologies, residual stream 
+    geometry, and positional encoding schemes (RoPE).
+    \item \textbf{Efficient Activation Storage Management:} Handling the memory 
+    overhead and tensor serialization challenges associated with saving dense 
+    high-dimensional activation matrices across multi-token sequence batches.
+\end{itemize}
 
 \cleardoublepage
 \bibliographystyle{plain}
