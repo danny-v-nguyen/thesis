@@ -1,0 +1,22 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="laNhpj0_beIv2gKF6fkQ">
+    <mxGraphModel dx="2054" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="92PNpcPcFx-iQLuPAXN--2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=25;strokeColor=none;" value="&lt;div class=&quot;math-block&quot; data-math=&quot;\mathbf{S}_{\text{emb}, b} = \sum_{i=1}^{S} \left( \mathbf{h}_{b, i} \cdot \mathbf{M}_{b, i} \right) \in \mathbb{R}^{d}&quot; style=&quot;font-family: Google Sans Text, sans-serif !important; line-height: 1.15 !important; margin-top: 0px !important;&quot;&gt;$$\mathbf{S}_{\text{emb}, b} = \sum_{i=1}^{S} \left( \mathbf{h}_{b, i} \cdot \mathbf{M}_{b, i} \right) \in \mathbb{R}^{d}$$&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="400" x="155" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="92PNpcPcFx-iQLuPAXN--4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=25;strokeColor=none;" value="&lt;div class=&quot;math-block&quot; data-math=&quot;\mathbf{S}_{\text{emb}, b} = \sum_{i=1}^{S} \left( \mathbf{h}_{b, i} \cdot \mathbf{M}_{b, i} \right) \in \mathbb{R}^{d}&quot; style=&quot;font-family: Google Sans Text, sans-serif !important; line-height: 1.15 !important; margin-top: 0px !important;&quot;&gt;&lt;div class=&quot;math-block&quot; data-math=&quot;\mathbf{C}_b = \sum_{i=1}^{S} \mathbf{M}_{b, i} \in \mathbb{R}^{d}&quot; style=&quot;line-height: 1.15 !important; margin-top: 0px !important;&quot;&gt;$$\mathbf{C}_b = \sum_{i=1}^{S} \mathbf{M}_{b, i} \in \mathbb{R}^{d}$$&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="400" x="155" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="92PNpcPcFx-iQLuPAXN--5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fontSize=25;strokeColor=none;" value="&lt;div class=&quot;math-block&quot; data-math=&quot;\mathbf{S}_{\text{emb}, b} = \sum_{i=1}^{S} \left( \mathbf{h}_{b, i} \cdot \mathbf{M}_{b, i} \right) \in \mathbb{R}^{d}&quot; style=&quot;font-family: Google Sans Text, sans-serif !important; line-height: 1.15 !important; margin-top: 0px !important;&quot;&gt;&lt;div class=&quot;math-block&quot; data-math=&quot;\mathbf{C}_b = \sum_{i=1}^{S} \mathbf{M}_{b, i} \in \mathbb{R}^{d}&quot; style=&quot;line-height: 1.15 !important; margin-top: 0px !important;&quot;&gt;&lt;div class=&quot;math-block&quot; data-math=&quot;\mathbf{\bar{h}}_b = \frac{\sum_{i=1}^{S} \mathbf{M}_{b, i} \cdot \mathbf{h}_{b, i}}{\sum_{i=1}^{S} \mathbf{M}_{b, i}} = \frac{1}{N_{\text{valid}, b}} \sum_{i \in \text{valid}} \mathbf{h}_{b, i} \in \mathbb{R}^{d}&quot; style=&quot;line-height: 1.15 !important; margin-top: 0px !important;&quot;&gt;$$\mathbf{\bar{h}}_b = \frac{\mathbf{S}_{\text{emb}, b}}{\mathbf{C}_b} = \frac{1}{N_{\text{valid}, b}} \sum_{i \in \text{valid}} \mathbf{h}_{b, i} \in \mathbb{R}^{d}$$&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="650" x="30" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="92PNpcPcFx-iQLuPAXN--7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=31;fontStyle=5" value="Masked Mean Pooling" vertex="1">
+          <mxGeometry height="30" width="330" x="190" y="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

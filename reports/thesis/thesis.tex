@@ -1,0 +1,62 @@
+\documentclass[11pt, letterpaper]{report}
+
+% Essential Packages
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage[acronym, toc]{glossaries}
+\usepackage{setspace}
+
+\onehalfspacing % Standard academic line spacing
+
+% Setup Hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdftitle={Data Science Master's Thesis},
+}
+
+% Setup Glossaries & Acronyms
+\makeglossaries
+\loadglsentries{acronyms}
+
+\begin{document}
+
+% Front Matter
+\input{titlepage}
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+\begin{abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+This thesis investigates novel data science techniques... Provide a clear, concise summary of the problem, methodology, key findings, and conclusions here.
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\printglossary[type=\acronymtype, title={List of Acronyms}]
+
+\clearpage
+\pagenumbering{arabic}
+
+% Main Chapters
+\input{sections/01_introduction}
+\input{sections/02_methodology}
+\input{sections/03_analysis}
+\input{sections/04_results}
+\input{sections/05_conclusion}
+
+% Bibliography
+\clearpage
+\bibliographystyle{plain}
+\bibliography{../refs}
+
+\end{document}

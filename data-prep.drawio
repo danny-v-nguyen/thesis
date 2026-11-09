@@ -1,0 +1,42 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="GHfijhVGfC7W59cV6IAt">
+    <mxGraphModel dx="2054" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="x6V6TdtxAjg88yXRrUnu-7" edge="1" parent="1" source="x6V6TdtxAjg88yXRrUnu-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;curved=0;" target="x6V6TdtxAjg88yXRrUnu-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="475" y="370" />
+              <mxPoint x="362.5" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x6V6TdtxAjg88yXRrUnu-1" parent="1" style="text;whiteSpace=wrap;fontStyle=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&quot;0&quot;: {&#xa;        &quot;facts&quot;: [&#xa;            &quot;Baird is concerned.&quot;,&#xa;            &quot;Baird is serious.&quot;,&#xa;            ...&#xa;        &quot;rules&quot;: [&#xa;            &quot;If there is someone who is either not concerned or fresh, then John is entire.&quot;,&#xa;            &quot;It can be concluded that Gabriel is concerned once knowing that Baird is not blue.&quot;,&#xa;            ...&#xa;        &quot;statements&quot;: [&#xa;            &quot;Baird is not serious.&quot;,&#xa;            &quot;Collier is not serious.&quot;,&#xa;            ..." vertex="1">
+          <mxGeometry height="200" width="530" x="210" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="x6V6TdtxAjg88yXRrUnu-3" parent="1" style="text;whiteSpace=wrap;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Baird is concerned.,fact&#xa;Baird is serious.,fact&#xa;&quot;If there is at least one people who is both not accurate and entire, then Collier is serious.&quot;,implication&#xa;It can be concluded that Gabriel is concerned once knowing that Baird is not blue.,implication&#xa;Baird is not serious.,negation&#xa;Collier is not serious.,negation" vertex="1">
+          <mxGeometry height="100" width="610" x="210" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="x6V6TdtxAjg88yXRrUnu-8" edge="1" parent="1" source="x6V6TdtxAjg88yXRrUnu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.011;exitY=0.337;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;curved=0;exitPerimeter=0;" target="x6V6TdtxAjg88yXRrUnu-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="265.9" />
+              <mxPoint x="310" y="370" />
+              <mxPoint x="362.5" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="x6V6TdtxAjg88yXRrUnu-4" parent="1" style="text;whiteSpace=wrap;fontStyle=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&quot;0&quot;: {&#xa;        &quot;facts&quot;: [&#xa;            &quot;3&quot;: [&#xa;                &quot;Baird&quot;,&#xa;                &quot;concerned&quot;,&#xa;                &quot;+&quot;,&#xa;                &quot;fact 3&quot;&#xa;            ],&#xa;            &quot;4&quot;: [&#xa;                &quot;Baird&quot;,&#xa;                &quot;serious&quot;,&#xa;                &quot;+&quot;,&#xa;                &quot;fact 4&quot;&#xa;            ],&#xa;            ...&#xa;        &quot;rules&quot;: [&#xa;            &quot;0&quot;: {&#xa;                &quot;p&quot;: {&#xa;                    &quot;fact&quot;: [&#xa;                        [&#xa;                            &quot;exist&quot;,&#xa;                            &quot;concerned&quot;,&#xa;                            &quot;-&quot;&#xa;                        ],&#xa;                        [&#xa;                            &quot;exist&quot;,&#xa;                            &quot;fresh&quot;,&#xa;                            &quot;+&quot;&#xa;                        ]&#xa;                    ],&#xa;                    &quot;conj&quot;: &quot;or&quot;&#xa;                },&#xa;                &quot;q&quot;: {&#xa;                    &quot;fact&quot;: [&#xa;                        [&#xa;                            &quot;John&quot;,&#xa;                            &quot;entire&quot;,&#xa;                            &quot;+&quot;&#xa;                        ]&#xa;                    ],&#xa;                    &quot;conj&quot;: &quot;none&quot;&#xa;                },&#xa;                &quot;type&quot;: &quot;imp&quot;,&#xa;                &quot;reasoning&quot;: &quot;EDI&quot;,&#xa;                &quot;class&quot;: 9&#xa;            },            ...&#xa;        &quot;statements&quot;: [&#xa;            ..." vertex="1">
+          <mxGeometry height="700" width="190" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="x6V6TdtxAjg88yXRrUnu-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=15;" value="*_language.json" vertex="1">
+          <mxGeometry height="30" width="60" x="240" as="geometry" />
+        </mxCell>
+        <mxCell id="x6V6TdtxAjg88yXRrUnu-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1;fontSize=15;" value="*_logic.json" vertex="1">
+          <mxGeometry height="30" width="60" x="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
